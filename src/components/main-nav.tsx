@@ -1,5 +1,6 @@
 "use client";
 
+import { navLinks } from "@/config";
 import {
   Link,
   Navbar,
@@ -12,21 +13,7 @@ import {
 import { Box } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-
-const navLinks = [
-  {
-    label: "About Us",
-    href: "/about",
-  },
-  {
-    label: "Contact Us",
-    href: "/contact",
-  },
-  {
-    label: "Legal",
-    href: "/legal",
-  },
-] as const;
+import { ThemeSwitcher } from "./theme-switcher";
 
 export function MainNav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -37,9 +24,10 @@ export function MainNav() {
       shouldHideOnScroll
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
-      height="3.25rem"
+      height="3.5rem"
+      maxWidth="full"
       classNames={{
-        wrapper: "px-0 ",
+        wrapper: "px-2 sm:px-4",
         item: ["data-[active=true]:text-red-400"],
       }}
     >
@@ -55,6 +43,7 @@ export function MainNav() {
             </Link>
           </NavbarItem>
         ))}
+        <ThemeSwitcher />
       </NavbarContent>
       <NavbarMenuToggle
         aria-label={isMenuOpen ? "Close menu" : "Open menu"}

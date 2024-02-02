@@ -21,14 +21,14 @@ export default function RootLayout({
       <body
         className={cn(
           inter.className,
-          "container relative mx-auto min-h-screen px-2.5 antialiased lg:px-0",
+          "relative min-h-screen text-foreground/90 antialiased",
         )}
       >
         <Providers>
           <MainNav />
           {children}
         </Providers>
-        <div className="fixed inset-0 z-0 h-full w-full bg-[url('/bg-gradient.png')] bg-cover bg-center opacity-90" />
+        <div className="fixed inset-0 z-0 h-full w-full bg-[url('/bg-gradient.png')] bg-cover bg-center opacity-80" />
       </body>
     </html>
   );
