@@ -1,3 +1,4 @@
+import { MainNav } from "@/components/main-nav";
 import { Providers } from "@/components/providers";
 import { cn } from "@/lib/cn";
 import type { Metadata } from "next";
@@ -17,8 +18,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={cn(inter.className, "container mx-auto px-2.5")}>
-        <Providers>{children}</Providers>
+      <body
+        className={cn(
+          inter.className,
+          "container relative mx-auto min-h-screen px-2.5 antialiased lg:px-0",
+        )}
+      >
+        <Providers>
+          <MainNav />
+          {children}
+        </Providers>
+        <div className="fixed inset-0 z-0 h-full w-full bg-[url('/bg-gradient.png')] bg-cover bg-center opacity-90" />
       </body>
     </html>
   );
