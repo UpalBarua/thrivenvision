@@ -22,7 +22,6 @@ type PricingPackageCardProps = (typeof pricingPackages)[number];
 // };
 
 export function PricingPackageCard({
-  _id,
   description,
   isPopular,
   name,
