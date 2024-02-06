@@ -1,25 +1,14 @@
-import { pricingPackages } from "@/config";
+import { TPricingPackage } from "@/types";
 import {
   Button,
   Card,
   CardBody,
   CardFooter,
   CardHeader,
+  Chip,
   Divider,
 } from "@nextui-org/react";
 import { Check } from "lucide-react";
-import { Chip } from "@nextui-org/react";
-
-type PricingPackageCardProps = (typeof pricingPackages)[number];
-
-// type PricingPackageCardProps = {
-//   _id: string;
-//   name: string;
-//   description: string;
-//   price: "Free" | number;
-//   keyPoints: string[];
-//   isPopular: boolean;
-// };
 
 export function PricingPackageCard({
   description,
@@ -27,7 +16,7 @@ export function PricingPackageCard({
   name,
   price,
   keyPoints,
-}: PricingPackageCardProps) {
+}: TPricingPackage) {
   return (
     <Card
       isBlurred
@@ -56,7 +45,7 @@ export function PricingPackageCard({
         <p className="leading-relaxed text-foreground/60">{description}</p>
         <div className="pt-2 font-bold">
           <span className="text-4xl tracking-tight">
-            {price === "Free" ? "Free" : `$${price}`}
+            {price > 0 ? `$${price}` : "Free"}
           </span>
           <span className="text-foreground/50"> / month</span>
         </div>

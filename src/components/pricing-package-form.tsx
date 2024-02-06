@@ -64,6 +64,7 @@ type PricingPackageForm = Omit<
 > & { price: string };
 
 export function PricingPackageForm() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [keyPointsCount, setKeyPointsCount] = useState([null, null]);
 
   const {
@@ -94,10 +95,12 @@ export function PricingPackageForm() {
     ...keyPoints
   }: PricingPackageForm) => {
     try {
+      setIsSubmitting(true);
+
       const newPricingPackage = {
         name,
         description,
-        price,
+        price: Number(price),
         isPopular,
         keyPoints: Object.keys(keyPoints)
           .map((key) => keyPoints[key as keyof typeof keyPoints])
@@ -110,6 +113,8 @@ export function PricingPackageForm() {
       reset();
     } catch (error) {
       console.log(error);
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -157,6 +162,7 @@ export function PricingPackageForm() {
         control={control}
         render={({ field, fieldState }) => (
           <Input
+            className="appearance-none"
             startContent={
               <div className="pointer-events-none flex items-center">
                 <span className="text-small text-default-400">$</span>
@@ -239,7 +245,7 @@ export function PricingPackageForm() {
         >
           Clear
         </Button>
-        <Button type="submit" color="primary">
+        <Button type="submit" color="primary" isLoading={isSubmitting}>
           Submit
         </Button>
       </div>

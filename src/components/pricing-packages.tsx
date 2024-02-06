@@ -1,7 +1,9 @@
-import { pricingPackages } from "@/config";
+import { getPricingPackagesFromDB } from "@/lib/services";
 import { PricingPackageCard } from "./pricing-package-card";
 
-export function PricingPackages() {
+export async function PricingPackages() {
+  const fetchedPricingPackages = await getPricingPackagesFromDB();
+
   return (
     <section className="pt-20">
       <header className="space-y-2 sm:space-y-4">
@@ -13,8 +15,8 @@ export function PricingPackages() {
         </p>
       </header>
       <div className="grid grid-cols-1 gap-4 py-10 sm:grid-cols-2 md:grid-cols-4">
-        {pricingPackages.map((pricingPackage) => (
-          <PricingPackageCard key={pricingPackage._id} {...pricingPackage} />
+        {fetchedPricingPackages.map((pricingPackage) => (
+          <PricingPackageCard key={pricingPackage.id} {...pricingPackage} />
         ))}
       </div>
     </section>
