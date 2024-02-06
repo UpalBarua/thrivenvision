@@ -58,7 +58,7 @@ const ChooseUs = () => {
   return (
     <section className="mt-10">
       <h1 className="pb-8 text-center text-5xl font-bold">Why Choose Us?</h1>
-      <p className=" mx-auto w-[40ch] px-4 text-center lg:w-[60ch]">
+      <p className=" mx-auto w-[40ch] px-4 text-center text-[18px] lg:w-[60ch]">
         Lights, Camera, Satisfaction! Why Choose Us? Because Quality Video
         Editing Can Be Fun, Affordable, and Absolutely Fantastic!
       </p>

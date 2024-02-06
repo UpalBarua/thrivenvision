@@ -2,6 +2,9 @@ import { PricingPackages } from "@/components/pricing-packages";
 import { PricingPackageForm } from "@/components/pricing-package-form";
 import ChooseUs from "@/components/choose-us";
 import TrustedCompany from "@/components/trustedCompany";
+import Services from "@/components/services";
+import MailChimp from "@/components/mailChimp";
+import Footer from "@/components/footer";
 
 export default function HomePage() {
   return (
@@ -9,6 +12,9 @@ export default function HomePage() {
       <PricingPackages />
       <ChooseUs />
       <TrustedCompany />
+      <Services />
+      {/* <MailChimp /> */}
+      <Footer />
       {/* <PricingPackageForm /> */}
     </main>
   );
