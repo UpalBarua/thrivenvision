@@ -13,9 +13,9 @@ export default function HomePage() {
       <ChooseUs />
       <TrustedCompany />
       <Services />
-      {/* <MailChimp /> */}
+      <MailChimp />
       <Footer />
-      {/* <PricingPackageForm /> */}
+      <PricingPackageForm />
     </main>
   );
 }
