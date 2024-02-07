@@ -28,7 +28,10 @@ export default function RootLayout({
           <MainNav />
           {children}
         </Providers>
-        <div className="fixed inset-0 z-0 h-full w-full bg-[url('/bg-gradient.png')] bg-cover bg-center opacity-80" />
+        <div
+          className="fixed inset-0 z-0 h-full w-full bg-[url('/bg-gradient.png')] 
+          bg-cover bg-center opacity-80"
+        />
       </body>
     </html>
   );

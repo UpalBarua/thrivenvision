@@ -17,7 +17,6 @@ const ServicesCard = ({ services }: { services: TServices }) => {
         </p>
         <h1 className="text-[24px] font-bold">{name}</h1>
       </div>
-
       <p className="pt-6">{service}</p>
     </div>
   );
