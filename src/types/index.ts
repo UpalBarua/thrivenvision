@@ -6,3 +6,13 @@ export type TPricingPackage = {
   isPopular: boolean;
   keyPoints: string[];
 };
+
+export type TTestimonial = {
+  id: string;
+  comment:string; 
+  customer: {
+    name: string;
+    handle: string;
+    picture: string;
+  };
+};

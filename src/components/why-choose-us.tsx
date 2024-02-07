@@ -11,7 +11,7 @@ export function WhyChooseUs() {
         Because Quality Video Editing Can Be Fun, Affordable, and Absolutely
         Fantastic!
       </SectionSubheading>
-      <div className="grid pt-8 md:pt-10 grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 pt-8 sm:grid-cols-2 md:pt-10 lg:grid-cols-3">
         {whyChooseUsData.map((data) => (
           <ChooseUsCard key={data.id} {...data} />
         ))}
