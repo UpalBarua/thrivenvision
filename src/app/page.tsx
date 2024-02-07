@@ -11,11 +11,9 @@ export default function HomePage() {
     <main className="container relative z-10 mx-auto max-w-7xl px-2 sm:px-4">
       <PricingPackages />
       <WhyChooseUs />
-      {/* <TrustedCompany /> */}
-      {/* <Services /> */}
-      {/* <MailChimp /> */}
-      {/* <Footer /> */}
-      {/* <PricingPackageForm /> */}
+      <TrustedCompany />
+      <Services />
+      <Footer />
     </main>
   );
 }
