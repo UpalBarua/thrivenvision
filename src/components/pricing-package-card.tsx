@@ -24,10 +24,10 @@ export function PricingPackageCard({
       className="space-y-2 p-4"
       classNames={{
         base: [
+          "bg-background/40",
+          "dark:bg-background/50",
           "data-[hover=true]:bg-background/80",
           "dark:data-[hover=true]:bg-background/80",
-          "bg-background/40",
-          "dark:bg-background/40",
           "backdrop-blur-md",
           "backdrop-saturate-150",
         ],
