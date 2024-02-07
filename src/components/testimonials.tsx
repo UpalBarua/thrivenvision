@@ -88,6 +88,7 @@ function TestimonialCard({
 }: TTestimonial) {
   return (
     <Card
+      isHoverable
       classNames={{
         base: [
           "bg-background/40",
