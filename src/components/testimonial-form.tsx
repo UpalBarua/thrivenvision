@@ -1,14 +1,14 @@
 "use client";
 
-import { addNewPricingPackageToDB } from "@/lib/services";
+import { SectionHeading } from "@/components/ui/section-heading";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Button, Input, Textarea } from "@nextui-org/react";
-import { Plus, X } from "lucide-react";
+import { Avatar, Button, Input, Textarea } from "@nextui-org/react";
+import { Camera } from "lucide-react";
 import { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import * as z from "zod";
-import { SectionHeading } from "@/components/ui/section-heading";
-import { Image } from "lucide-react";
+import { uploadFile } from "@/lib/upload-file";
+import { addNewTestimonialToDB } from "@/lib/services";
 
 const testimonialFormSchema = z.object({
   comment: z
@@ -32,13 +32,13 @@ const testimonialFormSchema = z.object({
     .regex(/^[a-zA-Z0-9@ ]+$/, {
       message: "Handle must only include alphanumeric characters.",
     }),
-  picture: z.instanceof(File),
 });
 
 type TestimonialForm = z.infer<typeof testimonialFormSchema>;
 
 export function TestimonialForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [pictureFile, setPictureFile] = useState<File | null>(null);
 
   const { control, handleSubmit, reset } = useForm<TestimonialForm>({
     resolver: zodResolver(testimonialFormSchema),
@@ -46,31 +46,29 @@ export function TestimonialForm() {
       name: "",
       comment: "",
       handle: "",
-      picture: new File([], ""),
     },
   });
 
-  const onSubmit = async ({
-    name,
-    comment,
-    handle,
-    picture,
-  }: TestimonialForm) => {
+  const onSubmit = async ({ name, comment, handle }: TestimonialForm) => {
     try {
       setIsSubmitting(true);
+
+      if (!pictureFile) {
+        return console.log("please add a picture");
+      }
+
+      const pictureURL = await uploadFile(pictureFile);
 
       const newTestimonial = {
         comment,
         customer: {
           name,
           handle,
-          picture,
+          picture: pictureURL,
         },
       };
 
-      console.log(newTestimonial);
-
-      // await addNewPricingPackageToDB(newPricingPackage);
+      await addNewTestimonialToDB(newTestimonial);
       console.log("new testimonial added");
       reset();
     } catch (error) {
@@ -86,6 +84,28 @@ export function TestimonialForm() {
       onSubmit={handleSubmit(onSubmit)}
     >
       <SectionHeading>Add New Price Package</SectionHeading>
+      <div className="relative w-max">
+        <input
+          id="picture"
+          type="file"
+          accept="image/*"
+          className="hidden"
+          onChange={(e) =>
+            setPictureFile(e.target.files ? e.target.files[0] : null)
+          }
+        />
+        <label
+          htmlFor="picture"
+          className="rounded-inherit absolute inset-0 z-10 appearance-none bg-transparent"
+        />
+        <Avatar
+          showFallback
+          radius="lg"
+          src={pictureFile ? URL.createObjectURL(pictureFile) : ""}
+          fallback={<Camera className="h-8 w-8" />}
+          className="h-20 w-20"
+        />
+      </div>
       <Controller
         name="name"
         control={control}
@@ -137,30 +157,6 @@ export function TestimonialForm() {
           />
         )}
       />
-      {/* <Controller */}
-      {/*   name="picture" */}
-      {/*   control={control} */}
-      {/*   render={({ field, fieldState }) => ( */}
-      {/*     <Input */}
-      {/*       startContent={ */}
-      {/*         <div className="pointer-events-none flex items-center"> */}
-      {/*           <Image /> */}
-      {/*         </div> */}
-      {/*       } */}
-      {/*       accept="image/*" */}
-      {/*       type="file" */}
-      {/*       size="lg" */}
-      {/*       labelPlacement="outside" */}
-      {/*       label="Customer picture" */}
-      {/*       placeholder="Enter customer picture" */}
-      {/*       errorMessage={fieldState.error?.message || ""} */}
-      {/*       isInvalid={fieldState.invalid} */}
-      {/*       {...field} */}
-      {/*       onChange={(e) => field.onChange(e.target.files?.[0])} */}
-      {/*     /> */}
-      {/*   )} */}
-      {/* /> */}
-      {/**/}
       <div className="flex items-center justify-end gap-x-2">
         <Button
           type="button"

@@ -8,7 +8,7 @@ export type TPricingPackage = {
 };
 
 export type TTestimonial = {
-  id: string;
+  id?: string;
   comment:string; 
   customer: {
     name: string;

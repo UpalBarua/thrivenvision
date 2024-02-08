@@ -1,5 +1,5 @@
 import { db } from "@/firebase/firebase.config";
-import type { TPricingPackage } from "@/types";
+import type { TPricingPackage, TTestimonial } from "@/types";
 import {
   addDoc,
   collection,
@@ -28,4 +28,10 @@ export const getPricingPackagesFromDB = async () => {
   );
 
   return pricingPackages;
+};
+
+export const addNewTestimonialToDB = async (
+  newTestimonial: TTestimonial,
+) => {
+  return await addDoc(collection(db, "testimonials"), newTestimonial);
 };
