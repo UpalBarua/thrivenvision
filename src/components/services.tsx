@@ -1,84 +1,77 @@
-import React from "react";
+"use client";
 
-import { LayoutPanelTop } from "lucide-react";
-import ServicesCard from "./servicesCard";
-const Services = () => {
-  const allServices = [
-    {
-      id: 1,
-      icon: <LayoutPanelTop />,
-      name: "Video Editing",
-      service:
-        "We specialize in crafting video sales letters where we showcase the unique features and benefits of your product or service. Our expertise lies in creating compelling narratives that effectively communicate your value proposition, addressing the specific needs of your target audience and motivating them to take action.",
-    },
-    {
-      id: 1,
-      icon: <LayoutPanelTop />,
-      name: "Video Editing",
-      service:
-        "We specialize in crafting video sales letters where we showcase the unique features and benefits of your product or service. Our expertise lies in creating compelling narratives that effectively communicate your value proposition, addressing the specific needs of your target audience and motivating them to take action.",
-    },
-    {
-      id: 1,
-      icon: <LayoutPanelTop />,
-      name: "Video Editing",
-      service:
-        "We specialize in crafting video sales letters where we showcase the unique features and benefits of your product or service. Our expertise lies in creating compelling narratives that effectively communicate your value proposition, addressing the specific needs of your target audience and motivating them to take action.",
-    },
-    {
-      id: 1,
-      icon: <LayoutPanelTop />,
-      name: "Video Editing",
-      service:
-        "We specialize in crafting video sales letters where we showcase the unique features and benefits of your product or service. Our expertise lies in creating compelling narratives that effectively communicate your value proposition, addressing the specific needs of your target audience and motivating them to take action.",
-    },
-    {
-      id: 1,
-      icon: <LayoutPanelTop />,
-      name: "Video Editing",
-      service:
-        "We specialize in crafting video sales letters where we showcase the unique features and benefits of your product or service. Our expertise lies in creating compelling narratives that effectively communicate your value proposition, addressing the specific needs of your target audience and motivating them to take action.",
-    },
-    {
-      id: 1,
-      icon: <LayoutPanelTop />,
-      name: "Video Editing",
-      service:
-        "We specialize in crafting video sales letters where we showcase the unique features and benefits of your product or service. Our expertise lies in creating compelling narratives that effectively communicate your value proposition, addressing the specific needs of your target audience and motivating them to take action.",
-    },
-    {
-      id: 1,
-      icon: <LayoutPanelTop />,
-      name: "Video Editing",
-      service:
-        "We specialize in crafting video sales letters where we showcase the unique features and benefits of your product or service. Our expertise lies in creating compelling narratives that effectively communicate your value proposition, addressing the specific needs of your target audience and motivating them to take action.",
-    },
-    {
-      id: 1,
-      icon: <LayoutPanelTop />,
-      name: "Video Editing",
-      service:
-        "We specialize in crafting video sales letters where we showcase the unique features and benefits of your product or service. Our expertise lies in creating compelling narratives that effectively communicate your value proposition, addressing the specific needs of your target audience and motivating them to take action.",
-    },
-  ];
+import { services } from "@/config/services";
+import { Card, Tab, Tabs } from "@nextui-org/react";
+import { SectionHeading } from "./ui/section-heading";
+import { SectionSubheading } from "./ui/section-subheading";
+
+export function Services() {
   return (
-    <section>
-      <div className="mt-24 text-center">
-        <h1 className="pb-4 text-5xl font-bold">What we offer !</h1>
-        <p className="mx-auto w-[40ch] pb-8 text-[18px] lg:w-[75ch]">
-          We take pride in offering a diverse range of editing services tailored
-          to meet your unique needs. With our commitment to quality and
-          creativity, we are your go-to partner for a wise spactrum of
-          professional editing services.
-        </p>
-      </div>
-      <div className="grid grid-cols-1 gap-4 lg:grid-cols-4">
-        {allServices?.map((services) => (
-          <ServicesCard key={services?.id} services={services} />
+    <section className="py-10">
+      <SectionHeading>What We Offer</SectionHeading>
+      <SectionSubheading>
+        Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
+        cupidatat.
+      </SectionSubheading>
+      <Tabs
+        aria-label="services"
+        color="primary"
+        size="lg"
+        radius="full"
+        classNames={{
+          tabList: [
+            "dark:border dark:border-foreground/10 border",
+            "bg-background/40",
+            "dark:bg-background/50",
+            "backdrop-blur-md",
+            "backdrop-saturate-150",
+            "w-full justify-between",
+            "text-foreground mb-2",
+          ],
+          tab: "max-w-fit h-12 px-4",
+          tabContent:
+            "group-data-[selected=true]:text-background dark:group-data-[selected=true]:text-foreground",
+        }}
+        className="pt-10"
+      >
+        {services.map(({ category, services, Icon }, i) => (
+          <Tab
+            key={category + i}
+            title={
+              <div className="flex items-center space-x-2">
+                <Icon className="h-9 w-9" />
+                <span>{category}</span>
+              </div>
+            }
+          >
+            <div className="gap-4 [column-fill:_balance] sm:columns-2 lg:columns-3">
+              {services.map((service) => (
+                <Card
+                  classNames={{
+                    base: [
+                      "bg-background/40",
+                      "dark:bg-background/50",
+                      "data-[hover=true]:bg-background/80",
+                      "dark:data-[hover=true]:bg-background/80",
+                      "backdrop-blur-md",
+                      "backdrop-saturate-150",
+                    ],
+                  }}
+                  key={service.name}
+                  className="mb-5 p-8 sm:break-inside-avoid"
+                >
+                  <h3 className="pb-2 text-xl font-medium tracking-tight">
+                    {service.name}
+                  </h3>
+                  <p className="leading-relaxed text-foreground/60">
+                    {service.serviceDescription}
+                  </p>
+                </Card>
+              ))}
+            </div>
+          </Tab>
         ))}
-      </div>
+      </Tabs>
     </section>
   );
-};
-
-export default Services;
+}
