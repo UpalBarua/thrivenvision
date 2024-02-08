@@ -35,3 +35,19 @@ export const addNewTestimonialToDB = async (
 ) => {
   return await addDoc(collection(db, "testimonials"), newTestimonial);
 };
+
+export const getTestimonialsFromDB = async () => {
+  let testimonials: TTestimonial[] = [];
+
+  const q = query(collection(db, "testimonials"));
+  const querySnapshot = await getDocs(q);
+
+  querySnapshot.forEach((doc) =>
+    testimonials.push({
+      id: doc.id,
+      ...doc.data(),
+    } as TTestimonial),
+  );
+
+  return testimonials;
+};

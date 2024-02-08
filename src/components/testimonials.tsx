@@ -1,5 +1,6 @@
 import { SectionHeading } from "@/components/ui/section-heading";
 import { SectionSubheading } from "@/components/ui/section-subheading";
+import { getTestimonialsFromDB } from "@/lib/services";
 import { TTestimonial } from "@/types";
 import { Avatar, Card, CardBody, CardHeader } from "@nextui-org/react";
 
@@ -7,7 +8,7 @@ const testimonials = [
   {
     id: "0",
     comment:
-      "Frontend developer and UI/UX enthusiast. Join me on this coding adventure! Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
+      "Frontend developer anLorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
     customer: {
       name: "Sarah Johnson",
       handle: "@SarahDigitalPro",
@@ -17,7 +18,7 @@ const testimonials = [
   {
     id: "1",
     comment:
-      "Passionate about design and technology. Let's create beautiful and intuitive digital experiences together! Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "Passionate about design Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat. and tcreate beautiful and intuitive digital experiences together! Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     customer: {
       name: "John Smith",
       handle: "@JohnDesignTech",
@@ -27,7 +28,7 @@ const testimonials = [
   {
     id: "2",
     comment:
-      "Full-stack developer with a knack for problem-solving. Ready to tackle any challenge that comes my way! Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "Full-stack developeany challenge that comes my way! Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     customer: {
       name: "Emily Davis",
       handle: "@EmilyFullStack",
@@ -37,7 +38,7 @@ const testimonials = [
   {
     id: "3",
     comment:
-      "Graphic designer by day, digital artist by night. Let's add a touch of creativity to your project! Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "Graphic designer by day, diga touch of creativity to your project! Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     customer: {
       name: "Alex Turner",
       handle: "@AlexGraphicArtist",
@@ -47,7 +48,7 @@ const testimonials = [
   {
     id: "4",
     comment:
-      "Marketing strategist and data-driven analyst. Let's craft strategies that drive results and propel your business forward! Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "Marketing strategist Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat. and datathat drive results and propel your business forward! Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     customer: {
       name: "Olivia White",
       handle: "@OliviaMarketing",
@@ -64,16 +65,78 @@ const testimonials = [
       picture: "https://source.unsplash.com/random/?random,person",
     },
   },
+  {
+    id: "6",
+    comment:
+      "Frontend developer and UI/UX Join me on this coding adventure! Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
+    customer: {
+      name: "Sarah Johnson",
+      handle: "@SarahDigitalPro",
+      picture: "https://source.unsplash.com/random/?random,person",
+    },
+  },
+  {
+    id: "7",
+    comment:
+      "Passionate about design and tcreate beautiful and intuitive digital experiences together! Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    customer: {
+      name: "John Smith",
+      handle: "@JohnDesignTech",
+      picture: "https://source.unsplash.com/random/?random,person",
+    },
+  },
+  {
+    id: "8",
+    comment:
+      "Full-stack developer with a kproblem-solving. Ready to tackle any challenge that comes my way! Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    customer: {
+      name: "Emily Davis",
+      handle: "@EmilyFullStack",
+      picture: "https://source.unsplash.com/random/?random,person",
+    },
+  },
+  {
+    id: "9",
+    comment:
+      "Graphic designer by day, diga touch of creativity to your project! Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    customer: {
+      name: "Alex Turner",
+      handle: "@AlexGraphicArtist",
+      picture: "https://source.unsplash.com/random/?random,person",
+    },
+  },
+  {
+    id: "10",
+    comment:
+      "Marketing strategist and datathat drive results and propel your business forward! Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    customer: {
+      name: "Olivia White",
+      handle: "@OliviaMarketing",
+      picture: "https://source.unsplash.com/random/?random,person",
+    },
+  },
+  {
+    id: "11",
+    comment:
+      "project manager with a passion for efficiency and collaboration. Let's streamline your project and achieve success together! Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    customer: {
+      name: "Daniel Brown",
+      handle: "@DanielProjectMgr",
+      picture: "https://source.unsplash.com/random/?random,person",
+    },
+  },
 ];
 
-export function Testimonials() {
+export async function Testimonials() {
+  // const testimonials = await getTestimonialsFromDB();
+
   return (
-    <section>
+    <section className="py-20">
       <SectionHeading>Testimonials!</SectionHeading>
       <SectionSubheading>
         Hear What Our Clients Have to Say About Their Journey with Us
       </SectionSubheading>
-      <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-10 [column-fill:_balance] sm:columns-2 lg:columns-3">
         {testimonials.map((testimonial) => (
           <TestimonialCard key={testimonial.id} {...testimonial} />
         ))}
@@ -99,7 +162,8 @@ function TestimonialCard({
           "backdrop-saturate-150",
         ],
       }}
-      className="group p-2 dark:border dark:border-foreground/10 sm:p-4 lg:p-5"
+      className="group mb-4 p-2 dark:border dark:border-foreground/10 
+      sm:break-inside-avoid sm:p-4 lg:p-5"
     >
       <CardHeader className="flex items-center gap-x-4">
         <Avatar isBordered radius="lg" size="md" src={picture} />

@@ -29,7 +29,7 @@ const testimonialFormSchema = z.object({
     .trim()
     .min(3, { message: "Handle must be at least 3 characters." })
     .max(20, { message: "Handle cannot exceed 20 characters." })
-    .regex(/^[a-zA-Z0-9@ ]+$/, {
+    .regex(/^[a-zA-Z0-9 ]+$/, {
       message: "Handle must only include alphanumeric characters.",
     }),
 });
@@ -69,7 +69,6 @@ export function TestimonialForm() {
       };
 
       await addNewTestimonialToDB(newTestimonial);
-      console.log("new testimonial added");
       reset();
     } catch (error) {
       console.log(error);
@@ -96,7 +95,8 @@ export function TestimonialForm() {
         />
         <label
           htmlFor="picture"
-          className="rounded-inherit absolute inset-0 z-10 appearance-none bg-transparent"
+          className="rounded-inherit absolute inset-0 z-10 cursor-pointer 
+          appearance-none bg-transparent"
         />
         <Avatar
           showFallback
