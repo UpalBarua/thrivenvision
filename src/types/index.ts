@@ -6,3 +6,7 @@ export type TPricingPackage = {
   isPopular: boolean;
   keyPoints: string[];
 };
+export type TPicture = {
+  id: string;
+  imageUrl: string;
+};

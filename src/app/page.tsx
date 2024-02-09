@@ -5,6 +5,8 @@ import TrustedCompany from "@/components/trustedCompany";
 import Services from "@/components/services";
 import MailChimp from "@/components/mailChimp";
 import Footer from "@/components/footer";
+import AddTrustedCompany from "@/components/addTrustCompany";
+import Portfolio from "@/components/portfolio";
 
 export default function HomePage() {
   return (
@@ -12,8 +14,11 @@ export default function HomePage() {
       <PricingPackages />
       <WhyChooseUs />
       <TrustedCompany />
-      <Services />
-      <Footer />
+      {/* <AddTrustedCompany /> */}
+      <Portfolio />
+
+      {/* <Services /> */}
+      {/* <Footer /> */}
     </main>
   );
 }

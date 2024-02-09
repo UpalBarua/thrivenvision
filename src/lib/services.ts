@@ -1,5 +1,5 @@
 import { db } from "@/firebase/firebase.config";
-import type { TPricingPackage } from "@/types";
+import type { TPicture, TPricingPackage } from "@/types";
 import {
   addDoc,
   collection,
@@ -28,4 +28,8 @@ export const getPricingPackagesFromDB = async () => {
   );
 
   return pricingPackages;
+};
+
+export const addNewPicture = async (picture: Omit<TPicture, "id">) => {
+  await addDoc(collection(db, "company"), picture);
 };
