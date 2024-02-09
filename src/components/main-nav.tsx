@@ -14,6 +14,7 @@ import { Box } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { ThemeSwitcher } from "./theme-switcher";
+import Image from "next/image";
 
 export function MainNav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,8 +33,9 @@ export function MainNav() {
       }}
     >
       <Link href="/">
-        <Box className="text-primary" />
-        <h1 className="tracing-tight ps-2 text-lg font-bold">Thrivenvision</h1>
+        <Image src="/logo.png" alt="logo" height={80} width={150}/>
+        {/* <Box className="text-primary" /> */}
+        {/* <h1 className="tracing-tight ps-2 text-lg font-bold">Thrivenvision</h1> */}
       </Link>
       <NavbarContent className="hidden gap-6 sm:flex" justify="end">
         {navLinks.map(({ label, href }) => (

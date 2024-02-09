@@ -1,3 +1,5 @@
+import { LucideIcon } from "lucide-react";
+
 export type TPricingPackage = {
   id?: string;
   name: string;
@@ -20,4 +22,14 @@ export type TTestimonial = {
     handle: string;
     picture: string;
   };
+};
+
+export type TServiceCategory = {
+  category: string;
+  categoryDescription: string;
+  Icon: LucideIcon;
+  services: {
+    name: string;
+    serviceDescription: string;
+  }[];
 };

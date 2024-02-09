@@ -4,6 +4,7 @@ import { cn } from "@/lib/cn";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Footer from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,6 +28,7 @@ export default function RootLayout({
         <Providers>
           <MainNav />
           {children}
+          <Footer/>
         </Providers>
         <div
           className="fixed inset-0 z-0 h-full w-full bg-[url('/bg-gradient.png')] 

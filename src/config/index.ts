@@ -1,10 +1,11 @@
 import {
+  BadgePlus,
   Handshake,
   Headset,
   Lightbulb,
   Star,
   ThumbsUp,
-  TimerReset
+  TimerReset,
 } from "lucide-react";
 
 export const navLinks = [
@@ -125,3 +126,4 @@ export const whyChooseUsData = [
       "Boost lead generation and secure clients with our compelling editing services designed to captivate and convert.",
   },
 ] as const;
+

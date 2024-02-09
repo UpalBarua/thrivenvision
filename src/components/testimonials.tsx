@@ -95,36 +95,6 @@ const testimonials = [
       picture: "https://source.unsplash.com/random/?random,person",
     },
   },
-  {
-    id: "9",
-    comment:
-      "Graphic designer by day, diga touch of creativity to your project! Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    customer: {
-      name: "Alex Turner",
-      handle: "@AlexGraphicArtist",
-      picture: "https://source.unsplash.com/random/?random,person",
-    },
-  },
-  {
-    id: "10",
-    comment:
-      "Marketing strategist and datathat drive results and propel your business forward! Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    customer: {
-      name: "Olivia White",
-      handle: "@OliviaMarketing",
-      picture: "https://source.unsplash.com/random/?random,person",
-    },
-  },
-  {
-    id: "11",
-    comment:
-      "project manager with a passion for efficiency and collaboration. Let's streamline your project and achieve success together! Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    customer: {
-      name: "Daniel Brown",
-      handle: "@DanielProjectMgr",
-      picture: "https://source.unsplash.com/random/?random,person",
-    },
-  },
 ];
 
 export async function Testimonials() {
