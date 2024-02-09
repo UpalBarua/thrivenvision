@@ -1,5 +1,6 @@
 import { db } from "@/firebase/firebase.config";
-import type { TPricingPackage, TTestimonial } from "@/types";
+import type { TPicture, TPricingPackage, TTestimonial } from "@/types";
+
 import {
   addDoc,
   collection,
@@ -30,24 +31,26 @@ export const getPricingPackagesFromDB = async () => {
   return pricingPackages;
 };
 
-export const addNewTestimonialToDB = async (
-  newTestimonial: TTestimonial,
-) => {
-  return await addDoc(collection(db, "testimonials"), newTestimonial);
-};
+export const addNewPicture = async (picture: Omit<TPicture, "id">) => {
+  await addDoc(collection(db, "company"), picture);
 
-export const getTestimonialsFromDB = async () => {
-  let testimonials: TTestimonial[] = [];
+  export const addNewTestimonialToDB = async (newTestimonial: TTestimonial) => {
+    return await addDoc(collection(db, "testimonials"), newTestimonial);
+  };
 
-  const q = query(collection(db, "testimonials"));
-  const querySnapshot = await getDocs(q);
+  export const getTestimonialsFromDB = async () => {
+    let testimonials: TTestimonial[] = [];
 
-  querySnapshot.forEach((doc) =>
-    testimonials.push({
-      id: doc.id,
-      ...doc.data(),
-    } as TTestimonial),
-  );
+    const q = query(collection(db, "testimonials"));
+    const querySnapshot = await getDocs(q);
 
-  return testimonials;
+    querySnapshot.forEach((doc) =>
+      testimonials.push({
+        id: doc.id,
+        ...doc.data(),
+      } as TTestimonial),
+    );
+
+    return testimonials;
+  };
 };

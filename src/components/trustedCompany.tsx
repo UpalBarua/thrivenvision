@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardBody, CardFooter, Image } from "@nextui-org/react";
+import { Button, Card, CardBody, CardFooter, Image } from "@nextui-org/react";
 
 const TrustedCompany = () => {
   const list = [
@@ -32,32 +32,46 @@ const TrustedCompany = () => {
     {
       img: "https://images.unsplash.com/photo-1661348027228-e7f05cd5a254?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
-    {
-      img: "https://images.unsplash.com/photo-1669642217377-88d1c171ed45?q=80&w=1634&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
   ];
 
   return (
-    <section className="mb-4 mt-10">
-      <h1 className="pb-14 pt-14 text-center text-4xl font-bold">
-        Trusted by 100 world-class <br></br> brands and organizations
-      </h1>
-      <div className="grid grid-cols-2 gap-4 sm:grid-cols-5">
-        {list.map((item, index) => (
-          <Card shadow="sm" key={index}>
-            <CardBody className="overflow-visible p-0">
-              <Image
-                isZoomed
-                shadow="sm"
-                radius="md"
-                width="100%"
-                alt=""
-                className="h-[140px] w-full object-cover"
-                src={item.img}
-              />
-            </CardBody>
-          </Card>
-        ))}
+    <section className=" mb-4 mt-20">
+      <div className="flex flex-col gap-14  lg:flex-row">
+        <div className="flex-1 p-4 lg:p-2">
+          <h1 className="pb-8 pt-14 text-4xl font-bold">
+            Trusted by 100 world-class <br></br> brands and organizations
+          </h1>
+          <p className="pb-4 text-[18px]">
+            We have earned the confidence of hundreds of brands and
+            organizations, solidifying our reputation as a trusted and reliable
+            partner in the industry.
+          </p>
+          <Button
+            className="px-8 py-6 font-bold text-white"
+            color="primary"
+            variant="flat"
+          >
+            Lets Connect
+          </Button>
+        </div>
+
+        <div className="grid flex-1 grid-cols-2 gap-4 sm:grid-cols-3">
+          {list.map((item, index) => (
+            <Card shadow="sm" key={index}>
+              <CardBody className="overflow-visible p-0">
+                <Image
+                  isZoomed
+                  shadow="sm"
+                  radius="md"
+                  width="100%"
+                  alt=""
+                  className="h-[100px] w-full object-cover"
+                  src={item.img}
+                />
+              </CardBody>
+            </Card>
+          ))}
+        </div>
       </div>
     </section>
   );
