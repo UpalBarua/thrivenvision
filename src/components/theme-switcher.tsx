@@ -10,7 +10,7 @@ export const ThemeSwitcher = () => {
   return (
     <Switch
       defaultSelected
-      size="md"
+      size="lg"
       color="primary"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       thumbIcon={({ isSelected, className }) =>
