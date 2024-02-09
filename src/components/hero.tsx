@@ -31,7 +31,6 @@ export function Hero() {
               className={cn(
                 "flex-col items-center justify-center gap-3 gap-x-2 p-6 dark:border dark:border-foreground/10",
               )}
-              onClick={() => setSelectedCategory(category + i)}
             >
               <Icon className="h-12 w-12" />
               <h4 className="text-lg font-medium tracking-tight">{category}</h4>
