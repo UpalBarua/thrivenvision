@@ -21,7 +21,6 @@ export function PricingPackageCard({
     <Card
       isBlurred
       isHoverable
-      className="space-y-2 p-4"
       classNames={{
         base: [
           "bg-background/40",
@@ -32,6 +31,7 @@ export function PricingPackageCard({
           "backdrop-saturate-150",
         ],
       }}
+      className="space-y-2 p-4 dark:border dark:border-foreground/10"
     >
       <CardHeader className="flex-col items-start space-y-2 pb-6">
         <div className="flex w-full items-center justify-between">
@@ -62,7 +62,7 @@ export function PricingPackageCard({
         </ul>
       </CardBody>
       <CardFooter>
-        <Button color="default" fullWidth size="lg">
+        <Button color="default" variant="bordered" fullWidth size="lg">
           Get Started
         </Button>
       </CardFooter>

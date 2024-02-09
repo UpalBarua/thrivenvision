@@ -2,19 +2,18 @@
 
 import { navLinks } from "@/config";
 import {
-  Link,
-  Navbar,
-  NavbarContent,
-  NavbarItem,
-  NavbarMenu,
-  NavbarMenuItem,
-  NavbarMenuToggle,
+    Link,
+    Navbar,
+    NavbarContent,
+    NavbarItem,
+    NavbarMenu,
+    NavbarMenuItem,
+    NavbarMenuToggle,
 } from "@nextui-org/react";
-import { Box } from "lucide-react";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { ThemeSwitcher } from "./theme-switcher";
-import Image from "next/image";
 
 export function MainNav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,7 +32,7 @@ export function MainNav() {
       }}
     >
       <Link href="/">
-        <Image src="/logo.png" alt="logo" height={80} width={150}/>
+        <Image src="/logo.png" alt="logo" height={25} width={25}/>
         {/* <Box className="text-primary" /> */}
         {/* <h1 className="tracing-tight ps-2 text-lg font-bold">Thrivenvision</h1> */}
       </Link>
