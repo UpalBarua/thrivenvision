@@ -16,7 +16,6 @@ export default function HomePage() {
       <TrustedCompany />
       {/* <AddTrustedCompany /> */}
       <Portfolio />
-
       {/* <Services /> */}
       {/* <Footer /> */}
     </main>

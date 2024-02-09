@@ -1,7 +1,7 @@
-import { getPricingPackagesFromDB } from "@/lib/services";
-import { PricingPackageCard } from "./pricing-package-card";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { SectionSubheading } from "@/components/ui/section-subheading";
+import { getPricingPackagesFromDB } from "@/lib/services";
+import { PricingPackageCard } from "./pricing-package-card";
 
 export async function PricingPackages() {
   const fetchedPricingPackages = await getPricingPackagesFromDB();
