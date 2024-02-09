@@ -9,6 +9,11 @@ export type TPricingPackage = {
   keyPoints: string[];
 };
 
+export type TPicture = {
+  id: string;
+  imageUrl: string;
+};
+
 export type TTestimonial = {
   id?: string;
   comment: string;
