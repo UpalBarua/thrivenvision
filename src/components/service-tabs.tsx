@@ -11,6 +11,7 @@ export function ServiceTabs() {
       color="primary"
       size="lg"
       radius="full"
+      fullWidth
       classNames={{
         tabList: [
           "dark:border dark:border-foreground/10 border",
