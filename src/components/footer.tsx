@@ -1,10 +1,19 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import MailChimp from "./mailChimp";
+import {
+  PhoneCall,
+  Mail,
+  MapPin,
+  Linkedin,
+  Instagram,
+  Facebook,
+} from "lucide-react";
 
 const Footer = () => {
   return (
     <div className="flex flex-col-reverse lg:flex-col ">
-      <footer className=" mt-14 divide-y px-4 pt-24 shadow-2xl dark:bg-[#000a14] dark:text-gray-100 lg:mt-96">
+      {/* <footer className=" mt-14 divide-y px-4 pt-24 shadow-2xl dark:bg-[#000a14] dark:text-gray-100 lg:mt-96">
         <div className="container mx-auto flex flex-col justify-between space-y-8 py-10 lg:flex-row lg:space-y-0">
           <div className="lg:w-1/3">
             <a
@@ -142,7 +151,79 @@ const Footer = () => {
         <div className="py-6 text-center text-sm dark:text-gray-400">
           © 1968 Company Co. All rights reserved.
         </div>
-      </footer>
+      </footer> */}
+
+      <div className="shadow-2xl dark:bg-[#000a14] dark:text-gray-100 lg:mt-96 ">
+        <footer className="  pt-24 ">
+          <div className="mb-14 ml-14 grid grid-cols-1 gap-4 pt-14 lg:grid-cols-4">
+            <div className=" space-y-4">
+              <h1>Don't be a stranger</h1>
+              <h1 className="text-2xl">The time is now</h1>
+              <h1>contract now</h1>
+            </div>
+            <div>
+              <h1 className="pb-2 text-[24px] ">Services</h1>
+              <ul className="space-y-4">
+                <li>Video editing</li>
+                <li>Business Ads</li>
+                <li>Scripting</li>
+                <li>Thumbnails</li>
+                <li>Content consultation</li>
+              </ul>
+            </div>
+            <div>
+              <h1 className="pb-2 text-[24px] ">Contacts</h1>
+              <ul className="space-y-6">
+                <li className="flex items-center gap-4">
+                  <PhoneCall /> +44 7477 216160
+                </li>
+                <li className="flex items-center gap-4">
+                  <Mail /> rafayat@doublerstudios.net
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h1 className="pb-2 text-[24px] ">Office Address</h1>
+
+              <ul className="flex items-center gap-4">
+                <MapPin />
+                <ul>
+                  <li>Global Office</li>
+                  <li>2nd Floor College House</li>
+                  <li>Road, RUISLIP,, London</li>
+                </ul>
+              </ul>
+              <ul className="flex items-center gap-4">
+                <MapPin />
+                <ul>
+                  <li>Bd Office</li>
+                  <li>2nd Floor College House</li>
+                  <li>Road, RUISLIP,, London.</li>
+                </ul>
+              </ul>
+            </div>
+          </div>
+          <div className="ml-14 grid  grid-cols-1 gap-6 lg:grid-cols-3  lg:gap-14">
+            <div className="item-center flex gap-3">
+              <h1>Thirnvision</h1>
+              <p>Copyright © 2023 Thirnvision Ltd.</p>
+            </div>
+            <div className="item-center flex gap-2">
+              <p>Round privacy</p>
+              <p>Privacy Policy</p>
+              <p>Terms of Service</p>
+              <p>Support</p>
+            </div>
+            <div className="item-center flex gap-3">
+              <Facebook />
+              <Instagram />
+              <Linkedin />
+            </div>
+          </div>
+          <hr className="mt-4"></hr>
+        </footer>
+      </div>
+
       <div>
         <MailChimp />
       </div>

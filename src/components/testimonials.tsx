@@ -102,9 +102,10 @@ export async function Testimonials() {
 
   return (
     <section className="py-20">
-      <SectionHeading>Testimonials!</SectionHeading>
+      <SectionHeading>Recommendations!</SectionHeading>
       <SectionSubheading>
-        Hear What Our Clients Have to Say About Their Journey with Us
+        Learn about the positive impact our services have had on our customers
+        through their testimonials.
       </SectionSubheading>
       <div className="mt-10 [column-fill:_balance] sm:columns-2 lg:columns-3">
         {testimonials.map((testimonial) => (

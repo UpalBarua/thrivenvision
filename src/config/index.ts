@@ -86,44 +86,43 @@ export const whyChooseUsData = [
   {
     id: 1,
     Icon: Star,
-    title: "Top Rated On fiverr",
+    title: "Proven Track Record",
     description:
-      "Our team has achieved top-rated seller status on Fiverr, garnering over 1000 reviews. This milestone reflects the collective dedication to delivering exceptional quality and client satisfaction.",
+      "With a track record of delivering measurable results and exceeding client expectations, we're the trusted choice for businesses seeking success in today's competitive landscape",
   },
   {
     id: 2,
     Icon: ThumbsUp,
-    title: "Engagement Enhancement",
+    title: "Expertise Across Industries",
     description:
-      "Capture and maintain audience attention with visually captivating edits, fostering higher viewer engagement.",
+      "Our team of seasoned professionals brings expertise across various industries, ensuring that we understand the unique challenges and opportunities specific to your business niche.",
   },
   {
     id: 3,
     Icon: TimerReset,
-    title: "Quick Turnaround",
+    title: "Customized Solutions",
     description:
-      "Experience prompt delivery of edited content, meeting your deadlines without sacrificing quality.",
+      "We believe in personalized approaches tailored to each client's needs. Our customized solutions are designed to address your specific goals and drive sustainable growth.",
   },
   {
     id: 4,
     Icon: Headset,
-    title: "24/7 Support",
+    title: "Innovative Strategies",
     description:
-      "Experience round-the-clock customer support from our team of industry-leading video editors, ensuring you have the best assistance whenever you need it",
+      "Stay ahead of the curve with our innovative strategies. We continuously adapt to the ever-changing digital landscape, leveraging the latest tools and techniques to maximize your success.",
   },
   {
     id: 5,
     Icon: Lightbulb,
-    title: "Creative Collaboration",
+    title: "Value for Money",
     description:
-      "Leverage our expertise in content creation and ideation, as we are content creators with a substantial following of 1.5 million across diverse social media platforms. We're here to help you shape and refine your content strategy.",
+      "We offer cost-effective solutions without compromising on quality. Get the most out of your investment with our competitive pricing and exceptional service.",
   },
   {
     id: 6,
     Icon: Handshake,
-    title: "Conversion Driven",
+    title: " Dedicated Support",
     description:
-      "Boost lead generation and secure clients with our compelling editing services designed to captivate and convert.",
+      "Your success is our priority. Count on us for dedicated support and ongoing assistance, ensuring that you have the resources and guidance you need to thrive in today's dynamic business environment.",
   },
 ] as const;
-

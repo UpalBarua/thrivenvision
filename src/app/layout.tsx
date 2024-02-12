@@ -28,7 +28,7 @@ export default function RootLayout({
         <Providers>
           <MainNav />
           {children}
-          <Footer/>
+          <Footer />
         </Providers>
         <div
           className="fixed inset-0 z-0 h-full w-full bg-[url('/bg-gradient.png')] 
