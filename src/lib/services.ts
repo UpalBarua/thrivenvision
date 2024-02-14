@@ -1,5 +1,10 @@
 import { db } from "@/firebase/firebase.config";
-import type { TPicture, TPricingPackage, TTestimonial } from "@/types";
+import type {
+  TPicture,
+  TPortfolio,
+  TPricingPackage,
+  TTestimonial,
+} from "@/types";
 
 import {
   addDoc,
@@ -53,4 +58,8 @@ export const getTestimonialsFromDB = async () => {
   );
 
   return testimonials;
+};
+
+export const addNewPortfolioToDB = async (newPortfolio: TPortfolio) => {
+  return await addDoc(collection(db, "portfolios"), newPortfolio);
 };

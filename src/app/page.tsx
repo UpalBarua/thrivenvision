@@ -5,6 +5,7 @@ import { Testimonials } from "@/components/testimonials";
 import TrustedCompany from "@/components/trustedCompany";
 import { WhyChooseUs } from "@/components/why-choose-us";
 import { Hero } from "@/components/hero";
+import { PortfolioForm } from "@/components/portfolio-form";
 
 export default function HomePage() {
   return (
@@ -15,6 +16,7 @@ export default function HomePage() {
       <WhyChooseUs />
       <TrustedCompany />
       <Portfolio />
+      <PortfolioForm />
 
       <Testimonials />
     </main>
