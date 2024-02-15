@@ -115,7 +115,7 @@ const AboutUs = () => {
                 src={employee?.image}
                 alt="NextUI Album Cover"
               />
-              <h1 className="pt-8 text-[18px] font-semibold">
+              <h1 className="pt-8 text-[24px] font-semibold">
                 {employee?.name}
               </h1>
               <h1 className="text-[18px] font-semibold">{employee?.title}</h1>

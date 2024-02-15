@@ -7,6 +7,8 @@ import { WhyChooseUs } from "@/components/why-choose-us";
 import { Hero } from "@/components/hero";
 
 import AdminAllPortfolio from "@/dashboard/Admin-all-portfolio";
+import AddTrustedCompany from "@/dashboard/addTrustCompany";
+import AdminAllTrustedCompany from "@/dashboard/Admin-all-trustedComapny";
 
 export default function HomePage() {
   return (
@@ -19,6 +21,8 @@ export default function HomePage() {
       <Portfolio />
       {/* <AdminAllPortfolio /> */}
       {/* <PortfolioForm /> */}
+      {/* <AddTrustedCompany />
+      <AdminAllTrustedCompany /> */}
 
       <Testimonials />
     </main>
