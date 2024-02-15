@@ -1,5 +1,8 @@
+"use client";
 import React from "react";
 import PortfolioCard from "./portfolioCard";
+import Link from "next/link";
+import { InstagramEmbed } from "react-social-media-embed";
 
 const Portfolio = () => {
   const allPortfolio = [
@@ -57,21 +60,39 @@ const Portfolio = () => {
   return (
     <section className="mt-24 rounded-md bg-purple-900 px-4 py-8  ">
       <div className="pb-14 pt-8 text-center">
-        <h1 className=" pb-2 text-4xl font-bold text-white dark:text-white">
-          Here Are Our Few Project
+        <h1 className="pb-2 text-4xl font-bold text-white dark:text-white">
+          Portfolio Spotlight: Witness Our Impact
         </h1>
         <p className="text-white">
-          We always try to makes happy our client .In this section you can watch
-          lot of project{" "}
+          Our achievements speak for themselves. Explore our portfolio to see
+          how we have helped clients achieve<br></br> their goals and surpass
+          their expectations.
         </p>
       </div>
       <div className="grid grid-cols-2 gap-6 lg:grid-cols-4">
-        {allPortfolio?.map((portfolio) => (
+        {/* {allPortfolio?.map((portfolio) => (
           <PortfolioCard
             key={portfolio?.id}
             portfolio={portfolio}
           ></PortfolioCard>
-        ))}
+        ))} */}
+
+        <div className="mx-auto ml-16 grid grid-cols-1 items-center justify-center gap-6 lg:grid-cols-3 lg:gap-96">
+          <InstagramEmbed
+            url="https://www.instagram.com/p/CojXYdJpcwz/"
+            width={328}
+          />
+
+          <InstagramEmbed
+            url="https://www.instagram.com/p/CojXYdJpcwz/"
+            width={328}
+          />
+
+          <InstagramEmbed
+            url="https://www.instagram.com/p/CojXYdJpcwz/"
+            width={328}
+          />
+        </div>
       </div>
     </section>
   );

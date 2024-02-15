@@ -33,3 +33,7 @@ export type TServiceCategory = {
     serviceDescription: string;
   }[];
 };
+export type TPortfolio = {
+  id?: string;
+  portfolio: string;
+};

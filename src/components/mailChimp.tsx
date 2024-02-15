@@ -3,7 +3,7 @@ import { Image } from "@nextui-org/react";
 
 const MailChimp = () => {
   return (
-    <section className="mx-auto mt-[20px] max-w-5xl  rounded-md bg-primary p-4 lg:-mt-[680px]">
+    <section className="mx-auto mt-[20px]  rounded-md  bg-primary p-4 lg:-mt-[760px] lg:max-w-5xl">
       <div className="flex flex-col items-center gap-24 lg:flex-row">
         <div>
           <Image

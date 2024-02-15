@@ -5,10 +5,10 @@ import { SectionSubheading } from "./ui/section-subheading";
 export function Services() {
   return (
     <section className="py-10">
-      <SectionHeading>What We Offer</SectionHeading>
+      <SectionHeading>Discover Our Offerings</SectionHeading>
       <SectionSubheading>
-        Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
-        cupidatat.
+        Explore our comprehensive range of services designed to elevate your
+        business to new heights
       </SectionSubheading>
       <ServiceTabs />
     </section>

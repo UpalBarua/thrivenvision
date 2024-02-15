@@ -6,11 +6,11 @@ import { Card, CardBody, CardHeader } from "@nextui-org/react";
 export function WhyChooseUs() {
   return (
     <section className="py-10">
-      <SectionHeading>Why Choose Us?</SectionHeading>
-      <SectionSubheading>
+      <SectionHeading>What Sets Us Apart</SectionHeading>
+      {/* <SectionSubheading>
         Because Quality Video Editing Can Be Fun, Affordable, and Absolutely
         Fantastic!
-      </SectionSubheading>
+      </SectionSubheading> */}
       <div className="grid grid-cols-1 gap-4 pt-8 sm:grid-cols-2 md:pt-10 lg:grid-cols-3">
         {whyChooseUsData.map((data) => (
           <ChooseUsCard key={data.id} {...data} />
