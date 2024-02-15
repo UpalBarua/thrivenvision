@@ -2,7 +2,13 @@ import { SectionHeading } from "@/components/ui/section-heading";
 import { SectionSubheading } from "@/components/ui/section-subheading";
 import { getTestimonialsFromDB } from "@/lib/services";
 import { TTestimonial } from "@/types";
-import { Avatar, Card, CardBody, CardHeader } from "@nextui-org/react";
+import {
+  Avatar,
+  Card,
+  CardBody,
+  CardFooter,
+  CardHeader,
+} from "@nextui-org/react";
 
 const testimonials = [
   {
@@ -136,7 +142,10 @@ function TestimonialCard({
       className="group mb-4 p-2 dark:border dark:border-foreground/10 
       sm:break-inside-avoid sm:p-4 lg:p-5"
     >
-      <CardHeader className="flex items-center gap-x-4">
+      <CardBody className="leading-relaxed text-foreground/60">
+        <p>{comment}</p>
+      </CardBody>
+      <CardFooter className="flex items-center gap-x-4">
         <Avatar isBordered radius="lg" size="md" src={picture} />
         <div className="space-y-1">
           <h3 className="font-semibold leading-none">{name}</h3>
@@ -144,10 +153,7 @@ function TestimonialCard({
             {handle}
           </span>
         </div>
-      </CardHeader>
-      <CardBody className="leading-relaxed text-foreground/60">
-        <p>{comment}</p>
-      </CardBody>
+      </CardFooter>
     </Card>
   );
 }

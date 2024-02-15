@@ -32,7 +32,7 @@ export default function RootLayout({
         </Providers>
         <div
           className="fixed inset-0 z-0 h-full w-full bg-[url('/bg-gradient.png')] 
-          bg-cover bg-center opacity-80"
+          bg-cover bg-center opacity-40"
         />
       </body>
     </html>

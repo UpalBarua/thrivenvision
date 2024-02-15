@@ -47,7 +47,7 @@ function ChooseUsCard({ Icon, title, description }: ChooseUsCardProps) {
         >
           <Icon
             className="h-10 w-10 text-primary transition-colors
-            duration-1000 ease-soft-spring group-hover:text-background lg:h-12 lg:w-12"
+            duration-1000 ease-soft-spring group-hover:text-background lg:h-11 lg:w-11"
           />
         </div>
       </CardHeader>
