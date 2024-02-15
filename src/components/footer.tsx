@@ -201,16 +201,14 @@ const Footer = () => {
                 <MapPin />
                 <ul>
                   <li>Global Office</li>
-                  <li>2nd Floor College House</li>
-                  <li>Road, RUISLIP,, London</li>
+                  <li>Lethbridge ,Canada</li>
                 </ul>
               </ul>
               <ul className="flex items-center gap-4">
                 <MapPin />
                 <ul>
                   <li>Bd Office</li>
-                  <li>2nd Floor College House</li>
-                  <li>Road, RUISLIP,, London.</li>
+                  <li>Mirpur ,Dhaka</li>
                 </ul>
               </ul>
             </div>
