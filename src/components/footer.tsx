@@ -9,10 +9,11 @@ import {
   Instagram,
   Facebook,
 } from "lucide-react";
+import { Button } from "@nextui-org/react";
 
 const Footer = () => {
   return (
-    <div className="flex flex-col-reverse lg:flex-col ">
+    <div className="flex flex-col-reverse  lg:flex-col ">
       {/* <footer className=" mt-14 divide-y px-4 pt-24 shadow-2xl dark:bg-[#000a14] dark:text-gray-100 lg:mt-96">
         <div className="container mx-auto flex flex-col justify-between space-y-8 py-10 lg:flex-row lg:space-y-0">
           <div className="lg:w-1/3">
@@ -154,15 +155,19 @@ const Footer = () => {
       </footer> */}
 
       <div className="shadow-2xl dark:bg-[#000a14] dark:text-gray-100 lg:mt-96 ">
-        <footer className="  pt-24 ">
+        <footer className="pb-4 pt-28 ">
           <div className="mb-14 ml-14 grid grid-cols-1 gap-4 pt-14 lg:grid-cols-4">
             <div className=" space-y-4">
-              <h1>Don't be a stranger</h1>
-              <h1 className="text-2xl">The time is now</h1>
-              <h1>contract now</h1>
+              <h1 className="text-[20px]">Don't be a stranger</h1>
+              <h1 className="text-3xl">The time is now</h1>
+              <Button color="danger">
+                {" "}
+                <h1>Contract now</h1>
+              </Button>
             </div>
             <div>
-              <h1 className="pb-2 text-[24px] ">Services</h1>
+              <h1 className="text-[24px]">Services</h1>
+              <hr className=" w-32 pb-2"></hr>
               <ul className="space-y-4">
                 <li>Video editing</li>
                 <li>Business Ads</li>
@@ -172,7 +177,8 @@ const Footer = () => {
               </ul>
             </div>
             <div>
-              <h1 className="pb-2 text-[24px] ">Contacts</h1>
+              <h1 className=" text-[24px] ">Contacts</h1>
+              <hr className=" w-32 pb-2"></hr>
               <ul className="space-y-6">
                 <li className="flex items-center gap-4">
                   <PhoneCall /> +44 7477 216160
@@ -180,10 +186,16 @@ const Footer = () => {
                 <li className="flex items-center gap-4">
                   <Mail /> rafayat@doublerstudios.net
                 </li>
+                <li className="flex gap-4">
+                  <Facebook />
+                  <Instagram />
+                  <Linkedin />
+                </li>
               </ul>
             </div>
             <div>
-              <h1 className="pb-2 text-[24px] ">Office Address</h1>
+              <h1 className=" text-[24px] ">Office Address</h1>
+              <hr className=" w-44  pb-2"></hr>
 
               <ul className="flex items-center gap-4">
                 <MapPin />
@@ -203,24 +215,12 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          <div className="ml-14 grid  grid-cols-1 gap-6 lg:grid-cols-3  lg:gap-14">
-            <div className="item-center flex gap-3">
-              <h1>Thirnvision</h1>
-              <p>Copyright © 2023 Thirnvision Ltd.</p>
-            </div>
-            <div className="item-center flex gap-2">
-              <p>Round privacy</p>
-              <p>Privacy Policy</p>
-              <p>Terms of Service</p>
-              <p>Support</p>
-            </div>
-            <div className="item-center flex gap-3">
-              <Facebook />
-              <Instagram />
-              <Linkedin />
+          <div className="pt-6 text-center">
+            <div className="text-center">
+              <p>Thirnvision Copyright © 2023 Thirnvision Ltd.</p>
             </div>
           </div>
-          <hr className="mt-4"></hr>
+          {/* <hr className="ml-6  mt-4"></hr> */}
         </footer>
       </div>
 
