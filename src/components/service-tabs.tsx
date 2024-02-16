@@ -34,7 +34,7 @@ export function ServiceTabs() {
           key={category + i}
           title={
             <div className="flex items-center space-x-2">
-              <Icon className="h-9 w-9 hidden md:block" />
+              <Icon className="hidden h-6 w-6 md:block" />
               <span>{category}</span>
             </div>
           }

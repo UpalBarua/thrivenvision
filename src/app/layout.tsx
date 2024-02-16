@@ -1,12 +1,12 @@
+import Footer from "@/components/footer";
 import { MainNav } from "@/components/main-nav";
 import { Providers } from "@/components/providers";
 import { cn } from "@/lib/cn";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Exo } from "next/font/google";
 import "./globals.css";
-import Footer from "@/components/footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const exo = Exo({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Thrivenvision",
@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body
         className={cn(
-          inter.className,
+          exo.className,
           "relative min-h-screen text-foreground/90 antialiased",
         )}
       >

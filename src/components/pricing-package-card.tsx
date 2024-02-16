@@ -6,7 +6,6 @@ import {
   CardFooter,
   CardHeader,
   Chip,
-  Divider,
 } from "@nextui-org/react";
 import { Check } from "lucide-react";
 
@@ -14,7 +13,6 @@ export function PricingPackageCard({
   description,
   isPopular,
   name,
-  price,
   keyPoints,
 }: TPricingPackage) {
   return (
