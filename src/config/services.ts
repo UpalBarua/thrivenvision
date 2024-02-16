@@ -14,7 +14,8 @@ export const services = [
     categoryDescription:
       "Strengthen your brand identity with our expertise in Branding, Advertising Management, Development, Consulting, and Lead Generation.",
     Icon: Store,
-    categoryImage: "https://source.unsplash.com/random/",
+    categoryImage:
+      "https://images.unsplash.com/photo-1603008211659-dfa24ae98e15?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     services: [
       {
         name: "Advertising Management",
@@ -48,7 +49,8 @@ export const services = [
     category: "Digital Marketing",
     categoryDescription:
       "Boost your online presence with our Digital Marketing services. We specialize in Influencer Marketing, SEO (On-Page, Off-Page, Keyword Research, Technical SEO, Competitor Analysis), Social Media Marketing(Management, Paid Promotion, Content Strategy), and Video Marketing (Promotion, SEO, YouTube Management)",
-    categoryImage: "https://source.unsplash.com/random/",
+    categoryImage:
+      "https://images.unsplash.com/photo-1626785774625-ddcddc3445e9?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     Icon: BarChartBig,
     services: [
       {
@@ -78,7 +80,8 @@ export const services = [
     category: "Graphics Design",
     categoryDescription:
       "Make an impact with our creative design solutions. We offer Logo Design, Website Design, Image Editing, T-Shirt Design, 3D Modeling, Social Media Graphics, and Vehicle Wraps.",
-    categoryImage: "https://source.unsplash.com/random/",
+    categoryImage:
+      "https://images.unsplash.com/photo-1627843240043-aa499ed215e7?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     Icon: Palette,
     services: [
       {
@@ -133,7 +136,8 @@ export const services = [
     category: "Programming and Tech ",
     categoryDescription:
       "Empower your digital presence with our Programming & Tech expertise. We offer Website Development in platforms like WordPress, Shopify, and Wix, as well as Android App Development services",
-    categoryImage: "https://source.unsplash.com/random/",
+    categoryImage:
+      "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=1412&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     Icon: TerminalSquare,
     services: [
       {
@@ -153,7 +157,8 @@ export const services = [
     category: "Video and Animation",
     categoryDescription:
       "Tell your story through captivating visuals. Our Video & Animation services include Video Editing for ads, YouTube content, corporate videos, family and travel memories, weddings, and explainer videos.We also create Video Ads & Commercials tailored for various platforms like Facebook, Instagram, TikTok, YouTube, and more.Explore our Animated Explainers(2D, Whiteboard, 3D, Isometric), Social Media Videos, Logo Animation, and 3D Product Animation",
-    categoryImage: "https://source.unsplash.com/random/",
+    categoryImage:
+      "https://images.unsplash.com/photo-1547027072-332f09bd6bb3?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     Icon: Clapperboard,
     services: [
       {
@@ -193,7 +198,8 @@ export const services = [
     category: "Writing and Translation ",
     categoryDescription:
       "Communicate effectively with our Writing & Translation services. We offer Articles & Blog Posts, including SEO Writing, Lifestyle Blogs, Promotional Articles, and Bulk Articles.Additionally, we provide Product Descriptions, Website Content, Resume Writing, and Scriptwriting to enhance your written content",
-    categoryImage: "https://source.unsplash.com/random/",
+    categoryImage:
+      "https://images.unsplash.com/photo-1537432376769-00f5c2f4c8d2?q=80&w=1450&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     Icon: Languages,
     services: [
       {

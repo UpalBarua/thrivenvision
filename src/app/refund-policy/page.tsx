@@ -12,18 +12,19 @@ const RefundPolicy = () => {
         the service, we offer the following refund policy:
       </p>
       <p className="pb-4 text-[18px]">
-        <span className=" font-semibold">Full refund:</span> If you cancel the
-        service before we have started working on your project, we will issue a
-        full refund of the amount paid.
+        <span className="font-semibold text-pink-500">Full refund:</span> If you
+        cancel the service before we have started working on your project, we
+        will issue a full refund of the amount paid.
       </p>
       <p className="pb-4 text-[18px]">
-        <span className=" font-semibold">Partial refund:</span> If we have
-        already started working on your project but have not completed it, we
-        will issue a partial refund based on the work completed.
+        <span className=" font-semibold text-pink-500">Partial refund:</span> If
+        we have already started working on your project but have not completed
+        it, we will issue a partial refund based on the work completed.
       </p>
       <p className="pb-4 text-[18px]">
-        <span className=" font-semibold">No refund:</span> If we have completed
-        the project and delivered it to you, no refund will be issued.
+        <span className=" font-semibold text-pink-500">No refund:</span> If we
+        have completed the project and delivered it to you, no refund will be
+        issued.
       </p>
 
       <p className="pb-4 text-[18px]">

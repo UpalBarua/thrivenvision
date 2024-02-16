@@ -1,4 +1,11 @@
 "use client";
+import {
+  Dropdown,
+  DropdownTrigger,
+  DropdownMenu,
+  DropdownItem,
+  Button,
+} from "@nextui-org/react";
 
 import { navLinks } from "@/config";
 import {
@@ -34,14 +41,42 @@ export function MainNav() {
       <Link href="/">
         <Image src="/named-logo.png" alt="logo" height={80} width={160} />
       </Link>
+
       <NavbarContent className="hidden gap-6 sm:flex" justify="end">
         {navLinks.map(({ label, href }) => (
           <NavbarItem key={href} isActive={pathname.startsWith(href)}>
-            <Link color="foreground" href={href}>
-              {label}
-            </Link>
+            <div>
+              <Link color="foreground" href={href}>
+                {label}
+              </Link>
+            </div>
           </NavbarItem>
         ))}
+        <div>
+          <Dropdown>
+            <DropdownTrigger>
+              {/* <Button>legal</Button> */}
+              <h1>Legal</h1>
+            </DropdownTrigger>
+            <DropdownMenu aria-label="Static Actions">
+              <DropdownItem key="new">
+                <Link className="text-white" href="refund-policy">
+                  Refund policy
+                </Link>
+              </DropdownItem>
+              <DropdownItem key="copy">
+                <Link className="text-white" href="privacy-policy">
+                  Privacy policy
+                </Link>
+              </DropdownItem>
+              <DropdownItem key="edit">
+                <Link className="text-white" href="teams-of-service">
+                  Teams Of Service
+                </Link>
+              </DropdownItem>
+            </DropdownMenu>
+          </Dropdown>
+        </div>
         <ThemeSwitcher />
       </NavbarContent>
       <NavbarMenuToggle
