@@ -1,166 +1,230 @@
-import { BadgePlus } from "lucide-react";
+import {
+  BarChartBig,
+  Clapperboard,
+  Languages,
+  Palette,
+  Store,
+  TerminalSquare,
+} from "lucide-react";
 
 export const services = [
   {
+    id: "771846b14a024",
     category: "Brand Building",
     categoryDescription:
       "Strengthen your brand identity with our expertise in Branding, Advertising Management, Development, Consulting, and Lead Generation.",
-    Icon: BadgePlus,
+    Icon: Store,
+    categoryImage: "https://source.unsplash.com/random/",
     services: [
       {
         name: "Advertising Management",
         serviceDescription:
-          "Optimize youManagement expertise.We maximize your ROI across various advertising platforms.",
+          "Optimize your ad campaigns with our Advertising Management expertise.We maximize your ROI across various advertising platforms.",
       },
       {
-        name: "Advertising Management",
+        name: "Branding",
         serviceDescription:
-          "Optimize youwith our Advertising Management expertise.We maximize your ROI across various advertising platforms.",
+          "Create a lasting brand identity with our Branding services. We develop logos, visual elements, and messaging that set you apart from the competition",
       },
       {
-        name: "Advertising Management",
+        name: "Brand Development",
         serviceDescription:
-          "Optimize your Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat. ad campaigns with our Advertising Management expertise.We maximize your ROI across various advertising platforms.",
+          "Grow your brand's influence and reputation through strategic Brand Development. We'll help you define your brand's unique story and purpose",
+      },
+      {
+        name: "Business Consulting",
+        serviceDescription:
+          "Achieve your business goals with our expert Business Consulting. We offer valuable insights and strategies tailored to your industry",
+      },
+      {
+        name: "Lead Generation:",
+        serviceDescription:
+          "Drive quality leads to your business with our Lead Generation services. We implement targeted campaigns to boost your customer base",
       },
     ],
   },
   {
-    category: "Brand Building",
+    id: "cbf5e281a52bc",
+    category: "Digital Marketing",
     categoryDescription:
-      "Strengthen your brand identity with our expertise in Branding, Advertising Management, Development, Consulting, and Lealorem d Generation.",
-    Icon: BadgePlus,
+      "Boost your online presence with our Digital Marketing services. We specialize in Influencer Marketing, SEO (On-Page, Off-Page, Keyword Research, Technical SEO, Competitor Analysis), Social Media Marketing(Management, Paid Promotion, Content Strategy), and Video Marketing (Promotion, SEO, YouTube Management)",
+    categoryImage: "https://source.unsplash.com/random/",
+    Icon: BarChartBig,
     services: [
       {
-        name: "Advertising Management",
+        name: "influencer Marketing",
         serviceDescription:
-          "Optimize your ad campaigns with our Advertising Management expertise.We maximize your ROI across latforms.",
+          "Amplify your brand's reach with Influencer Marketing. Collaborate with industry influencer to connect with your target audience effectively",
       },
       {
-        name: "Advertising Management",
+        name: "SEO",
         serviceDescription:
-          "Optimize your ad campaigns with our Advertising Management expertise.We maximize your ROI across various advertising platforms.",
+          "Elevate your online visibility with our SEO services, covering Off-Page SEO, On-Page SEO, Keyword Research, Technical SEO, Competitor Analysis, and comprehensive Full SEO Packages",
       },
       {
-        name: "Advertising Management",
+        name: "Social Media Marketing",
         serviceDescription:
-          "Optimize your ad campaigns with our Advertising Management expertise.We maximize your ROI across Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat. various advertising platforms.",
+          "Harness the power of social media with our Social Media Marketing services. We provide Social Media Management, Paid Social Media campaigns, Organic Social Promotions, Profile Setup & Integration, engaging Social Content, and strategic Social Media Strategy",
       },
       {
-        name: "Advertising Management",
+        name: "Video Marketing",
         serviceDescription:
-          "Optimize your ad campaigns with our Advertising Management expertise.We  ",
+          " Engage your audience through video with our Video Marketing services. We offer Video Promotion & Distribution, Video SEO, YouTube Channel Management, and in-depth Consultation & Audience Research.",
       },
     ],
   },
   {
-    category: "Brand Building",
+    id: "50c04fd85b6b5",
+    category: "Graphics Design",
     categoryDescription:
-      "Strengthen your brand identity with our expertise in Branding, Advertising Management, Development, Consulting, and Lead Generation.",
-    Icon: BadgePlus,
+      "Make an impact with our creative design solutions. We offer Logo Design, Website Design, Image Editing, T-Shirt Design, 3D Modeling, Social Media Graphics, and Vehicle Wraps.",
+    categoryImage: "https://source.unsplash.com/random/",
+    Icon: Palette,
     services: [
       {
-        name: "Advertising Management",
+        name: "3D Modeling & Rendering",
         serviceDescription:
-          "Optimize your ad campaigns with our Advertising Management expertise.We maximize your ROI across various advertising platforms.",
+          "Bring your ideas to life with our 3D Modeling & Rendering services. Visualize products and concepts in stunning 3D detail.",
       },
       {
-        name: "Advertising Management",
+        name: "Illustration",
         serviceDescription:
-          "Optimize your ad campaigns with our Advertising Management expertise.We maximize your ROI across various advertising platforms.",
+          "Enhance your visual content with custom Illustrations that add a unique touch to your projects",
       },
       {
-        name: "Advertising Management",
+        name: "Image Editing",
         serviceDescription:
-          "Optimize your ad campaigns with our Advertising Management expertise.We maximize your ROI across various advertising platforms.",
+          " Perfect your images with our Image Editing services, including Product Image Editing and Mockups for eCommerce and more.",
       },
       {
-        name: "Advertising Management",
+        name: "infographics",
         serviceDescription:
-          "Optimize your ad campaigns with our Advertising Management expertise.We maximize your ROI across various advertising platforms.",
+          " Convey complex information visually with our Infographic design. We transform data into engaging and easy-to-understand graphics",
+      },
+      {
+        name: "Logo Design",
+        serviceDescription:
+          "Craft a memorable brand image with our Logo Design services. Our logos are designed to leave a lasting impression.",
+      },
+      {
+        name: "Social Media Design",
+        serviceDescription:
+          "Enhance your social media presence with eye- catching designs. We create engaging Social Posts & Banners, Thumbnails Headers and Covers",
+      },
+      {
+        name: "T-Shirts & Merchandise",
+        serviceDescription:
+          " Boost your merch sales with custom T-Shirt, Hoodie, Sticker, Jersey, and Sportswear designs that resonate with your audience",
+      },
+      {
+        name: "Vehicle Wrap Design",
+        serviceDescription:
+          "Make a bold statement on the road with our Vehicle Wrap Design. Transform your vehicle into a moving advertisement that turn heads",
+      },
+      {
+        name: "Website Design",
+        serviceDescription:
+          "Create a stunning online presence with our Website Design service. We build user-friendly, visually appealing websites.",
       },
     ],
   },
   {
-    category: "Brand Building",
+    id: "ce36fcaa0638f",
+    category: "Programming and Tech ",
     categoryDescription:
-      "Strengthen your brand identity with our expertise in Branding, Advertising Management, Development, Consulting, and Lead Generation.",
-    Icon: BadgePlus,
+      "Empower your digital presence with our Programming & Tech expertise. We offer Website Development in platforms like WordPress, Shopify, and Wix, as well as Android App Development services",
+    categoryImage: "https://source.unsplash.com/random/",
+    Icon: TerminalSquare,
     services: [
       {
-        name: "Advertising Management",
+        name: "Android App Development",
         serviceDescription:
-          "Optimize your ad campaigns with our Advertising Management expertise.We maximize your ROI across various advertising platforms.",
+          "Turn your ideas into reality with our Android App Development service. We create innovative, user-friendly apps to meet your specific requirements",
       },
       {
-        name: "Advertising Management",
+        name: "Website Development",
         serviceDescription:
-          "Optimize your ad campaigns with our Advertising Management expertise.We maximize your ROI across various advertising platforms.",
-      },
-      {
-        name: "Advertising Management",
-        serviceDescription:
-          "Optimize your ad campaigns with our Advertising Management expertise.We maximize your ROI across various advertising platforms.",
-      },
-      {
-        name: "Advertising Management",
-        serviceDescription:
-          "Optimize your ad campaigns with our Advertising Management expertise.We maximize your ROI across various advertising platforms.",
+          "We specialize in crafting exceptional websites tailored to your needs, including WordPress, Shopify, and Wix development. Your online presence is in expert hands",
       },
     ],
   },
   {
-    category: "Brand Building",
+    id: "3d62ac0e9b12b",
+    category: "Video and Animation",
     categoryDescription:
-      "Strengthen your brand identity with our expertise in Branding, Advertising Management, Development, Consulting, and Lead Generation.",
-    Icon: BadgePlus,
+      "Tell your story through captivating visuals. Our Video & Animation services include Video Editing for ads, YouTube content, corporate videos, family and travel memories, weddings, and explainer videos.We also create Video Ads & Commercials tailored for various platforms like Facebook, Instagram, TikTok, YouTube, and more.Explore our Animated Explainers(2D, Whiteboard, 3D, Isometric), Social Media Videos, Logo Animation, and 3D Product Animation",
+    categoryImage: "https://source.unsplash.com/random/",
+    Icon: Clapperboard,
     services: [
       {
-        name: "Advertising Management",
+        name: "3D Product Animation",
         serviceDescription:
-          "Optimize your ad campaigns with our Advertising Management expertise.We maximize your ROI across various advertising platforms.",
+          "Showcase your products like never before with immersive 3D animations",
       },
       {
-        name: "Advertising Management",
+        name: "Animated Explainers",
         serviceDescription:
-          "Optimize your ad campaigns with our Advertising Management expertise.We maximize your ROI across various advertising platforms.",
+          "Simplify complex ideas with our Animated Explainers. Choose from 2D, Whiteboard, 3D, or Isometric animations to convey your message effectively.",
       },
       {
-        name: "Advertising Management",
+        name: "Logo Animation:",
         serviceDescription:
-          "Optimize your ad campaigns with our Advertising Management expertise.We maximize your ROI across various advertising platforms.",
+          "Make your logo come to life! Our Logo Animation service adds a dynamic touch to your brand identity.",
       },
       {
-        name: "Advertising Management",
+        name: "Video Ads & Commercials:",
         serviceDescription:
-          "Optimize your ad campaigns with our Advertising Management expertise.We maximize your ROI across various advertising platforms.",
+          " Boost your brand with targeted video ads. We create attention-grabbing content for Facebook, Instagram, TikTok, YouTube, Pinterest, LinkedIn, Twitter, and Snapchat",
+      },
+      {
+        name: "Video Editing",
+        serviceDescription:
+          " Transform your raw footage into captivating videos. Our Video Editing service covers ads, YouTube content, corporate videos, family memories, weddings, and engaging explainer videos",
+      },
+      {
+        name: "Social Media Videos",
+        serviceDescription:
+          " Elevate your social media presence with visually stunning videos tailored for various platforms.",
       },
     ],
   },
   {
-    category: "Brand Building",
+    id: "d473723a10fca",
+    category: "Writing and Translation ",
     categoryDescription:
-      "Strengthen your brand identity with our expertise in Branding, Advertising Management, Development, Consulting, and Lead Generation.",
-    Icon: BadgePlus,
+      "Communicate effectively with our Writing & Translation services. We offer Articles & Blog Posts, including SEO Writing, Lifestyle Blogs, Promotional Articles, and Bulk Articles.Additionally, we provide Product Descriptions, Website Content, Resume Writing, and Scriptwriting to enhance your written content",
+    categoryImage: "https://source.unsplash.com/random/",
+    Icon: Languages,
     services: [
       {
-        name: "Advertising Management",
+        name: "Articles & Blog Posts",
         serviceDescription:
-          "Optimize your ad campaigns with our Advertising Management expertise.We maximize your ROI across various advertising platforms.",
+          "Enhance your online presence with our Article & Blog Post writing. From SEO-rich content to lifestyle blogs, we create engaging articles that resonate with your audience",
       },
       {
-        name: "Advertising Management",
+        name: "Product Descriptions",
         serviceDescription:
-          "Optimize your ad campaigns with our Advertising Management expertise.We maximize your ROI across various advertising platforms.",
+          "Make your products stand out with compelling descriptions that drive sales",
       },
       {
-        name: "Advertising Management",
+        name: "Website Content:",
         serviceDescription:
-          "Optimize your ad campaigns with our Advertising Management expertise.We maximize your ROI across various advertising platforms.",
+          "Craft a compelling online narrative with our Website Content writing. We'll ensure your website effectively communicates your brand.",
       },
       {
-        name: "Advertising Management",
+        name: "Resume Writing",
         serviceDescription:
-          "Optimize your ad campaigns with our Advertising Management expertise.We maximize your ROI across various advertising platforms.",
+          "Land your dream job with a professionally crafted resume that highlights your strengths and achievements.",
+      },
+      {
+        name: "Video Editing",
+        serviceDescription:
+          " Transform your raw footage into captivating videos. Our Video Editing service covers ads, YouTube content, corporate videos, family memories, weddings, and engaging explainer videos",
+      },
+      {
+        name: "Scriptwriting",
+        serviceDescription:
+          " Bring your ideas to life on screen with our expert scriptwriting service. We create scripts that captivate and engage your audience.",
       },
     ],
   },

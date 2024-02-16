@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 dependencies:
   '@hookform/resolvers':
     specifier: ^3.3.4
@@ -34,9 +38,6 @@ dependencies:
   react-hook-form:
     specifier: ^7.50.0
     version: 7.50.0(react@18.2.0)
-  react-instagram-embed:
-    specifier: ^3.0.0
-    version: 3.0.0(react-dom@18.2.0)(react@18.2.0)
   react-social-media-embed:
     specifier: ^2.5.5
     version: 2.5.5(react-dom@18.2.0)(react@18.2.0)
@@ -5245,17 +5246,6 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
     dev: false
 
-  /react-instagram-embed@3.0.0(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-9X/t1J2YXj76iYTnCQx7SQ7DwVNxQOMpE0mnEDgKM9c6z1m7THDmk+kxhdGOrxULSjSZMAwxSxwgRMgT9jEqng==}
-    peerDependencies:
-      react: ^17.0.0 || ^16.0.0 || ^15.0.0 || ~0.14.0
-      react-dom: ^17.0.0 || ^16.0.0 || ^15.0.0 || ~0.14.0
-    dependencies:
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-      type-fest: 1.4.0
-    dev: false
-
   /react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
 
@@ -5817,11 +5807,6 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /type-fest@1.4.0:
-    resolution: {integrity: sha512-yGSza74xk0UG8k+pLh5oeoYirvIiWo5t0/o3zHHAO2tRDiZcxWP7fywNlXhqb6/r6sWvwi+RsyQMWhVLe4BVuA==}
-    engines: {node: '>=10'}
-    dev: false
-
   /typed-array-buffer@1.0.0:
     resolution: {integrity: sha512-Y8KTSIglk9OZEr8zywiIHG/kmQ7KWyjseXs1CbSo8vC42w7hg2HgYTxSWwP0+is7bWDc1H+Fo026CpHFwm8tkw==}
     engines: {node: '>= 0.4'}
@@ -6114,7 +6099,3 @@ packages:
   /zod@3.22.4:
     resolution: {integrity: sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==}
     dev: false
-
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
