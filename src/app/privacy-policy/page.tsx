@@ -47,16 +47,18 @@ const PrivacyPolicy = () => {
   ];
   return (
     <section className="mx-auto mt-14 max-w-full lg:max-w-6xl">
-      <h1 className="pb-6 text-3xl font-bold">Privacy Policy</h1>
-      <p className="pb-4 text-[18px]">
-        At DOUBLE R STUDIOS, we take your privacy seriously. This Privacy Policy
-        outlines how we collect, use, and protect the personal information you
-        provide to us through our website.
-      </p>
+      <div className="p-4 lg:p-0">
+        <h1 className="pb-6 text-3xl font-bold">Privacy Policy</h1>
+        <p className="pb-4 text-[18px]">
+          At DOUBLE R STUDIOS, we take your privacy seriously. This Privacy
+          Policy outlines how we collect, use, and protect the personal
+          information you provide to us through our website.
+        </p>
+      </div>
       <div>
         {allPrivacy?.map((privacy) => (
           <div className="pb-4" key={privacy?.id}>
-            <p className="text-[18px]">
+            <p className="p-4 text-[18px] lg:p-0">
               <span className="font-semibold text-pink-500">
                 {privacy?.privacy}
               </span>

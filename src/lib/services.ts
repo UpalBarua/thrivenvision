@@ -36,7 +36,7 @@ export const getPricingPackagesFromDB = async () => {
   return pricingPackages;
 };
 
-export const addNewPicture = async (picture: Omit<TPicture, "id">) => {
+export const addNewPCompany = async (picture: Omit<TPicture, "id">) => {
   await addDoc(collection(db, "company"), picture);
 };
 
