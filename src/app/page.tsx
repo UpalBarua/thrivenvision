@@ -1,11 +1,9 @@
+import { Hero } from "@/components/hero";
 import Portfolio from "@/components/portfolio";
 import { PricingPackages } from "@/components/pricing-packages";
 import { Services } from "@/components/services";
-import { Testimonials } from "@/components/testimonials";
 import TrustedCompany from "@/components/trustedCompany";
 import { WhyChooseUs } from "@/components/why-choose-us";
-import { PortfolioForm } from "@/components/portfolio-form";
-import { Hero } from "@/components/hero";
 
 export default function HomePage() {
   return (
@@ -16,8 +14,6 @@ export default function HomePage() {
       <WhyChooseUs />
       <TrustedCompany />
       <Portfolio />
-      <PortfolioForm />
-      <Testimonials />
     </main>
   );
 }

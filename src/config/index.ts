@@ -11,7 +11,7 @@ import {
 export const navLinks = [
   {
     label: "About Us",
-    href: "/about",
+    href: "/about-us",
   },
   {
     label: "Contact Us",
