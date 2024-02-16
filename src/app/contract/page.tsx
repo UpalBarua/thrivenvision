@@ -1,18 +1,20 @@
 "use client";
 import React from "react";
 import { Facebook, Instagram, Linkedin } from "lucide-react";
+import { LucideIcon } from "lucide-react";
 import { Button, Input, Textarea } from "@nextui-org/react";
 
 const contract = () => {
-  const iconSize = 48;
-  const applyGradientBorder = (icon) => (
-    <div className="relative rounded-full  p-1">
-      {React.cloneElement(icon, {
-        size: iconSize,
-        className: `absolute inset-0 rounded-full bg-gradient-to-r from-purple-600 to-pink-600`,
-      })}
-    </div>
-  );
+  // const iconSize = 48;
+
+  // const applyGradientBorder = (icon: LucideIcon) => (
+  //   <div className="relative rounded-full  p-1">
+  //     {React.cloneElement(icon, {
+  //       size: iconSize,
+  //       className: `absolute inset-0 rounded-full bg-gradient-to-r from-purple-600 to-pink-600`,
+  //     })}
+  //   </div>
+  // );
 
   return (
     <section className="mx-auto mt-24 max-w-5xl">
