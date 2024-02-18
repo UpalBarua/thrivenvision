@@ -1,4 +1,4 @@
-import { db } from "@/firebase/firebase.config";
+import { db, storage } from "@/firebase/firebase.config";
 import type {
   TPicture,
   TPortfolio,
@@ -9,10 +9,14 @@ import type {
 import {
   addDoc,
   collection,
+  deleteDoc,
+  doc,
+  getDoc,
   getDocs,
   orderBy,
   query,
 } from "firebase/firestore";
+import { deleteObject, ref } from "firebase/storage";
 
 export const addNewPricingPackageToDB = async (
   newPricingPackage: TPricingPackage,
@@ -39,6 +43,26 @@ export const getPricingPackagesFromDB = async () => {
 export const addNewPCompany = async (picture: Omit<TPicture, "id">) => {
   await addDoc(collection(db, "company"), picture);
 };
+export const getAllTrustedCompany = async () => {
+  let company: TPicture[] = [];
+
+  const querySnapshot = await getDocs(collection(db, "company"));
+
+  querySnapshot.forEach((doc) => {
+    company.push({ id: doc.id, ...doc.data() } as TPicture);
+  });
+
+  return company;
+};
+export const deleteCompanyById = async (id: string) => {
+  const querySnapshot = await getDoc(doc(db, "company", id));
+  const document = querySnapshot.data();
+
+  const docRef = ref(storage, document?.imageUrl);
+  await deleteObject(docRef);
+
+  await deleteDoc(doc(db, "company", id));
+};
 
 export const addNewTestimonialToDB = async (newTestimonial: TTestimonial) => {
   return await addDoc(collection(db, "testimonials"), newTestimonial);
@@ -62,4 +86,15 @@ export const getTestimonialsFromDB = async () => {
 
 export const addNewPortfolioToDB = async (newPortfolio: TPortfolio) => {
   return await addDoc(collection(db, "portfolios"), newPortfolio);
+};
+export const getAllPortfolio = async () => {
+  let portfolio: TPortfolio[] = [];
+
+  const querySnapshot = await getDocs(collection(db, "portfolio"));
+
+  querySnapshot.forEach((doc) => {
+    portfolio.push({ id: doc.id, ...doc.data() } as TPortfolio);
+  });
+
+  return portfolio;
 };
