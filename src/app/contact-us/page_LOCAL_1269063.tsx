@@ -2,10 +2,8 @@
 "use client";
 import React, { useState } from "react";
 import { Facebook, Instagram, Linkedin } from "lucide-react";
-import { LucideIcon } from "lucide-react";
 import { Button, Input, Textarea } from "@nextui-org/react";
 import ContractUsForm from "@/components/contract-us-form";
-
 const contact = () => {
   const iconSize = 48;
   // const applyGradientBorder = (icon) => (

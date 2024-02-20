@@ -1,14 +1,13 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import { Facebook, Instagram, Linkedin } from "lucide-react";
 import { LucideIcon } from "lucide-react";
 import { Button, Input, Textarea } from "@nextui-org/react";
-import ContractUsForm from "@/components/contract-us-form";
 
-const contact = () => {
-  const iconSize = 48;
-  // const applyGradientBorder = (icon) => (
+const contract = () => {
+  // const iconSize = 48;
+
+  // const applyGradientBorder = (icon: LucideIcon) => (
   //   <div className="relative rounded-full  p-1">
   //     {React.cloneElement(icon, {
   //       size: iconSize,
@@ -52,8 +51,7 @@ const contact = () => {
             </div>
           </div>
         </div>
-
-        {/* <div className="m-8 flex flex-1 flex-col gap-6 rounded-md bg-gray-700 p-8 lg:p-8">
+        <div className="m-8 flex flex-1 flex-col gap-6 rounded-md bg-gray-700 p-8 lg:p-8">
           <Input className="max-w-xl" type="email" label="Name" />
           <Input className="max-w-xl" type="email" label="Email" />
           <Input className="max-w-xl" type="email" label="Nobile" />
@@ -66,13 +64,10 @@ const contact = () => {
           <Button className=" max-w-full bg-gray-500 px-8 py-6 text-white">
             Submit
           </Button>
-        </div> */}
-        <div className="flex-1 rounded-md bg-gray-700 p-8">
-          <ContractUsForm></ContractUsForm>
         </div>
       </div>
     </section>
   );
 };
 
-export default contact;
+export default contract;

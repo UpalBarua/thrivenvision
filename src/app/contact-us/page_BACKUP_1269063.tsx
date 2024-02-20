@@ -4,11 +4,18 @@ import React, { useState } from "react";
 import { Facebook, Instagram, Linkedin } from "lucide-react";
 import { LucideIcon } from "lucide-react";
 import { Button, Input, Textarea } from "@nextui-org/react";
+<<<<<<< HEAD:src/app/contact-us/page.tsx
 import ContractUsForm from "@/components/contract-us-form";
-
 const contact = () => {
   const iconSize = 48;
   // const applyGradientBorder = (icon) => (
+=======
+
+const contract = () => {
+  // const iconSize = 48;
+
+  // const applyGradientBorder = (icon: LucideIcon) => (
+>>>>>>> main:src/app/contract/page.tsx
   //   <div className="relative rounded-full  p-1">
   //     {React.cloneElement(icon, {
   //       size: iconSize,

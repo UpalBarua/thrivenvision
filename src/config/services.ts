@@ -133,7 +133,7 @@ export const services = [
   },
   {
     id: "ce36fcaa0638f",
-    category: "Programming and Tech ",
+    category: "Programming & Tech ",
     categoryDescription:
       "Empower your digital presence with our Programming & Tech expertise. We offer Website Development in platforms like WordPress, Shopify, and Wix, as well as Android App Development services",
     categoryImage:
@@ -154,7 +154,7 @@ export const services = [
   },
   {
     id: "3d62ac0e9b12b",
-    category: "Video and Animation",
+    category: "Video & Animation",
     categoryDescription:
       "Tell your story through captivating visuals. Our Video & Animation services include Video Editing for ads, YouTube content, corporate videos, family and travel memories, weddings, and explainer videos.We also create Video Ads & Commercials tailored for various platforms like Facebook, Instagram, TikTok, YouTube, and more.Explore our Animated Explainers(2D, Whiteboard, 3D, Isometric), Social Media Videos, Logo Animation, and 3D Product Animation",
     categoryImage:
@@ -195,7 +195,7 @@ export const services = [
   },
   {
     id: "d473723a10fca",
-    category: "Writing and Translation ",
+    category: "Writing & Translation ",
     categoryDescription:
       "Communicate effectively with our Writing & Translation services. We offer Articles & Blog Posts, including SEO Writing, Lifestyle Blogs, Promotional Articles, and Bulk Articles.Additionally, we provide Product Descriptions, Website Content, Resume Writing, and Scriptwriting to enhance your written content",
     categoryImage:
