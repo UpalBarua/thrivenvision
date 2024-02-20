@@ -56,7 +56,8 @@ export function HeroDetails() {
             <Image
               className="rounded-2xl object-cover object-center shadow-md"
               alt="NextUI hero Image with delay"
-              src={categoryImage}
+              src={'/test.png'}
+              // src={categoryImage}
               fill
             />
             <span className="absolute inset-0 text-2xl font-bold text-red-500">
