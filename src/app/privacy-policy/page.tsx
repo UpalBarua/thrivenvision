@@ -6,43 +6,37 @@ const PrivacyPolicy = () => {
       id: 1,
       privacy: "Information Collection",
       description:
-        "We collect personal information that you voluntarily provide to us, such as your name, email address, phone number, and other contact information. We also collect information about your device, browser, and IP address when you access our website.",
+        "We gather your personal details voluntarily given through forms, email, and direct contact, including name, email, phone number, and other information. We also automatically collect data like your IP address, browser type, and browsing activity when you visit our website.",
     },
     {
       id: 2,
       privacy: "Information Use",
       description:
-        "We use your personal information to provide you with our services, respond to your inquiries, and improve our website. We may also use your information to send you marketing materials and promotional offers, but only if you have given us your consent to do so.",
+        "The personal information we collect is primarily used to offer and improve our services, to respond to your inquiries and requests, and to provide you with information and updates about our services. With your consent, we may also use your contact information to send you marketing communications and promotional offers.",
     },
     {
-      id: 2,
+      id: 3,
       privacy: "Information Protection",
       description:
-        "We take appropriate measures to protect your personal information from unauthorized access, disclosure, or destruction. We use industry-standard security protocols and techniques to protect your personal information, including SSL encryption.",
+        "We employ various security measures to protect your personal information from unauthorized access, use, or disclosure. This includes the use of industry standard encryption technologies and maintaining physical, electronic, and procedural safeguards in line with applicable laws and standards.",
     },
     {
-      id: 2,
+      id: 4,
       privacy: "Information Sharing",
       description:
-        "We do not sell, rent, or trade your personal information to third parties. We may share your personal information with our service providers or partners, but only to the extent necessary to provide you with our services.",
+        "We do not sell, rent, or trade your personal information. We may share it with trusted partners to help run our website and business, provided they keep it confidential. Your information may also be disclosed if necessary to comply with the law, enforce our policies, or protect rights and safety",
     },
     {
-      id: 2,
+      id: 5,
       privacy: "Cookies",
       description:
-        "We use cookies to enhance your user experience and to collect information about your usage of our website. You can disable cookies in your browser settings if you prefer.",
+        "Our website uses cookies to improve your experience and analyze site traffic. You can disable cookies in your browser settings, but this may affect site functionality.",
     },
     {
-      id: 2,
+      id: 6,
       privacy: "Updates",
       description:
-        "We may update this Privacy Policy from time to time. We encourage you to review this policy periodically to stay informed about how we are protecting your personal information.",
-    },
-    {
-      id: 2,
-      privacy: "Contact Us",
-      description:
-        "If you have any questions about this Privacy Policy or our practices regarding your personal information, please contact us at rafayat@doublestudios.net.",
+        "We reserve the right to update this Privacy Policy at any time. When we do, we will post a notification on our website. We encourage you to periodically review this page for the latest information on our privacy practices.",
     },
   ];
   return (
@@ -69,6 +63,12 @@ const PrivacyPolicy = () => {
           </div>
         ))}
       </div>
+      <p>
+        Thank you for choosing{" "}
+        <span className="pt-6 text-[18px] font-semibold">thrivenvision</span>.
+        Your privacy is important to us, and we are committed to protecting the
+        personal information you share with us
+      </p>
     </section>
   );
 };
