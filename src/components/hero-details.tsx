@@ -60,7 +60,7 @@ export function HeroDetails() {
               // src={categoryImage}
               fill
             />
-            <span className="absolute inset-0 text-2xl font-bold text-red-500">
+            <span className="absolute inset-0  text-2xl font-bold text-red-500">
               {category}
             </span>
           </motion.div>

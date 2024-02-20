@@ -160,7 +160,7 @@ const Footer = () => {
             <div className=" space-y-4">
               <h1 className="text-[20px]">Don't be a stranger</h1>
               <h1 className="text-3xl">The time is now</h1>
-              <Button color="danger">
+              <Button color="primary">
                 {" "}
                 <h1>Contract now</h1>
               </Button>

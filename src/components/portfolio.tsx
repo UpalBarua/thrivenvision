@@ -23,7 +23,7 @@ const Portfolio = () => {
   //   dark:bg-[#9F8082]
   //   bg-purple-500
   return (
-    <section className="mt-24 rounded-md bg-purple-900 px-4 py-8  ">
+    <section className="mt-32 rounded-md bg-purple-600 px-4 py-8  dark:bg-[#263d50]  ">
       <div className="pb-14 pt-8 text-center">
         <h1 className="pb-6 text-5xl font-bold text-white dark:text-white">
           Portfolio Spotlight: Witness Our Impact
@@ -43,7 +43,7 @@ const Portfolio = () => {
       </div>
       <div className="flex justify-center pt-14">
         <Link href="all-portfolio">
-          <Button color="danger" className="text-[20px] font-bold">
+          <Button color="primary" className="text-[20px] font-bold">
             All Portfolio
           </Button>
         </Link>

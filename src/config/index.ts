@@ -1,3 +1,4 @@
+import { DropdownItemProps, DropdownTriggerProps } from "@nextui-org/react";
 import {
   BadgePlus,
   Handshake,
@@ -15,11 +16,7 @@ export const navLinks = [
   },
   {
     label: "Contact Us",
-    href: "/contact",
-  },
-  {
-    label: "Legal",
-    href: "/legal",
+    href: "/contact-us",
   },
 ] as const;
 

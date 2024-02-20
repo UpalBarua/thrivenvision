@@ -4,6 +4,8 @@ import { PricingPackages } from "@/components/pricing-packages";
 import { Services } from "@/components/services";
 import TrustedCompany from "@/components/trustedCompany";
 import { WhyChooseUs } from "@/components/why-choose-us";
+import AdminAllTrustedCompany from "@/dashboard/Admin-all-trustedComapny";
+import AddTrustedCompany from "@/dashboard/addTrustCompany";
 
 export default function HomePage() {
   return (
@@ -14,6 +16,8 @@ export default function HomePage() {
       <WhyChooseUs />
       <TrustedCompany />
       <Portfolio />
+      {/* <AddTrustedCompany /> */}
+      {/* <AdminAllTrustedCompany /> */}
     </main>
   );
 }

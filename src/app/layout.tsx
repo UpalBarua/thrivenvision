@@ -5,11 +5,18 @@ import { cn } from "@/lib/cn";
 import type { Metadata } from "next";
 import { Exo } from "next/font/google";
 import "./globals.css";
+import {
+  Button,
+  Dropdown,
+  DropdownItem,
+  DropdownMenu,
+  DropdownTrigger,
+} from "@nextui-org/react";
 
 const exo = Exo({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Thrivenvision",
+  title: "thrivenvision",
 };
 
 export default function RootLayout({
@@ -28,6 +35,7 @@ export default function RootLayout({
         <Providers>
           <MainNav />
           {children}
+
           <Footer />
         </Providers>
         <div
