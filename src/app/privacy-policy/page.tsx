@@ -50,9 +50,11 @@ const PrivacyPolicy = () => {
       <div className="p-4 lg:p-0">
         <h1 className="pb-6 text-3xl font-bold">Privacy Policy</h1>
         <p className="pb-4 text-[18px]">
-          At DOUBLE R STUDIOS, we take your privacy seriously. This Privacy
-          Policy outlines how we collect, use, and protect the personal
-          information you provide to us through our website.
+          At <span className="font-semibold">thrivenvision</span>, we are
+          committed to safeguarding the privacy and security of the personal
+          information of our clients and website visitors. This Privacy Policy
+          describes how we collect, use, and protect the personal information
+          you provide to us when you use our website and services.
         </p>
       </div>
       <div>

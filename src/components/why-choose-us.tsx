@@ -7,6 +7,7 @@ export function WhyChooseUs() {
   return (
     <section className="py-10">
       <SectionHeading>What Sets Us Apart</SectionHeading>
+
       {/* <SectionSubheading>
         Because Quality Video Editing Can Be Fun, Affordable, and Absolutely
         Fantastic!
