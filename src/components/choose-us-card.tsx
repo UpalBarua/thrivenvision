@@ -35,7 +35,7 @@ const ChooseUsCard = ({ choose }: { choose: TChoose }) => {
           <h4 className="pt-2 text-[1.5rem]  font-bold">{work_headline}</h4>
         </CardHeader>
         <CardBody className="overflow-visible py-2">
-          <p>{work_details}</p>
+          <p className=" text-justify">{work_details}</p>
         </CardBody>
       </Card>
     </div>
