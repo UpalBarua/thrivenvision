@@ -29,7 +29,7 @@ export default function RootLayout({
       <body
         className={cn(
           exo.className,
-          "relative min-h-screen text-foreground/90 antialiased",
+          "overflow-x-hidden relative min-h-screen text-foreground/90 antialiased",
         )}
       >
         <Providers>

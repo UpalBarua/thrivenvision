@@ -3,7 +3,7 @@ import { cn } from "@/lib/cn";
 
 type SectionSubheadingProps = {
   children: React.ReactNode;
-  className?: React.ClassAttributes<HTMLHeadingElement>;
+  className?: string;
 };
 
 export function SectionSubheading({
@@ -12,7 +12,10 @@ export function SectionSubheading({
 }: SectionSubheadingProps) {
   return (
     <h2
-      className={cn("mx-auto px-4 max-w-[30rem] text-center text-foreground/80", className)}
+      className={cn(
+        "mx-auto max-w-[30rem] px-4 text-center text-[1.25rem] text-foreground/80",
+        className,
+      )}
     >
       {children}
     </h2>
