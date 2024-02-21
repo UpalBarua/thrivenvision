@@ -64,18 +64,18 @@ export function MainNav() {
             </DropdownTrigger>
             <DropdownMenu aria-label="Static Actions">
               <DropdownItem key="new">
-                <Link className="text-white" href="refund-policy">
+                {/* <Link className="text-white" href="refund-policy">
                   Refund policy
+                </Link> */}
+              </DropdownItem>
+              <DropdownItem key="edit">
+                <Link className="text-white" href="teams-of-service">
+                  Teams Of Service
                 </Link>
               </DropdownItem>
               <DropdownItem key="copy">
                 <Link className="text-white" href="privacy-policy">
                   Privacy policy
-                </Link>
-              </DropdownItem>
-              <DropdownItem key="edit">
-                <Link className="text-white" href="teams-of-service">
-                  Teams Of Service
                 </Link>
               </DropdownItem>
             </DropdownMenu>

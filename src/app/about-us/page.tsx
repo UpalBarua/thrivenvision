@@ -74,55 +74,15 @@ const AboutUs = () => {
   ];
   return (
     <section className="mx-auto mt-14 max-w-6xl">
-      <div>
-        <h1 className="pb-4 text-4xl font-bold">About Us</h1>
-        <p className="pb-14 text-[18px]">
-          A team of video editing enthusiasts who are passionate about creating
-          amazing videos that help you tell your story in the most captivating
-          and exciting way possible
-        </p>
-      </div>
-
-      <div>
-        {textAbout?.map((text) => (
-          <div className="pb-8" key={text?.id}>
-            <h1 className="pb-8 text-center text-4xl font-bold">
-              {text?.title}
-            </h1>
-            <p className="text-[18px]">{text?.description}</p>
-          </div>
-        ))}
-      </div>
-
-      {/* employee section */}
-      <div className="mt-24">
-        <div className="text-center">
-          <h1 className="pb-6 text-4xl font-bold">
-            Meet the Force Behind the Magic
-          </h1>
-          <p className="pb-8 text-[18px]">
-            A team of video editing enthusiasts who are passionate about
-            creating amazing videos that help you tell your story in the most
-            captivating and exciting way possible.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-          {AllEmployee?.map((employee) => (
-            <div key={employee?.id}>
-              <Image
-                isZoomed
-                width={240}
-                src={employee?.image}
-                alt="NextUI Album Cover"
-              />
-              <h1 className="pt-8 text-[24px] font-semibold">
-                {employee?.name}
-              </h1>
-              <h1 className="text-[18px] font-semibold">{employee?.title}</h1>
-            </div>
-          ))}
-        </div>
-      </div>
+      <h1 className="pb-6 text-3xl font-semibold">About us</h1>
+      <p>
+        <span>thrivenvision</span> distinguishes itself as more than a digital
+        agency by employing innovators, creators, and strategists who are
+        committed to propelling your brand forward in the digital era. With a
+        founding principle of flourishing and imagining the extraordinary, our
+        organization provides a range of services tailored to enhance the online
+        visibility and interaction of your brand
+      </p>
     </section>
   );
 };
