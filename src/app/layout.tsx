@@ -5,6 +5,7 @@ import { cn } from "@/lib/cn";
 import type { Metadata } from "next";
 import { Exo } from "next/font/google";
 import "./globals.css";
+import { AuthContextProvider } from "@/context/auth-context";
 
 const exo = Exo({ subsets: ["latin"] });
 
@@ -26,9 +27,11 @@ export default function RootLayout({
         )}
       >
         <Providers>
-          <MainNav />
-          {children}
-          <Footer />
+          <AuthContextProvider>
+            <MainNav />
+            {children}
+            <Footer />
+          </AuthContextProvider>
         </Providers>
         <div
           className="fixed inset-0 z-0 h-full w-full bg-[url('/bg-gradient.png')] 
