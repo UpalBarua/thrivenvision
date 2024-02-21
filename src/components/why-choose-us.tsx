@@ -31,7 +31,7 @@ function ChooseUsCard({ Icon, title, description }: ChooseUsCardProps) {
           "backdrop-saturate-150",
         ],
       }}
-      className="group p-3 dark:border dark:border-foreground/10 sm:p-4 lg:p-5"
+      className="group p-3 dark:border dark:border-foreground/10 sm:p-4"
     >
       <CardHeader className="flex flex-col items-start">
         <div
@@ -41,8 +41,8 @@ function ChooseUsCard({ Icon, title, description }: ChooseUsCardProps) {
           group-hover:bg-primary/90 dark:border-foreground/10"
         >
           <Icon
-            className="h-10 w-10 text-primary transition-colors
-            duration-1000 ease-soft-spring group-hover:text-background lg:h-9 lg:w-9"
+            className="h-9 w-9 text-primary transition-colors
+            duration-1000 ease-soft-spring group-hover:text-background"
           />
         </div>
       </CardHeader>
