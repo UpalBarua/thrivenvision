@@ -1,5 +1,4 @@
 import { SectionHeading } from "@/components/ui/section-heading";
-import { SectionSubheading } from "@/components/ui/section-subheading";
 import { whyChooseUsData } from "@/config";
 import { Card, CardBody, CardHeader } from "@nextui-org/react";
 
@@ -7,10 +6,6 @@ export function WhyChooseUs() {
   return (
     <section className="py-10">
       <SectionHeading>What Sets Us Apart</SectionHeading>
-      {/* <SectionSubheading>
-        Because Quality Video Editing Can Be Fun, Affordable, and Absolutely
-        Fantastic!
-      </SectionSubheading> */}
       <div className="grid grid-cols-1 gap-4 pt-8 sm:grid-cols-2 md:pt-10 lg:grid-cols-3">
         {whyChooseUsData.map((data) => (
           <ChooseUsCard key={data.id} {...data} />
@@ -47,7 +42,7 @@ function ChooseUsCard({ Icon, title, description }: ChooseUsCardProps) {
         >
           <Icon
             className="h-10 w-10 text-primary transition-colors
-            duration-1000 ease-soft-spring group-hover:text-background lg:h-11 lg:w-11"
+            duration-1000 ease-soft-spring group-hover:text-background lg:h-9 lg:w-9"
           />
         </div>
       </CardHeader>

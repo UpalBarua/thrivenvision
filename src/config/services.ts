@@ -75,7 +75,7 @@ export const services = [
   },
   {
     id: "50c04fd85b6b5",
-    category: "Graphics Design",
+    category: "Graphics & Design",
     categoryDescription:
       "Make an impact with our creative design solutions. We offer Logo Design, Website Design, Image Editing, T-Shirt Design, 3D Modeling, Social Media Graphics, and Vehicle Wraps.",
     categoryImage: "/images/services/brand-building.png",
