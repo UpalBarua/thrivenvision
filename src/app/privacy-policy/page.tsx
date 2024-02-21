@@ -42,8 +42,8 @@ const PrivacyPolicy = () => {
   return (
     <section className="mx-auto mt-14 max-w-full lg:max-w-6xl">
       <div className="p-4 lg:p-0">
-        <h1 className="pb-6 text-3xl font-bold">Privacy Policy</h1>
-        <p className="pb-4 text-[18px]">
+        <h1 className="pb-6 text-5xl font-bold">Privacy Policy</h1>
+        <p className="pb-4 text-[20px]">
           At <span className="font-semibold">thrivenvision</span>, we are
           committed to safeguarding the privacy and security of the personal
           information of our clients and website visitors. This Privacy Policy
@@ -65,7 +65,7 @@ const PrivacyPolicy = () => {
       </div>
       <p>
         Thank you for choosing{" "}
-        <span className="pt-6 text-[18px] font-semibold">thrivenvision</span>.
+        <span className="pt-6 text-[20px] font-semibold">thrivenvision</span>.
         Your privacy is important to us, and we are committed to protecting the
         personal information you share with us
       </p>
