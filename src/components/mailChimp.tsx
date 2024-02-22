@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import { Image } from "@nextui-org/react";
 
@@ -16,12 +17,14 @@ const MailChimp = () => {
         </div>
         <div>
           <h1 className="text-3xl font-bold">
-            Become Part of the Monks Meet Visionaries😍
+            Stay Ahead of the Curve Join Our Exclusive Newsletter!
           </h1>
           <p className="pt-6 text-[18px]">
-            Are you passionate about the future of virtual communication? Join
-            the VideoCon Visionaries community today! Connect with like-minded
-            professionals
+            Dive into the latest trends, insights, and tips in the digital world
+            with <span className="font-semibold">thrivenvision's</span>{" "}
+            newsletter. Signing up is quick and easy! Just enter your email
+            below, and let us bring the future of digital innovation straight to
+            you.
           </p>
           <div className="flex flex-row pt-4">
             <input
@@ -36,6 +39,10 @@ const MailChimp = () => {
               Subscribe
             </button>
           </div>
+          <p className="pt-8 text-[18px]">
+            Your privacy is paramount to us. We promise to keep your email safe
+            and never spam. Unsubscribe at any time with just a click.
+          </p>
         </div>
       </div>
     </section>

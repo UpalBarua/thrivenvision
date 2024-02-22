@@ -80,6 +80,11 @@ export function MainNav() {
               </DropdownItem>
             </DropdownMenu>
           </Dropdown>
+
+        </div>
+        <Button className="text-white" color="primary" variant="flat">
+          Get a code
+        </Button>
         </NavbarItem>
         {/* <ThemeSwitcher /> */}
       </NavbarContent>
