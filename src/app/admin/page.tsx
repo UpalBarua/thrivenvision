@@ -1,21 +1,9 @@
-"use client";
-import React, { useState } from "react";
+import { PricingTable } from "@/components/packages-table";
 
-import Link from "next/link";
-
-const Admin = () => {
-  const [dashboard, setDashboard] = useState<string | null>(null);
-  console.log(dashboard);
+export default function AdminPage() {
   return (
-    <div className="flex gap-14">
-      <div className="ml-24 mt-24">
-        <button onClick={() => setDashboard("services")}>Add service</button>
-        {/* <h1>All service</h1>
-        <h1>Add testimonial</h1> */}
-      </div>
-      {dashboard === "services" && <div>services </div>}
-    </div>
+    <main className="container relative z-10 mx-auto max-w-7xl space-y-10 px-2 sm:px-4">
+      <PricingTable />
+    </main>
   );
-};
-
-export default Admin;
+}

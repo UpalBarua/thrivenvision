@@ -221,10 +221,6 @@ const Footer = () => {
           {/* <hr className="ml-6  mt-4"></hr> */}
         </footer>
       </div>
-
-      <div>
-        <MailChimp />
-      </div>
     </div>
   );
 };

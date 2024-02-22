@@ -4,7 +4,7 @@ import { getPricingPackagesFromDB } from "@/lib/services";
 import { PricingPackageCard } from "./pricing-package-card";
 
 export async function PricingPackages() {
-  const fetchedPricingPackages = await getPricingPackagesFromDB();
+  const pricingPackages = await getPricingPackagesFromDB();
 
   return (
     <section className="pt-20">
@@ -13,7 +13,7 @@ export async function PricingPackages() {
         Explore our affordable pricing packages
       </SectionSubheading>
       <div className="grid grid-cols-1 gap-4 py-10 sm:grid-cols-2 md:grid-cols-4">
-        {fetchedPricingPackages.map((pricingPackage) => (
+        {pricingPackages?.map((pricingPackage) => (
           <PricingPackageCard key={pricingPackage.id} {...pricingPackage} />
         ))}
       </div>

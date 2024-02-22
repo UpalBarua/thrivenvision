@@ -2,7 +2,16 @@
 
 import { addNewPricingPackageToDB } from "@/lib/services";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Button, Input, Textarea } from "@nextui-org/react";
+import {
+  Button,
+  Input,
+  Modal,
+  ModalBody,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
+  useDisclosure,
+} from "@nextui-org/react";
 import { Plus, X } from "lucide-react";
 import { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
@@ -27,89 +36,68 @@ const pricingPackageFormSchema = z.object({
     .regex(/^[a-zA-Z0-9 ]+$/, {
       message: "Name must only include alphanumeric characters.",
     }),
-  description: z
-    .string()
-    .trim()
-    .min(5, { message: "Description must be at least 5 characters." })
-    .max(300, { message: "Description cannot exceed 200 characters." }),
-  price: z.coerce
-    .number()
-    .nonnegative({ message: "Price must be a valid number." })
-    .max(9999999, { message: "Vai eto price kn????" })
-    .refine(
-      (number) => {
-        const decimal = number.toString().split(".")[1];
-        return decimal ? decimal.length <= 2 : true;
-      },
-      { message: "Price cannot have more than 2 decimal places." },
-    ),
-  keyPoint1: keyPointSchema,
-  keyPoint2: keyPointSchema,
-  keyPoint3: keyPointSchema,
-  keyPoint4: keyPointSchema,
-  keyPoint5: keyPointSchema,
-  isPopular: z.boolean().default(false),
+  service1: keyPointSchema,
+  service2: keyPointSchema,
+  service3: keyPointSchema,
+  service4: keyPointSchema,
+  service5: keyPointSchema,
+  feature1: keyPointSchema,
+  feature2: keyPointSchema,
+  feature3: keyPointSchema,
+  feature4: keyPointSchema,
+  feature5: keyPointSchema,
 });
 
-type KeyPoint =
-  | "keyPoint1"
-  | "keyPoint2"
-  | "keyPoint3"
-  | "keyPoint4"
-  | "keyPoint5";
+type Services = "service1" | "service2" | "service3" | "service4" | "service5";
+type Features = "feature1" | "feature2" | "feature3" | "feature4" | "feature5";
 
-type PricingPackageForm = Omit<
-  z.infer<typeof pricingPackageFormSchema>,
-  "price"
-> & { price: string };
+type PricingPackageForm = z.infer<typeof pricingPackageFormSchema>;
 
 export function PricingPackageForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [keyPointsCount, setKeyPointsCount] = useState([null, null]);
+  const [serviceCount, setServiceCount] = useState([null, null]);
+  const [featuresCount, setFeaturesCount] = useState([null, null]);
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
-  const {
-    control,
-    handleSubmit,
-    setValue,
-    reset,
-    formState: { errors },
-  } = useForm<PricingPackageForm>({
-    resolver: zodResolver(pricingPackageFormSchema),
-    defaultValues: {
-      name: "",
-      description: "",
-      price: "0.0",
-      keyPoint1: "",
-      keyPoint2: "",
-      keyPoint3: "",
-      keyPoint4: "",
-      keyPoint5: "",
-    },
-  });
+  const { control, handleSubmit, setValue, reset } =
+    useForm<PricingPackageForm>({
+      resolver: zodResolver(pricingPackageFormSchema),
+      defaultValues: {
+        name: "",
+        service1: "",
+        service2: "",
+        service3: "",
+        service4: "",
+        service5: "",
+        feature1: "",
+        feature2: "",
+        feature3: "",
+        feature4: "",
+        feature5: "",
+      },
+    });
 
-  const onSubmit = async ({
-    name,
-    description,
-    price,
-    isPopular,
-    ...keyPoints
-  }: PricingPackageForm) => {
+  const onSubmit = async ({ name, ...data }: PricingPackageForm) => {
     try {
       setIsSubmitting(true);
 
       const newPricingPackage = {
         name,
-        description,
-        price: Number(price),
-        isPopular,
-        keyPoints: Object.keys(keyPoints)
-          .map((key) => keyPoints[key as keyof typeof keyPoints])
-          .filter((point) => (point as string).length > 0),
+        services: Object.keys(data)
+          .filter((key) => key.startsWith("service"))
+          .map((key) => data[key as keyof typeof data])
+          .filter((service) => (service as string).length > 0),
+        features: Object.keys(data)
+          .filter((key) => key.startsWith("feature"))
+          .map((key) => data[key as keyof typeof data])
+          .filter((feature) => (feature as string).length > 0),
       };
 
       await addNewPricingPackageToDB(newPricingPackage);
       console.log("new pricing package added");
-      setKeyPointsCount([null, null]);
+
+      setServiceCount([null, null]);
+      setFeaturesCount([null, null]);
       reset();
     } catch (error) {
       console.log(error);
@@ -119,136 +107,180 @@ export function PricingPackageForm() {
   };
 
   return (
-    <form
-      className="mx-auto flex max-w-[40rem] flex-col gap-8 py-10"
-      onSubmit={handleSubmit(onSubmit)}
-    >
-      <h2 className="pb-8 text-center text-2xl font-bold tracking-tight">
-        Add New Price Package
-      </h2>
-      <Controller
-        name="name"
-        control={control}
-        render={({ field, fieldState }) => (
-          <Input
-            size="lg"
-            labelPlacement="outside"
-            label="Package Name"
-            placeholder="Enter package name"
-            errorMessage={fieldState.error?.message || ""}
-            isInvalid={fieldState.invalid}
-            {...field}
-          />
-        )}
-      />
-      <Controller
-        name="description"
-        control={control}
-        render={({ field, fieldState }) => (
-          <Textarea
-            size="lg"
-            minRows={6}
-            labelPlacement="outside"
-            label="Short Description"
-            placeholder="Enter a short description"
-            errorMessage={fieldState.error?.message || ""}
-            isInvalid={fieldState.invalid}
-            {...field}
-          />
-        )}
-      />
-      <Controller
-        name="price"
-        control={control}
-        render={({ field, fieldState }) => (
-          <Input
-            className="appearance-none"
-            startContent={
-              <div className="pointer-events-none flex items-center">
-                <span className="text-small text-default-400">$</span>
-              </div>
-            }
-            size="lg"
-            labelPlacement="outside"
-            type="number"
-            step="any"
-            min={0}
-            label="Package Price"
-            placeholder="Enter package price"
-            errorMessage={fieldState.error?.message || ""}
-            isInvalid={fieldState.invalid}
-            {...field}
-          />
-        )}
-      />
-      <div>
-        <div className="flex items-center justify-between">
-          <h3>Package Key Points</h3>
-          <Button
-            isIconOnly
-            color="primary"
-            onClick={() => {
-              if (keyPointsCount.length < 5) {
-                setKeyPointsCount((prevKeyPointsCount) => [
-                  ...prevKeyPointsCount,
-                  null,
-                ]);
-              }
-            }}
-          >
-            <Plus />
-          </Button>
-        </div>
-      </div>
-      <div className="space-y-3">
-        {keyPointsCount.map((_, i) => (
-          <div key={i} className="flex items-start gap-x-4">
-            <Controller
-              name={`keyPoint${i + 1}` as KeyPoint}
-              control={control}
-              render={({ field, fieldState }) => (
-                <Input
-                  size="lg"
-                  labelPlacement="outside"
-                  placeholder="Enter key point"
-                  errorMessage={fieldState.error?.message || ""}
-                  isInvalid={fieldState.invalid}
-                  {...field}
-                />
-              )}
-            />
-            <Button
-              isIconOnly
-              onClick={() => {
-                if (keyPointsCount.length > 1) {
-                  setKeyPointsCount((prevKeyPoints) =>
-                    prevKeyPoints.filter((_, n) => i !== n),
-                  );
-                  setValue(`keyPoint${i + 1}` as KeyPoint, "");
-                  console.log("clear");
-                }
-              }}
-            >
-              <X />
-            </Button>
-          </div>
-        ))}
-      </div>
-      <div className="flex items-center justify-end gap-x-2">
-        <Button
-          type="button"
-          color="danger"
-          onClick={() => {
-            setKeyPointsCount([null, null]);
-            reset();
-          }}
-        >
-          Clear
-        </Button>
-        <Button type="submit" color="primary" isLoading={isSubmitting}>
-          Submit
-        </Button>
-      </div>
-    </form>
+    <>
+      <Button onPress={onOpen} color="primary">
+        New Package
+      </Button>
+      <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
+        <ModalContent>
+          {(onClose) => (
+            <>
+              <ModalHeader className="flex flex-col gap-1">
+                Modal Title
+              </ModalHeader>
+              <ModalBody>
+                <form
+                  className="mx-auto flex max-w-[40rem] flex-col gap-8 py-10"
+                  onSubmit={handleSubmit(onSubmit)}
+                >
+                  <h2 className="pb-8 text-center text-2xl font-bold tracking-tight">
+                    Add New Price Package
+                  </h2>
+                  <Controller
+                    name="name"
+                    control={control}
+                    render={({ field, fieldState }) => (
+                      <Input
+                        size="lg"
+                        labelPlacement="outside"
+                        label="Package Name"
+                        placeholder="Enter package name"
+                        errorMessage={fieldState.error?.message || ""}
+                        isInvalid={fieldState.invalid}
+                        {...field}
+                      />
+                    )}
+                  />
+                  <div>
+                    <div className="flex items-center justify-between">
+                      <h3>Package Services</h3>
+                      <Button
+                        isIconOnly
+                        color="primary"
+                        onClick={() => {
+                          if (serviceCount.length < 5) {
+                            setServiceCount((prevServiceCount) => [
+                              ...prevServiceCount,
+                              null,
+                            ]);
+                          }
+                        }}
+                      >
+                        <Plus />
+                      </Button>
+                    </div>
+                  </div>
+                  <div className="space-y-3">
+                    {serviceCount.map((_, i) => (
+                      <div key={i} className="flex items-start gap-x-4">
+                        <Controller
+                          name={`service${i + 1}` as Services}
+                          control={control}
+                          render={({ field, fieldState }) => (
+                            <Input
+                              size="lg"
+                              labelPlacement="outside"
+                              placeholder="Enter key point"
+                              errorMessage={fieldState.error?.message || ""}
+                              isInvalid={fieldState.invalid}
+                              {...field}
+                            />
+                          )}
+                        />
+                        <Button
+                          isIconOnly
+                          onClick={() => {
+                            if (serviceCount.length > 1) {
+                              setServiceCount((serviceCount) =>
+                                serviceCount.filter((_, n) => i !== n),
+                              );
+                              setValue(`service${i + 1}` as Services, "");
+                              console.log("clear");
+                            }
+                          }}
+                        >
+                          <X />
+                        </Button>
+                      </div>
+                    ))}
+                  </div>
+                  <div>
+                    <div className="flex items-center justify-between">
+                      <h3>Package Features</h3>
+                      <Button
+                        isIconOnly
+                        color="primary"
+                        onClick={() => {
+                          if (serviceCount.length < 5) {
+                            setFeaturesCount((prevFeaturesCount) => [
+                              ...prevFeaturesCount,
+                              null,
+                            ]);
+                          }
+                        }}
+                      >
+                        <Plus />
+                      </Button>
+                    </div>
+                  </div>
+                  <div className="space-y-3">
+                    {featuresCount.map((_, i) => (
+                      <div key={i} className="flex items-start gap-x-4">
+                        <Controller
+                          name={`feature${i + 1}` as Features}
+                          control={control}
+                          render={({ field, fieldState }) => (
+                            <Input
+                              size="lg"
+                              labelPlacement="outside"
+                              placeholder="Enter key point"
+                              errorMessage={fieldState.error?.message || ""}
+                              isInvalid={fieldState.invalid}
+                              {...field}
+                            />
+                          )}
+                        />
+                        <Button
+                          isIconOnly
+                          onClick={() => {
+                            if (featuresCount.length > 1) {
+                              setFeaturesCount((featureCount) =>
+                                featureCount.filter((_, n) => i !== n),
+                              );
+                              setValue(`feature${i + 1}` as Features, "");
+                              console.log("clear");
+                            }
+                          }}
+                        >
+                          <X />
+                        </Button>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="flex items-center justify-end gap-x-2">
+                    <Button
+                      type="button"
+                      color="danger"
+                      onClick={() => {
+                        setServiceCount([null, null]);
+                        setFeaturesCount([null, null]);
+                        reset();
+                      }}
+                    >
+                      Clear
+                    </Button>
+                    <Button
+                      type="submit"
+                      color="primary"
+                      isLoading={isSubmitting}
+                    >
+                      Submit
+                    </Button>
+                  </div>
+                </form>
+              </ModalBody>
+              <ModalFooter>
+                <Button color="danger" variant="light" onPress={onClose}>
+                  Close
+                </Button>
+                <Button color="primary" onPress={onClose}>
+                  Action
+                </Button>
+              </ModalFooter>
+            </>
+          )}
+        </ModalContent>
+      </Modal>
+    </>
   );
 }

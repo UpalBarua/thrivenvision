@@ -1,6 +1,4 @@
-import { DropdownItemProps, DropdownTriggerProps } from "@nextui-org/react";
 import {
-  BadgePlus,
   Handshake,
   Headset,
   Lightbulb,

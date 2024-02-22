@@ -5,13 +5,7 @@ import { cn } from "@/lib/cn";
 import type { Metadata } from "next";
 import { Exo } from "next/font/google";
 import "./globals.css";
-import {
-  Button,
-  Dropdown,
-  DropdownItem,
-  DropdownMenu,
-  DropdownTrigger,
-} from "@nextui-org/react";
+import { AuthContextProvider } from "@/context/auth-context";
 
 const exo = Exo({ subsets: ["latin"] });
 
@@ -29,14 +23,15 @@ export default function RootLayout({
       <body
         className={cn(
           exo.className,
-          "overflow-x-hidden relative min-h-screen text-foreground/90 antialiased",
+          "relative min-h-screen overflow-x-hidden text-foreground/90 antialiased",
         )}
       >
         <Providers>
-          <MainNav />
-          {children}
-
-          <Footer />
+          <AuthContextProvider>
+            <MainNav />
+            {children}
+            <Footer />
+          </AuthContextProvider>
         </Providers>
         <div
           className="fixed inset-0 z-0 h-full w-full bg-[url('/bg-gradient.png')] 
