@@ -15,11 +15,10 @@ import {
   NavbarMenuItem,
   NavbarMenuToggle,
 } from "@nextui-org/react";
+import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { ThemeSwitcher } from "./theme-switcher";
-import { ChevronDown } from "lucide-react";
 
 export function MainNav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -80,12 +79,11 @@ export function MainNav() {
               </DropdownItem>
             </DropdownMenu>
           </Dropdown>
-
-        </div>
-        <Button className="text-white" color="primary" variant="flat">
-          Get a code
-        </Button>
+          <Button className="text-white" color="primary" variant="flat">
+            Get a code
+          </Button>
         </NavbarItem>
+
         {/* <ThemeSwitcher /> */}
       </NavbarContent>
       <NavbarMenuToggle
