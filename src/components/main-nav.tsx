@@ -77,6 +77,9 @@ export function MainNav() {
             </DropdownMenu>
           </Dropdown>
         </div>
+        <Button className="text-white" color="primary" variant="flat">
+          Get a code
+        </Button>
         <ThemeSwitcher />
       </NavbarContent>
       <NavbarMenuToggle

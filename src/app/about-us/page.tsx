@@ -99,7 +99,7 @@ const AboutUs = () => {
         {AllEmployee?.map((employee) => (
           <div key={employee?.id}>
             <Card className="bg-primary/5 py-4">
-              <CardBody className="ml-8 flex justify-center overflow-visible py-2">
+              <CardBody className="ml-6 flex justify-center overflow-visible py-2">
                 <Image
                   alt="Card background"
                   className="  w-full rounded-xl object-cover object-center lg:w-[300px]"
