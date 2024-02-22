@@ -1,9 +1,11 @@
 "use client";
-import React from "react";
 
+import React from "react";
 import Link from "next/link";
 import { InstagramEmbed } from "react-social-media-embed";
 import { Button } from "@nextui-org/react";
+import { SectionHeading } from "./ui/section-heading";
+import { SectionSubheading } from "./ui/section-subheading";
 
 const Portfolio = () => {
   const AllPortfolios = [
@@ -20,31 +22,33 @@ const Portfolio = () => {
       url: "https://www.instagram.com/p/CojXYdJpcwz/",
     },
   ];
-  //   dark:bg-[#9F8082]
-  //   bg-purple-500
+
   return (
-    <section className="mt-32 rounded-md bg-purple-600 px-4 py-8  dark:bg-[#263d50]  ">
+    <section className="portfolio | mt-32 rounded-[2.5em] px-4 py-8 shadow-2xl backdrop-blur-lg">
       <div className="pb-14 pt-8 text-center">
-        <h1 className="pb-6 text-5xl font-bold text-white dark:text-white">
+        <SectionHeading className="text-white/90">
           Portfolio Spotlight: Witness Our Impact
-        </h1>
-        <p className="text-white">
+        </SectionHeading>
+        <SectionSubheading className="max-w-2xl text-white/80">
           Our achievements speak for themselves. Explore our portfolio to see
-          how we have helped clients achieve<br></br> their goals and surpass
-          their expectations.
-        </p>
+          how we have helped clients achievetheir goals and surpass their
+          expectations.
+        </SectionSubheading>
       </div>
-      <div className="mx-auto grid grid-cols-1 gap-24  lg:max-w-6xl lg:grid-cols-3">
+      <div className="mx-auto grid grid-cols-1 gap-4 lg:max-w-6xl lg:grid-cols-3">
         {AllPortfolios?.map((portfolio) => (
-          <div key={portfolio?.id}>
-            <InstagramEmbed url="https://www.instagram.com/p/CojXYdJpcwz/" />{" "}
+          <div key={portfolio?.id} className="rounded-[2.5em]">
+            <InstagramEmbed
+              className="rounded-2xl"
+              url="https://www.instagram.com/p/CojXYdJpcwz/"
+            />
           </div>
         ))}
       </div>
       <div className="flex justify-center pt-14">
         <Link href="all-portfolio">
-          <Button color="primary" className="text-[20px] font-bold">
-            All Portfolio
+          <Button color="primary" size="lg">
+            View All
           </Button>
         </Link>
       </div>

@@ -23,7 +23,7 @@ export function ServiceTabs() {
           "md:w-full md:justify-between",
           "text-foreground mb-2",
         ],
-        tab: "max-w-fit h-10 px-2 md:h-12 md:px-4",
+        tab: "max-w-fit h-10 px-2 md:h-12 md:px-3",
         tabContent:
           "group-data-[selected=true]:text-background dark:group-data-[selected=true]:text-foreground",
       }}

@@ -1,14 +1,12 @@
 "use client";
-import {
-  Dropdown,
-  DropdownTrigger,
-  DropdownMenu,
-  DropdownItem,
-  Button,
-} from "@nextui-org/react";
 
 import { navLinks } from "@/config";
 import {
+  Button,
+  Dropdown,
+  DropdownItem,
+  DropdownMenu,
+  DropdownTrigger,
   Link,
   Navbar,
   NavbarContent,
@@ -21,6 +19,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { ThemeSwitcher } from "./theme-switcher";
+import { ChevronDown } from "lucide-react";
 
 export function MainNav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,8 +30,8 @@ export function MainNav() {
       shouldHideOnScroll
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
-      height="3.5rem"
-      maxWidth="full"
+      height="4rem"
+      maxWidth="xl"
       classNames={{
         wrapper: "px-2 sm:px-4",
         item: ["data-[active=true]:text-red-400"],
@@ -52,11 +51,16 @@ export function MainNav() {
             </div>
           </NavbarItem>
         ))}
-        <div>
+        <NavbarItem>
           <Dropdown>
             <DropdownTrigger>
-              {/* <Button>legal</Button> */}
-              <h1>Legal</h1>
+              <Button
+                variant="light"
+                className="text-base"
+                endContent={<ChevronDown />}
+              >
+                legal
+              </Button>
             </DropdownTrigger>
             <DropdownMenu aria-label="Static Actions">
               <DropdownItem key="new">
@@ -76,11 +80,13 @@ export function MainNav() {
               </DropdownItem>
             </DropdownMenu>
           </Dropdown>
+
         </div>
         <Button className="text-white" color="primary" variant="flat">
           Get a code
         </Button>
-        <ThemeSwitcher />
+        </NavbarItem>
+        {/* <ThemeSwitcher /> */}
       </NavbarContent>
       <NavbarMenuToggle
         aria-label={isMenuOpen ? "Close menu" : "Open menu"}
