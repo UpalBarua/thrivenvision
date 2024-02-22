@@ -22,6 +22,7 @@ export default function HomePage() {
       <PricingPackages />
       <WhyChooseUs />
       <TrustedCompany />
+      <AddTrustedCompany />
 
       {/* <Portfolio /> */}
 

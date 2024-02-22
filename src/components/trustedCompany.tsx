@@ -7,6 +7,7 @@ import { ChevronRight } from "lucide-react";
 
 const TrustedCompany = async () => {
   const fetchedCompany = await getAllTrustedCompany();
+  console.log(fetchedCompany);
 
   return (
     <section className="mb-4 mt-20">
