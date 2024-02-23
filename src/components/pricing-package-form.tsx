@@ -201,7 +201,7 @@ export function PricingPackageForm() {
                         isIconOnly
                         color="primary"
                         onClick={() => {
-                          if (serviceCount.length < 5) {
+                          if (featuresCount.length < 5) {
                             setFeaturesCount((prevFeaturesCount) => [
                               ...prevFeaturesCount,
                               null,
