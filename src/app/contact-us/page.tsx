@@ -1,78 +1,38 @@
-/* eslint-disable react-hooks/rules-of-hooks */
-"use client";
-import React, { useState } from "react";
-import { Facebook, Instagram, Linkedin } from "lucide-react";
-import { LucideIcon } from "lucide-react";
-import { Button, Input, Textarea } from "@nextui-org/react";
-import ContractUsForm from "@/components/contract-us-form";
+import { SectionHeading } from "@/components/ui/section-heading";
+import { SectionSubheading } from "@/components/ui/section-subheading";
+import { socialLinks } from "@/config";
+import { ContactUsForm } from "@/components/contact-us-form";
 
-const contact = () => {
-  const iconSize = 48;
-  // const applyGradientBorder = (icon) => (
-  //   <div className="relative rounded-full  p-1">
-  //     {React.cloneElement(icon, {
-  //       size: iconSize,
-  //       className: `absolute inset-0 rounded-full bg-gradient-to-r from-purple-600 to-pink-600`,
-  //     })}
-  //   </div>
-  // );
-
+export default function ContactUs() {
   return (
-    <section className="mx-auto mt-24 max-w-5xl">
-      <div className="flex flex-col gap-14 lg:flex-row">
-        <div className="mt-6 flex-1 p-8  lg:p-2">
-          <h3 className="pb-2 text-2xl">Contract us</h3>
-          <h1 className="pb-4 text-3xl font-bold">
-            Reach our Customer service
-          </h1>
-          <p className="pb-6">
-            Our team try to communicate you as soon as possible. please mail us
-            and try to know us a good. Welcome in our company .We always try to
-            give you a great service.
-          </p>
-          <p className=" w-72 rounded-md border-2 border-pink-600 p-4 font-bold ">
-            Call Now Us: +88018356237
-          </p>
-
-          <div className="flex gap-6  pt-10">
-            <div className="rounded-full bg-gray-900 p-2">
-              <p className="text-primary">
-                {React.cloneElement(<Facebook />, { size: 40 })}
-              </p>
-            </div>
-            <div className="rounded-full bg-gray-900 p-2">
-              <p className="text-primary">
-                {React.cloneElement(<Instagram />, { size: 40 })}
-              </p>
-            </div>
-            <div className="rounded-full bg-gray-900 p-2">
-              <p className="text-primary">
-                {React.cloneElement(<Linkedin />, { size: 40 })}
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* <div className="m-8 flex flex-1 flex-col gap-6 rounded-md bg-gray-700 p-8 lg:p-8">
-          <Input className="max-w-xl" type="email" label="Name" />
-          <Input className="max-w-xl" type="email" label="Email" />
-          <Input className="max-w-xl" type="email" label="Nobile" />
-          <Textarea
-            label="Description"
-            placeholder="Enter your message"
-            className="max-w-xl"
-          />
-
-          <Button className=" max-w-full bg-gray-500 px-8 py-6 text-white">
-            Submit
-          </Button>
-        </div> */}
-        <div className="flex-1 rounded-md bg-gray-700 p-8">
-          <ContractUsForm></ContractUsForm>
+    <main className="container relative z-10 mx-auto grid max-w-5xl grid-cols-2 gap-28 py-20">
+      <div>
+        <SectionSubheading className="mx-0 px-0 pb-2 text-start">
+          Contact Us
+        </SectionSubheading>
+        <SectionHeading className="text-start">
+          Reach our Customer service!
+        </SectionHeading>
+        <p className="leading-relaxed text-foreground/60">
+          Our team try to communicate you as soon as possible. please mail us
+          and try to know us a good. Welcome in our company. We always try to
+          give you a great service.
+        </p>
+        <div className="flex items-center gap-x-4 pt-8">
+          {socialLinks.map(({ link, Icon }) => (
+            <a
+              href={link}
+              key={link}
+              target="_blank"
+              className="cursor-pointer rounded-full border border-foreground/10
+              bg-background/80 p-3 text-foreground/60 hover:bg-primary"
+            >
+              <Icon size={26} />
+            </a>
+          ))}
         </div>
       </div>
-    </section>
+      <ContactUsForm />
+    </main>
   );
-};
-
-export default contact;
+}

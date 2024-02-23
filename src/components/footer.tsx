@@ -1,6 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
-import MailChimp from "./mailChimp";
 import {
   PhoneCall,
   Mail,

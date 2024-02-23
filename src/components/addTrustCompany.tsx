@@ -1,7 +1,8 @@
 "use client";
+
 import { addNewPCompany } from "@/lib/services";
-import { uploadFile } from "@/lib/uploadFile";
-import { Avatar, Button, Input } from "@nextui-org/react";
+import { uploadFile } from "@/lib/upload-file";
+import { Avatar, Button } from "@nextui-org/react";
 import { Camera } from "lucide-react";
 import { FormEvent, useState } from "react";
 
@@ -15,11 +16,12 @@ const AddTrustedCompany = () => {
       setIsSubmitting(true);
 
       const imgURL = await uploadFile(pictureFile);
-      console.log(imgURL);
 
       await addNewPCompany({
         imageUrl: imgURL,
       });
+
+      console.log("done");
     } catch (error) {
       console.log(error);
     } finally {
@@ -67,5 +69,3 @@ const AddTrustedCompany = () => {
 };
 
 export default AddTrustedCompany;
-
-// is it not work just for pushing
