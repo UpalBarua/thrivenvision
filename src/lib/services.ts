@@ -27,7 +27,7 @@ export const addNewPricingPackageToDB = async (
 export const getPricingPackagesFromDB = async () => {
   let pricingPackages: TPricingPackage[] = [];
 
-  const q = query(collection(db, "pricing-packages"), orderBy("price"));
+  const q = query(collection(db, "pricing-packages"));
   const querySnapshot = await getDocs(q);
 
   querySnapshot.forEach((doc) =>
