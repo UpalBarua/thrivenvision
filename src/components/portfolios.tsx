@@ -25,7 +25,7 @@ export function Portfolios() {
       <SectionHeading className="text-white/90">
         Portfolio Spotlight: Witness Our Impact
       </SectionHeading>
-      <SectionSubheading className="max-w-2xl text-white/80">
+      <SectionSubheading className="max-w-3xl text-white/80">
         Our achievements speak for themselves. Explore our portfolio to see how
         we have helped clients achievetheir goals and surpass their
         expectations.
