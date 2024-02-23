@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Card, CardHeader, CardBody, Image } from "@nextui-org/react";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 type TChoose = {
   icon: React.ReactElement;
@@ -9,8 +10,17 @@ type TChoose = {
 
 const ChooseUsCard = ({ choose }: { choose: TChoose }) => {
   const { icon, work_headline, work_details } = choose;
+  const componentRef = useRef<HTMLDivElement>(null);
+
+  const { scrollXProgress } = useScroll({
+    target: componentRef,
+    offset: ["0 1", "1.2 1"],
+  });
+
+  const scaleValues = useTransform(scrollXProgress, [0, 1], [0.9, 1]);
+
   return (
-    <div>
+    <motion.div ref={componentRef} style={{ scale: scaleValues }}>
       <Card
         isHoverable
         classNames={{
@@ -38,7 +48,7 @@ const ChooseUsCard = ({ choose }: { choose: TChoose }) => {
           <p className=" text-justify">{work_details}</p>
         </CardBody>
       </Card>
-    </div>
+    </motion.div>
   );
 };
 
