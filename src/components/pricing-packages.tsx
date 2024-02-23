@@ -12,7 +12,7 @@ export async function PricingPackages() {
       <SectionSubheading>
         Explore our affordable pricing packages
       </SectionSubheading>
-      <div className="grid grid-cols-1 gap-4 py-10 sm:grid-cols-2 md:grid-cols-4">
+      <div className="flex flex-wrap place-content-center gap-6 pt-10">
         {pricingPackages?.map((pricingPackage) => (
           <PricingPackageCard key={pricingPackage.id} {...pricingPackage} />
         ))}

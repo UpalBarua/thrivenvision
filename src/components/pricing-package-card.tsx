@@ -5,15 +5,13 @@ import {
   CardBody,
   CardFooter,
   CardHeader,
-  Chip,
 } from "@nextui-org/react";
 import { Check } from "lucide-react";
 
 export function PricingPackageCard({
-  description,
-  isPopular,
   name,
-  keyPoints,
+  services,
+  features,
 }: TPricingPackage) {
   return (
     <Card
@@ -29,28 +27,36 @@ export function PricingPackageCard({
           "backdrop-saturate-150",
         ],
       }}
-      className="space-y-2 p-4 dark:border dark:border-foreground/10"
+      className="w-[25rem] p-6 dark:border dark:border-foreground/10"
     >
-      <CardHeader className="flex-col items-start space-y-2">
-        <div className="flex w-full items-center justify-between">
-          <h3 className="text-2xl font-bold tracking-tight">{name}</h3>
-          {isPopular && (
-            <Chip color="primary" variant="dot" size="sm">
-              Popular
-            </Chip>
-          )}
-        </div>
-        <p className="leading-relaxed text-foreground/60">{description}</p>
+      <CardHeader>
+        <h3 className="text-2xl font-bold tracking-tight">{name}</h3>
       </CardHeader>
-      <CardBody>
-        <ul className="space-y-2 leading-relaxed">
-          {keyPoints.map((point) => (
-            <li key={point} className="flex items-center gap-x-3">
-              <Check size={14} />
-              <span>{point}</span>
-            </li>
-          ))}
-        </ul>
+      <CardBody className="space-y-6">
+        <div>
+          <h4 className="pb-2 font-medium text-foreground/80">
+            Services Included
+          </h4>
+          <ul className="space-y-2 leading-relaxed text-foreground/60">
+            {services.map((service) => (
+              <li key={service} className="flex items-center gap-x-2">
+                <Check size={14} />
+                <span>{service}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h4 className="pb-2 font-medium text-foreground/80">Features</h4>
+          <ul className="space-y-2 leading-relaxed text-foreground/60">
+            {features.map((feature) => (
+              <li key={feature} className="flex items-center gap-x-2">
+                <Check size={14} />
+                <span>{feature}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
       </CardBody>
       <CardFooter>
         <Button color="primary" variant="solid" fullWidth size="lg">

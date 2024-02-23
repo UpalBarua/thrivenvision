@@ -4,7 +4,7 @@ export type TPricingPackage = {
   id?: string;
   name: string;
   services: string[];
-  featrues: string[];
+  features: string[];
 };
 
 export type TPicture = {

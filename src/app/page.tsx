@@ -1,9 +1,10 @@
 import { Hero } from "@/components/hero";
+import { Newsletter } from "@/components/newsletter";
+import { Portfolios } from "@/components/portfolios";
 import { PricingPackages } from "@/components/pricing-packages";
 import { Services } from "@/components/services";
 import { TrustedCompanies } from "@/components/trusted-companies";
 import { WhyChooseUs } from "@/components/why-choose-us";
-import { Portfolios } from "@/components/portfolios";
 
 export default function HomePage() {
   return (
@@ -14,6 +15,7 @@ export default function HomePage() {
       <WhyChooseUs />
       <TrustedCompanies />
       <Portfolios />
+      <Newsletter />
     </main>
   );
 }
