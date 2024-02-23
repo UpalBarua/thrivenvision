@@ -2,6 +2,11 @@
 const nextConfig = {
   images: {
     domains: ["images.unsplash.com", "source.unsplash.com"],
+    remotePatterns: [
+      {
+        hostname: "firebasestorage.googleapis.com",
+      },
+    ],
   },
 };
 

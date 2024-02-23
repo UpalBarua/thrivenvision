@@ -1,7 +1,10 @@
 import {
+  Facebook,
   Handshake,
   Headset,
+  Instagram,
   Lightbulb,
+  Linkedin,
   Star,
   ThumbsUp,
   TimerReset,
@@ -23,65 +26,6 @@ export const navLinks = [
   {
     label: "Contact Us",
     href: "/contact-us",
-  },
-] as const;
-
-export const pricingPackages = [
-  {
-    _id: "01",
-    name: "Trial",
-    description: "bo illum consectetur natus quod inventore error nemo",
-    price: "Free",
-    isPopular: false,
-    keyPoints: [
-      "bo illum consectetur",
-      "bo illum consectetur",
-      "bo illum consectetur",
-      "bo illum consectetur",
-      "bo illum consectetur",
-    ],
-  },
-  {
-    _id: "02",
-    name: "Starter",
-    description: "bo illum consectetur natus quod inventore error nemo",
-    price: 50,
-    isPopular: true,
-    keyPoints: [
-      "bo illum consectetur",
-      "bo illum consectetur",
-      "bo illum consectetur",
-      "bo illum consectetur",
-      "bo illum consectetur",
-    ],
-  },
-  {
-    _id: "03",
-    name: "Professional",
-    description: "bo illum consectetur natus quod inventore error nemo",
-    price: 100,
-    isPopular: false,
-    keyPoints: [
-      "bo illum consectetur",
-      "bo illum consectetur",
-      "bo illum consectetur",
-      "bo illum consectetur",
-      "bo illum consectetur",
-    ],
-  },
-  {
-    _id: "04",
-    name: "Enterprise",
-    description: "bo illum consectetur natus quod inventore error nemo",
-    price: 200,
-    isPopular: true,
-    keyPoints: [
-      "bo illum consectetur",
-      "bo illum consectetur",
-      "bo illum consectetur",
-      "bo illum consectetur",
-      "bo illum consectetur",
-    ],
   },
 ] as const;
 
@@ -127,5 +71,23 @@ export const whyChooseUsData = [
     title: " Dedicated Support",
     description:
       "Your success is our priority. Count on us for dedicated support and ongoing assistance, ensuring that you have the resources and guidance you need to thrive in today's dynamic business environment.",
+  },
+] as const;
+
+export const socialLinks = [
+  {
+    platform: "Facebook",
+    link: "facebook.com",
+    Icon: Facebook,
+  },
+  {
+    platform: "Instagram",
+    link: "instagram.com",
+    Icon: Instagram,
+  },
+  {
+    platform: "LinkedIn",
+    link: "linkedin.com",
+    Icon: Linkedin,
   },
 ] as const;

@@ -27,7 +27,7 @@ export function PricingPackageCard({
           "backdrop-saturate-150",
         ],
       }}
-      className="p-6 dark:border dark:border-foreground/10"
+      className="w-[25rem] p-6 dark:border dark:border-foreground/10"
     >
       <CardHeader>
         <h3 className="text-2xl font-bold tracking-tight">{name}</h3>

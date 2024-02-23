@@ -1,5 +1,6 @@
 import { getAllTrustedCompany } from "@/lib/services";
-import { Button, Image } from "@nextui-org/react";
+import Image from "next/image";
+import { Button } from "@nextui-org/react";
 import { ChevronRight } from "lucide-react";
 import { SectionHeading } from "./ui/section-heading";
 import { SectionSubheading } from "./ui/section-subheading";
@@ -26,13 +27,12 @@ export async function TrustedCompanies() {
         {companines?.map(({ imageUrl }) => (
           <Image
             key={imageUrl}
-            isZoomed
-            shadow="sm"
-            radius="md"
-            width="100%"
-            alt=""
-            className="h-[100px] w-full object-cover"
             src={imageUrl}
+            alt="trusted company"
+            height={200}
+            width={200}
+            quality={95}
+            className="object-fit rounded-xl border border-foreground/10 bg-background/80 object-center p-8"
           />
         ))}
       </div>

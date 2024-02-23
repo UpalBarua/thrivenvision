@@ -13,7 +13,7 @@ export function SectionSubheading({
   return (
     <h2
       className={cn(
-        "mx-auto max-w-[30rem] px-4 text-center text-[1.25rem] text-foreground/80",
+        "mx-auto max-w-[30rem] px-2 text-center text-[1.25rem] leading-relaxed text-foreground/80",
         className,
       )}
     >
