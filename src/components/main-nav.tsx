@@ -80,7 +80,7 @@ export function MainNav() {
             </DropdownMenu>
           </Dropdown>
           <Button className="text-white" color="primary" variant="flat">
-            Get a code
+            Get a Quote
           </Button>
         </NavbarItem>
 
