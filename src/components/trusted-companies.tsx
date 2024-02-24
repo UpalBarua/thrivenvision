@@ -12,12 +12,13 @@ export async function TrustedCompanies() {
     <section className="grid grid-cols-2 gap-8 py-20">
       <div className="flex flex-col items-start">
         <SectionHeading className="text-start">
-          Trusted by 100 world-class <br></br> brands and organizations
+          Partnering with Industry Leaders
         </SectionHeading>
         <SectionSubheading className="mx-0 w-full px-0 pb-6 text-start">
-          We have earned the confidence of hundreds of brands and organizations,
-          solidifying our reputation as a trusted and reliable partner in the
-          industry.
+          Our agency is a hub for elite partnerships, trusted by over a hundred
+          leading brands to deliver impactful and innovative collaborations.
+          Discover the synergy of creativity and strategy in our portfolio of
+          successful projects.
         </SectionSubheading>
         <Button color="primary" size="lg" endContent={<ChevronRight />}>
           Lets Connect

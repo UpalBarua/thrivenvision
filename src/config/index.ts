@@ -12,11 +12,11 @@ import {
 
 export const navLinks = [
   {
-    label: "About Us",
+    label: "About us",
     href: "/about-us",
   },
   {
-    label: "Pricing",
+    label: "Packages",
     href: "/pricing",
   },
   {
@@ -24,7 +24,7 @@ export const navLinks = [
     href: "/services",
   },
   {
-    label: "Contact Us",
+    label: "Contact us",
     href: "/contact-us",
   },
 ] as const;
@@ -35,7 +35,7 @@ export const whyChooseUsData = [
     Icon: Star,
     title: "Proven Track Record",
     description:
-      "With a track record of delivering measurable results and exceeding client expectations, we're the trusted choice for businesses seeking success in today's competitive landscape",
+      "With a track record of delivering measurable results and exceeding client expectations, we're the trusted choice for businesses seeking success in today's competitive landscape.",
   },
   {
     id: 2,
@@ -68,7 +68,7 @@ export const whyChooseUsData = [
   {
     id: 6,
     Icon: Handshake,
-    title: " Dedicated Support",
+    title: "Dedicated Support",
     description:
       "Your success is our priority. Count on us for dedicated support and ongoing assistance, ensuring that you have the resources and guidance you need to thrive in today's dynamic business environment.",
   },
