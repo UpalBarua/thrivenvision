@@ -50,7 +50,7 @@ export function MainNav() {
             </div>
           </NavbarItem>
         ))}
-        <NavbarItem>
+        <NavbarItem className="-ml-4">
           <Dropdown>
             <DropdownTrigger>
               <Button
@@ -58,15 +58,10 @@ export function MainNav() {
                 className="text-base"
                 endContent={<ChevronDown />}
               >
-                legal
+                Legal
               </Button>
             </DropdownTrigger>
             <DropdownMenu aria-label="Static Actions">
-              <DropdownItem key="new">
-                {/* <Link className="text-white" href="refund-policy">
-                  Refund policy
-                </Link> */}
-              </DropdownItem>
               <DropdownItem key="edit">
                 <Link className="text-white" href="teams-of-service">
                   Teams Of Service

@@ -37,7 +37,7 @@ export const services = [
           "Achieve your business goals with our expert Business Consulting. We offer valuable insights and strategies tailored to your industry.",
       },
       {
-        name: "Lead Generation:",
+        name: "Lead Generation",
         serviceDescription:
           "Drive quality leads to your business with our Lead Generation services. We implement targeted campaigns to boost your customer base.",
       },
@@ -47,14 +47,14 @@ export const services = [
     id: "cbf5e281a52bc",
     category: "Digital Marketing",
     categoryDescription:
-      "Boost your online presence with our Digital Marketing services. We specialize in Influencer Marketing, SEO (On-Page, Off-Page, Keyword Research, Technical SEO, Competitor Analysis), Social Media Marketing(Management, Paid Promotion, Content Strategy), and Video Marketing (Promotion, SEO, YouTube Management)",
+      "Boost your online presence with our Digital Marketing services. We specialize in Influencer Marketing, SEO (On-Page, Off-Page, Keyword Research, Technical SEO, Competitor Analysis), Social Media Marketing (Management, Paid Promotion, Content Strategy), and Video Marketing (Promotion, SEO, YouTube Management).",
     categoryImage: "/images/services/brand-building.png",
     Icon: BarChartBig,
     services: [
       {
-        name: "influencer Marketing",
+        name: "Influencer Marketing",
         serviceDescription:
-          "Amplify your brand's reach with Influencer Marketing. Collaborate with industry influencer to connect with your target audience effectively.",
+          "Amplify your brand's reach with Influencer Marketing. Collaborate with industry influencers to connect with your target audience effectively.",
       },
       {
         name: "SEO",
@@ -69,7 +69,7 @@ export const services = [
       {
         name: "Video Marketing",
         serviceDescription:
-          " Engage your audience through video with our Video Marketing services. We offer Video Promotion & Distribution, Video SEO, YouTube Channel Management, and in-depth Consultation & Audience Research.",
+          "Engage your audience through video with our Video Marketing services. We offer Video Promotion & Distribution, Video SEO, YouTube Channel Management, and in-depth Consultation & Audience Research.",
       },
     ],
   },
@@ -94,12 +94,12 @@ export const services = [
       {
         name: "Image Editing",
         serviceDescription:
-          " Perfect your images with our Image Editing services, including Product Image Editing and Mockups for eCommerce and more.",
+          "Perfect your images with our Image Editing services, including Product Image Editing and Mockups for eCommerce and more.",
       },
       {
-        name: "infographics",
+        name: "Infographic",
         serviceDescription:
-          " Convey complex information visually with our Infographic design. We transform data into engaging and easy-to-understand graphics.",
+          "Convey complex information visually with our Infographic design. We transform data into engaging and easy-to-understand graphics.",
       },
       {
         name: "Logo Design",
@@ -109,17 +109,17 @@ export const services = [
       {
         name: "Social Media Design",
         serviceDescription:
-          "Enhance your social media presence with eye- catching designs. We create engaging Social Posts & Banners, Thumbnails Headers and Covers.",
+          "Enhance your social media presence with eye-catching designs. We create engaging Social Posts & Banners, Thumbnails, Headers, and Covers.",
       },
       {
         name: "T-Shirts & Merchandise",
         serviceDescription:
-          " Boost your merch sales with custom T-Shirt, Hoodie, Sticker, Jersey, and Sportswear designs that resonate with your audience.",
+          "Boost your merch sales with custom T-Shirt, Hoodie, Sticker, Jersey, and Sportswear designs that resonate with your audience.",
       },
       {
         name: "Vehicle Wrap Design",
         serviceDescription:
-          "Make a bold statement on the road with our Vehicle Wrap Design. Transform your vehicle into a moving advertisement that turn heads.",
+          "Make a bold statement on the road with our Vehicle Wrap Design. Transform your vehicle into a moving advertisement that turns heads.",
       },
       {
         name: "Website Design",
@@ -152,7 +152,7 @@ export const services = [
     id: "3d62ac0e9b12b",
     category: "Video & Animation",
     categoryDescription:
-      "Tell your story through captivating visuals. Our Video & Animation services include Video Editing for ads, YouTube content, corporate videos, family and travel memories, weddings, and explainer videos.We also create Video Ads & Commercials tailored for various platforms like Facebook, Instagram, TikTok, YouTube, and more.Explore our Animated Explainers(2D, Whiteboard, 3D, Isometric), Social Media Videos, Logo Animation, and 3D Product Animation.",
+      "Tell your story through captivating visuals. Our Video & Animation services include Video Editing for ads, YouTube content, corporate videos, family and travel memories, weddings, and explainer videos. We also create Video Ads & Commercials tailored for various platforms like Facebook, Instagram, TikTok, YouTube, and more. Explore our Animated Explainers (2D, Whiteboard, 3D, Isometric), Social Media Videos, Logo Animation, and 3D Product Animation.",
     categoryImage: "/images/services/video-and-animation.png",
     Icon: Clapperboard,
     services: [
@@ -167,24 +167,24 @@ export const services = [
           "Simplify complex ideas with our Animated Explainers. Choose from 2D, Whiteboard, 3D, or Isometric animations to convey your message effectively.",
       },
       {
-        name: "Logo Animation:",
+        name: "Logo Animation",
         serviceDescription:
           "Make your logo come to life! Our Logo Animation service adds a dynamic touch to your brand identity.",
       },
       {
-        name: "Video Ads & Commercials:",
+        name: "Video Ads & Commercials",
         serviceDescription:
-          " Boost your brand with targeted video ads. We create attention-grabbing content for Facebook, Instagram, TikTok, YouTube, Pinterest, LinkedIn, Twitter, and Snapchat.",
+          "Boost your brand with targeted video ads. We create attention-grabbing content for Facebook, Instagram, TikTok, YouTube, Pinterest, LinkedIn, Twitter, and Snapchat.",
       },
       {
         name: "Video Editing",
         serviceDescription:
-          " Transform your raw footage into captivating videos. Our Video Editing service covers ads, YouTube content, corporate videos, family memories, weddings, and engaging explainer videos.",
+          "Transform your raw footage into captivating videos. Our Video Editing service covers ads, YouTube content, corporate videos, family memories, weddings, and engaging explainer videos.",
       },
       {
         name: "Social Media Videos",
         serviceDescription:
-          " Elevate your social media presence with visually stunning videos tailored for various platforms.",
+          "Elevate your social media presence with visually stunning videos tailored for various platforms.",
       },
     ],
   },
@@ -192,7 +192,7 @@ export const services = [
     id: "d473723a10fca",
     category: "Writing & Translation",
     categoryDescription:
-      "Communicate effectively with our Writing & Translation services. We offer Articles & Blog Posts, including SEO Writing, Lifestyle Blogs, Promotional Articles, and Bulk Articles.Additionally, we provide Product Descriptions, Website Content, Resume Writing, and Scriptwriting to enhance your written content.",
+      "Communicate effectively with our Writing & Translation services. We offer Articles & Blog Posts, including SEO Writing, Lifestyle Blogs, Promotional Articles, and Bulk Articles. Additionally, we provide Product Descriptions, Website Content, Resume Writing, and Scriptwriting to enhance your written content.",
     categoryImage: "/images/services/brand-building.png",
     Icon: Languages,
     services: [
@@ -207,7 +207,7 @@ export const services = [
           "Make your products stand out with compelling descriptions that drive sales.",
       },
       {
-        name: "Website Content:",
+        name: "Website Content",
         serviceDescription:
           "Craft a compelling online narrative with our Website Content writing. We'll ensure your website effectively communicates your brand.",
       },
@@ -217,14 +217,9 @@ export const services = [
           "Land your dream job with a professionally crafted resume that highlights your strengths and achievements.",
       },
       {
-        name: "Video Editing",
-        serviceDescription:
-          " Transform your raw footage into captivating videos. Our Video Editing service covers ads, YouTube content, corporate videos, family memories, weddings, and engaging explainer videos.",
-      },
-      {
         name: "Scriptwriting",
         serviceDescription:
-          " Bring your ideas to life on screen with our expert scriptwriting service. We create scripts that captivate and engage your audience.",
+          "Bring your ideas to life on screen with our expert scriptwriting service. We create scripts that captivate and engage your audience.",
       },
     ],
   },

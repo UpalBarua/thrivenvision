@@ -26,14 +26,15 @@ const Footer = () => {
         <div className="shadow-2xl  dark:text-gray-100 ">
           <footer className="pb-4 ">
             <div className="mb-8 ml-6 grid grid-cols-1 gap-4 pt-14 lg:mb-14 lg:grid-cols-4">
-              <div className=" space-y-6">
-                <h2 className="text-[25px]">
-                  'Embrace the unknown,<br></br>let your dreams take flight’
-                </h2>
+              <div>
+                <h2 className="text-[25px]">'Embrace the unknown,</h2>
+                <h3 className="pb-6 text-[20px]">
+                  let your dreams take flight’
+                </h3>
 
                 <Button color="primary">
                   {" "}
-                  <h1>Contact now</h1>
+                  <h1>Hire us now</h1>
                 </Button>
               </div>
               <div>
@@ -86,9 +87,9 @@ const Footer = () => {
                 </ul>
               </div>
               <div className="flex items-center gap-8">
-                <Facebook size={30} />
-                <Instagram size={30} />
-                <Linkedin size={30} />
+                <Facebook size={26} />
+                <Instagram size={26} />
+                <Linkedin size={26} />
               </div>
             </div>
             {/* <div className="pt-6 text-center">
