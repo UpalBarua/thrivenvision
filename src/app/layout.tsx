@@ -28,9 +28,9 @@ export default function RootLayout({
       >
         <Providers>
           <AuthContextProvider>
-            <MainNav />
+            {/* <MainNav /> */}
             {children}
-            <Footer />
+            {/* <Footer /> */}
           </AuthContextProvider>
         </Providers>
         <div

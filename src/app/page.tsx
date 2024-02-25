@@ -10,12 +10,12 @@ export default function HomePage() {
   return (
     <main className="container relative z-10 mx-auto max-w-7xl space-y-10 px-2 sm:px-4">
       <Hero />
-      <Services />
-      <PricingPackages />
-      <WhyChooseUs />
-      <TrustedCompanies />
-      <Portfolios />
-      <Newsletter />
+      {/* <Services /> */}
+      {/* <PricingPackages /> */}
+      {/* <WhyChooseUs /> */}
+      {/* <TrustedCompanies /> */}
+      {/* <Portfolios /> */}
+      {/* <Newsletter /> */}
     </main>
   );
 }

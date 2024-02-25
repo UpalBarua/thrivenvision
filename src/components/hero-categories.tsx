@@ -5,61 +5,57 @@ import { ScrollShadow } from "@nextui-org/react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-const serviceCategoryIds = services.map((service) => service.id);
+const initialServiceCategories = services.map(({ id, category, Icon }) => ({
+  id,
+  category,
+  Icon,
+}));
 
 export function HeroCategories() {
-  const [scrollY, setScrollY] = useState(0);
-  const [focusedService, setFocusedService] = useState<
-    (typeof serviceCategoryIds)[number]
-  >(serviceCategoryIds[1]);
+  const [serviceCategories, setServiceCategories] = useState(
+    initialServiceCategories,
+  );
 
   useEffect(() => {
+    let tempCategory = {};
+
     const interval = setInterval(() => {
-      setFocusedService((prevService) => {
-        const currentServiceIdIndex = serviceCategoryIds.indexOf(prevService);
-        const nextServiceIdIndex =
-          currentServiceIdIndex === 5 ? 0 : currentServiceIdIndex + 1;
-        return serviceCategoryIds[nextServiceIdIndex];
+      setServiceCategories((prev) => {
+        tempCategory = prev[0];
+        return [...prev.slice(1)];
       });
 
-      setScrollY((prev) => {
-        if (prev >= services.length * 3.5) {
-          setFocusedService(serviceCategoryIds[1]);
-          return 0;
-        } else {
-          return prev + 3.5;
-        }
-      });
+      setTimeout(() => {
+        setServiceCategories((prev) => {
+          return [...prev, tempCategory] as typeof initialServiceCategories;
+        });
+      }, 1000);
     }, 3000);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <ScrollShadow
-      visibility="both"
-      hideScrollBar
-      size={25}
-      className="h-[calc(3*3.5rem)] px-2 text-2xl text-foreground/60"
-    >
-      {[...services, ...services, ...services].map(({ id, category, Icon }) => (
-        <motion.div
-          className={"flex min-h-[3.5rem] items-center gap-x-3"}
-          key={id}
-          animate={{
-            y: `-${scrollY}rem`,
-            fontSize: id === focusedService ? "1.875rem" : "1.5rem",
-            color:
-              id === focusedService
-                ? "rgba(255,255,255, 0.9)"
-                : "rgba(255,255,255, 0.6)",
-          }}
-          transition={{ ease: "linear", duration: 0.5 }}
-        >
-          <Icon className="h-7 w-7 text-primary" />
-          <p>{category}</p>
-        </motion.div>
-      ))}
+    <ScrollShadow hideScrollBar visibility="both" size={25}>
+      <div className="h-full max-h-[calc(3.5rem*3)] px-2 text-2xl text-foreground/60">
+        {serviceCategories.map(({ id, category, Icon }, i) => (
+          <motion.div
+            key={id}
+            className={"flex min-h-[3.5rem] items-center gap-x-3"}
+            layout
+            initial={{ fontSize: "1.5rem" }}
+            animate={
+              i === 1
+                ? { fontSize: "1.875rem", color: "rgba(255,255,255, 0.9)" }
+                : { fontSize: "1.5rem", color: "rgba(255,255,255, 0.6)" }
+            }
+            transition={{ duration: 0.75, layout: { duration: 0.5 } }}
+          >
+            <Icon className="h-7 w-7 text-primary" />
+            <p>{category}</p>
+          </motion.div>
+        ))}
+      </div>
     </ScrollShadow>
   );
 }
