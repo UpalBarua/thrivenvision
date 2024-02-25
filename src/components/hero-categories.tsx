@@ -1,7 +1,6 @@
 "use client";
 
 import { services } from "@/config/services";
-import { cn } from "@/lib/cn";
 import { ScrollShadow } from "@nextui-org/react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
@@ -31,26 +30,31 @@ export function HeroCategories() {
           return prev + 3.5;
         }
       });
-    }, 4000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
     <ScrollShadow
+      visibility="both"
       hideScrollBar
-      size={140}
-      className="h-[calc(4*3.5rem)] overflow-hidden px-2 text-2xl text-foreground/60"
+      size={25}
+      className="h-[calc(3*3.5rem)] px-2 text-2xl text-foreground/60"
     >
-      {[...services, ...services].map(({ id, category, Icon }) => (
+      {[...services, ...services, ...services].map(({ id, category, Icon }) => (
         <motion.div
-          className={cn(
-            "flex min-h-[3.5rem] items-center gap-x-3 transition-all duration-[0.8] ease-in-out",
-            id === focusedService && "min-h-[4rem] text-3xl text-foreground/90",
-          )}
+          className={"flex min-h-[3.5rem] items-center gap-x-3"}
           key={id}
-          animate={{ y: `-${scrollY}rem` }}
-          transition={{ type: "spring", duration: 0.5, stiffness: 50 }}
+          animate={{
+            y: `-${scrollY}rem`,
+            fontSize: id === focusedService ? "1.875rem" : "1.5rem",
+            color:
+              id === focusedService
+                ? "rgba(255,255,255, 0.9)"
+                : "rgba(255,255,255, 0.6)",
+          }}
+          transition={{ ease: "linear", duration: 0.5 }}
         >
           <Icon className="h-7 w-7 text-primary" />
           <p>{category}</p>
