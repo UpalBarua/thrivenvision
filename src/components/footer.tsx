@@ -1,17 +1,16 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from "react";
+import { cn } from "@/lib/cn";
+import { Button } from "@nextui-org/react";
 import {
-  PhoneCall,
+  Facebook,
+  Instagram,
+  Linkedin,
   Mail,
   MapPin,
-  Linkedin,
-  Instagram,
-  Facebook,
+  PhoneCall,
 } from "lucide-react";
-import { Button } from "@nextui-org/react";
-import { useScroll, useTransform, motion } from "framer-motion";
 
-const Footer = () => {
+const Footer = ({ accentFont }) => {
   //  const componentRef = useRef<HTMLDivElement>(null);
 
   //  const { scrollXProgress } = useScroll({
@@ -27,19 +26,23 @@ const Footer = () => {
           <footer className="pb-4 ">
             <div className="mb-8 ml-6 grid grid-cols-1 gap-4 pt-14 lg:mb-14 lg:grid-cols-4">
               <div>
-                <h2 className="text-[25px]">'Embrace the unknown,</h2>
-                <h3 className="pb-6 text-[20px]">
-                  let your dreams take flight’
+                <h2 className={cn(accentFont.className, "text-[29px]")}>
+                  Embrace the unknown,
+                </h2>
+                <h3 className="pb-6 text-[20px] capitalize">
+                  let your dreams take flight.
                 </h3>
 
-                <Button color="primary">
-                  {" "}
-                  <h1>Hire us now</h1>
+                <Button
+                  color="primary"
+                  size="lg"
+                  className="!text-xl font-bold capitalize"
+                >
+                  Hire us now
                 </Button>
               </div>
               <div>
-                <h2 className="pb-4 text-[24px]">Services</h2>
-
+                <h2 className="pb-4 text-[24px] font-bold">Services</h2>
                 <ul className="space-y-4 text-gray-400">
                   <li>Brand Building</li>
                   <li>Digital Marketing</li>
@@ -50,7 +53,7 @@ const Footer = () => {
                 </ul>
               </div>
               <div>
-                <h2 className=" pb-4 text-[24px]">Contacts</h2>
+                <h2 className=" pb-4 text-[24px] font-bold">Contacts</h2>
 
                 <ul className="space-y-6 text-gray-400">
                   <li className="flex items-center gap-4">
@@ -62,41 +65,33 @@ const Footer = () => {
                 </ul>
               </div>
               <div>
-                <h1 className=" pb-4 text-[24px]">Office Address</h1>
+                <h1 className=" pb-4 text-[24px] font-bold">Office Address</h1>
 
                 <ul className="flex items-center gap-4 text-gray-400">
                   <MapPin size={30} />
                   <ul>
-                    <li> Address: 27/20A, Babor Road,</li>
-                    <li> Block #F, Mohammadpur,</li>
-                    <li>Dhaka, Bangladesh</li>
+                    <li>27/20A, Babor Road, Block #F,</li>
+                    <li>Mohammadpur, Dhaka, BD.</li>
                   </ul>
                 </ul>
               </div>
             </div>
-            <div className="ml-4 grid grid-cols-1 gap-4 text-gray-400 lg:grid-cols-3 lg:gap-8">
+            <div className="flex items-center justify-between">
               <div className="flex items-center gap-6">
                 <h4>thrivenvision</h4>
-                <p>Copyright © 2023 thrivenvision.studio</p>
+                <p>Copyright © 2024 thrivenvision.studio</p>
               </div>
-              <div className="lg:ml-8">
-                <ul className="flex items-center gap-8">
+              <div>
+                <ul className="flex items-center gap-8 capitalize">
                   <li>privacy policy</li>
                   <li>terms of service</li>
                   <li>support</li>
+                  <Facebook size={20} />
+                  <Instagram size={20} />
+                  <Linkedin size={20} />
                 </ul>
               </div>
-              <div className="flex items-center gap-8">
-                <Facebook size={26} />
-                <Instagram size={26} />
-                <Linkedin size={26} />
-              </div>
             </div>
-            {/* <div className="pt-6 text-center">
-              <div className="text-center">
-                <p>thrivenvision Copyright © 2023 thrivenvision.studio</p>
-              </div>
-            </div> */}
           </footer>
         </div>
       </div>

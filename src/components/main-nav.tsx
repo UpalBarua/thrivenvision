@@ -39,7 +39,6 @@ export function MainNav() {
       <Link href="/">
         <Image src="/named-logo.png" alt="logo" height={80} width={160} />
       </Link>
-
       <NavbarContent className="hidden gap-6 sm:flex" justify="end">
         {navLinks.map(({ label, href }) => (
           <NavbarItem key={href} isActive={pathname.startsWith(href)}>
@@ -64,7 +63,7 @@ export function MainNav() {
             <DropdownMenu aria-label="Static Actions">
               <DropdownItem key="edit">
                 <Link className="text-white" href="teams-of-service">
-                  Teams Of Service
+                  Terms Of Service
                 </Link>
               </DropdownItem>
               <DropdownItem key="copy">
@@ -74,9 +73,9 @@ export function MainNav() {
               </DropdownItem>
             </DropdownMenu>
           </Dropdown>
-          <Button className="text-white" color="primary" variant="flat">
-            Get a Quote
-          </Button>
+          {/* <Button className="text-white" color="primary" variant="flat"> */}
+          {/*   Get a Quote */}
+          {/* </Button> */}
         </NavbarItem>
 
         {/* <ThemeSwitcher /> */}

@@ -71,7 +71,7 @@ const TeamsOfService = () => {
         {teamService?.map((team) => (
           <div className="pb-4" key={team?.id}>
             <p className="p-4 text-[20px] lg:p-0">
-              <span className="font-semibold text-pink-500">
+              <span className="font-semibold text-primary">
                 {team?.privacy}
               </span>
               : {team?.description}

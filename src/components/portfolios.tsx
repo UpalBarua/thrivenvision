@@ -7,15 +7,15 @@ import { SectionSubheading } from "./ui/section-subheading";
 const portfolios = [
   {
     id: 1,
-    url: "https://www.instagram.com/p/CojXYdJpcwz/",
+    url: "https://www.instagram.com/p/C2sWPScP0qD/",
   },
   {
     id: 1,
-    url: "https://www.instagram.com/p/CojXYdJpcwz/",
+    url: "https://www.instagram.com/p/C2sWPScP0qD/",
   },
   {
     id: 1,
-    url: "https://www.instagram.com/p/CojXYdJpcwz/",
+    url: "https://www.instagram.com/p/C2sWPScP0qD/",
   },
 ];
 

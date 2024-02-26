@@ -51,7 +51,8 @@ function ChooseUsCard({ Icon, title, description }: ChooseUsCardProps) {
       <CardBody className="space-y-2">
         <h3 className="text-2xl font-bold tracking-tight">{title}</h3>
         <p className="leading-relaxed text-foreground/80">
-          {description.slice(0, 100)}
+          {/* {description.slice(0, 100)} */}
+          {description}
         </p>
       </CardBody>
     </Card>

@@ -8,9 +8,9 @@ export async function PricingPackages() {
 
   return (
     <section className="pt-20">
-      <SectionHeading>Our Pricing Packages</SectionHeading>
+      <SectionHeading>Our Packages</SectionHeading>
       <SectionSubheading>
-        Explore our affordable pricing packages
+        Discover our customizable packages <br /> tailored to your needs
       </SectionSubheading>
       <div className="flex flex-wrap place-content-center gap-6 pt-10">
         {pricingPackages?.map((pricingPackage) => (

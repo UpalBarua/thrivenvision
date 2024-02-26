@@ -60,7 +60,7 @@ export function PricingPackageCard({
       </CardBody>
       <CardFooter>
         <Button color="primary" variant="solid" fullWidth size="lg">
-          Get Qoute
+          Get a Quote
         </Button>
       </CardFooter>
     </Card>

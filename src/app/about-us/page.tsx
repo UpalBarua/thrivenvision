@@ -30,8 +30,8 @@ const AboutUs = () => {
   ];
   return (
     <section className="mx-auto mb-20  mt-14 max-w-6xl ">
-      <h1 className="p-4 pb-8 text-5xl font-semibold lg:p-0">About us</h1>
-      <p className="p-4 text-[20px]">
+      <h1 className="pb-8 text-5xl font-semibold lg:pb-6">About us</h1>
+      <p className="text-[20px] leading-relaxed">
         <span className="font-semibold">thrivenvision</span> distinguishes
         itself as more than a digital agency by employing innovators, creators,
         and strategists who are committed to propelling your brand forward in
@@ -92,6 +92,7 @@ const AboutUs = () => {
         </h1>
         <p className="pb-14 text-center text-[20px]">
           A diverse group of dedicated professionals driven by collaboration,
+          <br />
           delivering innovative solutions to exceed client expectations
         </p>
       </div>
