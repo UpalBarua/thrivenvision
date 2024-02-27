@@ -1,13 +1,11 @@
 import Footer from "@/components/footer";
 import { MainNav } from "@/components/main-nav";
 import { Providers } from "@/components/providers";
+import { AuthContextProvider } from "@/context/auth-context";
 import { cn } from "@/lib/cn";
 import type { Metadata } from "next";
-import { Exo } from "next/font/google";
+import { exo } from "./fonts";
 import "./globals.css";
-import { AuthContextProvider } from "@/context/auth-context";
-
-const exo = Exo({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "thrivenvision",
@@ -19,18 +17,26 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html
+      lang="en"
+      className="scroll-smooth dark"
+      style={{ scrollBehavior: "smooth" }}
+    >
       <body
         className={cn(
           exo.className,
-          "relative min-h-screen overflow-x-hidden text-foreground/90 antialiased",
+          "relative min-h-screen overflow-x-hidden  text-foreground/90 antialiased",
         )}
       >
         <Providers>
           <AuthContextProvider>
-            <MainNav />
-            {children}
-            <Footer />
+            <div className="flex min-h-screen flex-col">
+              <div className="flex-1">
+                <MainNav />
+                {children}
+              </div>
+              <Footer />
+            </div>
           </AuthContextProvider>
         </Providers>
         <div

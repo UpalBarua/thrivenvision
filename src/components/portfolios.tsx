@@ -7,21 +7,21 @@ import { SectionSubheading } from "./ui/section-subheading";
 const portfolios = [
   {
     id: 1,
-    url: "https://www.instagram.com/p/CojXYdJpcwz/",
+    url: "https://www.instagram.com/p/C2sWPScP0qD/",
   },
   {
     id: 1,
-    url: "https://www.instagram.com/p/CojXYdJpcwz/",
+    url: "https://www.instagram.com/p/C2sWPScP0qD/",
   },
   {
     id: 1,
-    url: "https://www.instagram.com/p/CojXYdJpcwz/",
+    url: "https://www.instagram.com/p/C2sWPScP0qD/",
   },
 ];
 
 export function Portfolios() {
   return (
-    <section className="portfolio | flex flex-col items-center justify-center rounded-[2.5em] py-24">
+    <section className="portfolio | relative flex h-full flex-col items-center justify-center overflow-hidden rounded-[2.5em] py-24">
       <SectionHeading className="text-white/90">
         Portfolio Spotlight: Witness Our Impact
       </SectionHeading>

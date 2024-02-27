@@ -41,7 +41,7 @@ export function Newsletter() {
           <Input
             placeholder="example@email.com"
             classNames={{
-              inputWrapper: "bg-background/60 border border-foreground/10",
+              inputWrapper: "bg-background/60 border border-foreground/20",
             }}
           />
           <Button
@@ -54,7 +54,7 @@ export function Newsletter() {
           </Button>
         </form>
         <p className="pt-16 leading-relaxed text-foreground/60">
-          * Your privacy is paramount to us. We promise to keep your email safe
+          Your privacy is paramount to us. We promise to keep your email safe
           and never spam. Unsubscribe at any time with just a click.
         </p>
       </div>

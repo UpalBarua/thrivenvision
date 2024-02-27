@@ -1,8 +1,7 @@
 "use client";
 
-import { pricingPackages } from "@/config";
+import { TPricingPackage } from "@/types";
 import {
-  Button,
   Table,
   TableBody,
   TableCell,
@@ -13,7 +12,11 @@ import {
 import { Pencil, Trash2 } from "lucide-react";
 import { PricingPackageForm } from "./pricing-package-form";
 
-export function PricingTable() {
+type PricingTableProp = {
+  pricingPackages: TPricingPackage[];
+};
+
+export function PricingTable({ pricingPackages }: PricingTableProp) {
   return (
     <section>
       <div className="flex items-center justify-between pb-4">
@@ -35,11 +38,10 @@ export function PricingTable() {
           <TableColumn>Actions</TableColumn>
         </TableHeader>
         <TableBody>
-          {pricingPackages.map(({ _id, name, description }) => (
-            <TableRow key={_id}>
+          {pricingPackages.map(({ id, name }) => (
+            <TableRow key={id}>
               <TableCell className="">
                 <h4 className="font-medium">{name}</h4>
-                <p className="text-foreground/80">{description}</p>
               </TableCell>
               <TableCell className="relative flex items-center gap-4">
                 <span className="cursor-pointer text-lg text-default-400 active:opacity-50">

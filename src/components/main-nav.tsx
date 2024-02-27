@@ -7,7 +7,7 @@ import {
   DropdownItem,
   DropdownMenu,
   DropdownTrigger,
-  Link,
+  // Link,
   Navbar,
   NavbarContent,
   NavbarItem,
@@ -19,6 +19,7 @@ import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import Link from "next/link";
 
 export function MainNav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,46 +40,19 @@ export function MainNav() {
       <Link href="/">
         <Image src="/named-logo.png" alt="logo" height={80} width={160} />
       </Link>
-
-      <NavbarContent className="hidden gap-6 sm:flex" justify="end">
+      <NavbarContent className="hidden gap-2 sm:flex" justify="end">
         {navLinks.map(({ label, href }) => (
           <NavbarItem key={href} isActive={pathname.startsWith(href)}>
-            <div>
-              <Link color="foreground" href={href}>
+            <Button variant="light" className="text-base">
+              <Link color="foreground" href={href} scroll={false}>
                 {label}
               </Link>
-            </div>
+            </Button>
           </NavbarItem>
         ))}
-        <NavbarItem className="-ml-4">
-          <Dropdown>
-            <DropdownTrigger>
-              <Button
-                variant="light"
-                className="text-base"
-                endContent={<ChevronDown />}
-              >
-                Legal
-              </Button>
-            </DropdownTrigger>
-            <DropdownMenu aria-label="Static Actions">
-              <DropdownItem key="edit">
-                <Link className="text-white" href="teams-of-service">
-                  Teams Of Service
-                </Link>
-              </DropdownItem>
-              <DropdownItem key="copy">
-                <Link className="text-white" href="privacy-policy">
-                  Privacy policy
-                </Link>
-              </DropdownItem>
-            </DropdownMenu>
-          </Dropdown>
-          <Button className="text-white" color="primary" variant="flat">
-            Get a Quote
-          </Button>
+        <NavbarItem>
+          <LegalButton />
         </NavbarItem>
-
         {/* <ThemeSwitcher /> */}
       </NavbarContent>
       <NavbarMenuToggle
@@ -88,12 +62,45 @@ export function MainNav() {
       <NavbarMenu>
         {navLinks.map(({ label, href }) => (
           <NavbarMenuItem key={href} isActive={pathname.startsWith(href)}>
-            <Link className="w-full" color="foreground" href={href} size="lg">
+            <Link className="w-full" color="foreground" href={href}>
               {label}
             </Link>
           </NavbarMenuItem>
         ))}
       </NavbarMenu>
     </Navbar>
+  );
+}
+
+function LegalButton() {
+  return (
+    <Dropdown className="mt-2 border border-foreground/10 bg-background/80 backdrop-blur-md backdrop-saturate-150">
+      <DropdownTrigger>
+        <Button variant="light" className="text-base">
+          <span>Legal</span>
+          <ChevronDown />
+        </Button>
+      </DropdownTrigger>
+      <DropdownMenu>
+        <DropdownItem className="hover:!bg-background">
+          <Link
+            className="w-full text-base"
+            color="foreground"
+            href="/terms-of-service"
+          >
+            Terms of Service
+          </Link>
+        </DropdownItem>
+        <DropdownItem className="hover:!bg-background">
+          <Link
+            className="w-full text-base"
+            color="foreground"
+            href="/privacy-policy"
+          >
+            Privacy Policy
+          </Link>
+        </DropdownItem>
+      </DropdownMenu>
+    </Dropdown>
   );
 }

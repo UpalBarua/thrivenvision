@@ -55,7 +55,7 @@ const PrivacyPolicy = () => {
         {allPrivacy?.map((privacy) => (
           <div className="pb-4" key={privacy?.id}>
             <p className="p-4 text-[18px] lg:p-0">
-              <span className="font-semibold text-pink-500">
+              <span className="font-semibold text-primary">
                 {privacy?.privacy}
               </span>
               : {privacy?.description}

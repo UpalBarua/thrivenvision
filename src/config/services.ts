@@ -14,7 +14,7 @@ export const services = [
     categoryDescription:
       "Strengthen your brand identity with our expertise in Branding, Advertising Management, Development, Consulting, and Lead Generation.",
     Icon: Store,
-    categoryImage: "/images/services/brand-building.png",
+    categoryImage: "/images/services/brand-building.webp",
     services: [
       {
         name: "Advertising Management",
@@ -48,7 +48,7 @@ export const services = [
     category: "Digital Marketing",
     categoryDescription:
       "Boost your online presence with our Digital Marketing services. We specialize in Influencer Marketing, SEO (On-Page, Off-Page, Keyword Research, Technical SEO, Competitor Analysis), Social Media Marketing (Management, Paid Promotion, Content Strategy), and Video Marketing (Promotion, SEO, YouTube Management).",
-    categoryImage: "/images/services/brand-building.png",
+    categoryImage: "/images/services/digital-marketing.webp",
     Icon: BarChartBig,
     services: [
       {
@@ -78,7 +78,7 @@ export const services = [
     category: "Graphics & Design",
     categoryDescription:
       "Make an impact with our creative design solutions. We offer Logo Design, Website Design, Image Editing, T-Shirt Design, 3D Modeling, Social Media Graphics, and Vehicle Wraps.",
-    categoryImage: "/images/services/brand-building.png",
+    categoryImage: "/images/services/graphics-&-design.webp",
     Icon: Palette,
     services: [
       {
@@ -133,7 +133,7 @@ export const services = [
     category: "Programming & Tech",
     categoryDescription:
       "Empower your digital presence with our Programming & Tech expertise. We offer Website Development in platforms like WordPress, Shopify, and Wix, as well as Android App Development services.",
-    categoryImage: "/images/services/programming-and-tech.png",
+    categoryImage: "/images/services/programming-&-tech.webp",
     Icon: TerminalSquare,
     services: [
       {
@@ -153,7 +153,7 @@ export const services = [
     category: "Video & Animation",
     categoryDescription:
       "Tell your story through captivating visuals. Our Video & Animation services include Video Editing for ads, YouTube content, corporate videos, family and travel memories, weddings, and explainer videos. We also create Video Ads & Commercials tailored for various platforms like Facebook, Instagram, TikTok, YouTube, and more. Explore our Animated Explainers (2D, Whiteboard, 3D, Isometric), Social Media Videos, Logo Animation, and 3D Product Animation.",
-    categoryImage: "/images/services/video-and-animation.png",
+    categoryImage: "/images/services/video-&-animation.webp",
     Icon: Clapperboard,
     services: [
       {
@@ -193,7 +193,7 @@ export const services = [
     category: "Writing & Translation",
     categoryDescription:
       "Communicate effectively with our Writing & Translation services. We offer Articles & Blog Posts, including SEO Writing, Lifestyle Blogs, Promotional Articles, and Bulk Articles. Additionally, we provide Product Descriptions, Website Content, Resume Writing, and Scriptwriting to enhance your written content.",
-    categoryImage: "/images/services/brand-building.png",
+    categoryImage: "/images/services/writing-&-translation.webp",
     Icon: Languages,
     services: [
       {
