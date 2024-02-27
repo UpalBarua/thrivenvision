@@ -4,7 +4,7 @@ import { SectionSubheading } from "./ui/section-subheading";
 
 export function Services() {
   return (
-    <section className="py-10">
+    <section id="services" className="py-10">
       <SectionHeading>Discover Our Offerings</SectionHeading>
       <SectionSubheading>
         Explore our comprehensive range of services designed to elevate your

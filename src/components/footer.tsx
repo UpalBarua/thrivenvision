@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import { cn } from "@/lib/cn";
 import { Button } from "@nextui-org/react";
+import Image from "next/image";
 import {
   Facebook,
   Instagram,
@@ -11,16 +12,8 @@ import {
 } from "lucide-react";
 
 const Footer = ({ accentFont }) => {
-  //  const componentRef = useRef<HTMLDivElement>(null);
-
-  //  const { scrollXProgress } = useScroll({
-  //    target: componentRef,
-  //    offset: ["0 1", "1.2 1"],
-  //  });
-
-  //  const scaleValues = useTransform(scrollXProgress, [0, 1], [0.9, 1]);
   return (
-    <section className="mt-8 dark:bg-[#000a14]">
+    <section className="mt-auto border-t border-foreground/10 bg-black/80 pt-[20rem]">
       <div className="mx-auto flex max-w-7xl flex-col-reverse lg:flex-col ">
         <div className="shadow-2xl  dark:text-gray-100 ">
           <footer className="pb-4 ">
@@ -36,9 +29,9 @@ const Footer = ({ accentFont }) => {
                 <Button
                   color="primary"
                   size="lg"
-                  className="!text-xl font-bold capitalize"
+                  className="gradient-btn !text-xl font-semibold capitalize"
                 >
-                  Hire us now
+                  <span>Hire us now</span>
                 </Button>
               </div>
               <div>
@@ -66,7 +59,6 @@ const Footer = ({ accentFont }) => {
               </div>
               <div>
                 <h1 className=" pb-4 text-[24px] font-bold">Office Address</h1>
-
                 <ul className="flex items-center gap-4 text-gray-400">
                   <MapPin size={30} />
                   <ul>
@@ -78,7 +70,12 @@ const Footer = ({ accentFont }) => {
             </div>
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-6">
-                <h4>thrivenvision</h4>
+                <Image
+                  src="/named-logo.png"
+                  alt="logo"
+                  height={80}
+                  width={160}
+                />
                 <p>Copyright © 2024 thrivenvision.studio</p>
               </div>
               <div>

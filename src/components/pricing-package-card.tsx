@@ -59,7 +59,13 @@ export function PricingPackageCard({
         </div>
       </CardBody>
       <CardFooter>
-        <Button color="primary" variant="solid" fullWidth size="lg">
+        <Button
+          color="primary"
+          variant="solid"
+          fullWidth
+          size="lg"
+          className="text-base font-semibold"
+        >
           Get a Quote
         </Button>
       </CardFooter>

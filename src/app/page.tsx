@@ -5,17 +5,29 @@ import { PricingPackages } from "@/components/pricing-packages";
 import { Services } from "@/components/services";
 import { TrustedCompanies } from "@/components/trusted-companies";
 import { WhyChooseUs } from "@/components/why-choose-us";
+import Image from "next/image";
 
 export default function HomePage() {
   return (
-    <main className="container relative z-10 mx-auto max-w-7xl space-y-10 px-2 sm:px-4">
+    <main className="container relative z-10 mx-auto max-w-7xl space-y-20 px-2 sm:px-4">
       <Hero />
-      {/* <Services /> */}
-      {/* <PricingPackages /> */}
-      {/* <WhyChooseUs /> */}
-      {/* <TrustedCompanies /> */}
-      {/* <Portfolios /> */}
-      {/* <Newsletter /> */}
+      <Services />
+      <PricingPackages />
+      <WhyChooseUs />
+      <TrustedCompanies />
+      <Portfolios />
+      <section className="translate-y-[50%]">
+        <Newsletter />
+      </section>
+      <Image
+        className="object-fit absolute right-0 top-0 h-[calc(75dvh)] opacity-30"
+        src={"/hero-bg-logo.webp"}
+        alt="hero bg image"
+        height="600"
+        width="600"
+        quality={95}
+        priority
+      />
     </main>
   );
 }

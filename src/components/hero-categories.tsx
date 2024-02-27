@@ -37,15 +37,15 @@ export function HeroCategories() {
 
   return (
     <ScrollShadow hideScrollBar visibility="both" size={25}>
-      <div className="h-full max-h-[calc(3.5rem*3)] px-2 text-2xl text-foreground/60">
+      <div className="-mt-[3.5rem] h-full max-h-[calc(3.5rem*4)] overflow-hidden px-2 text-2xl text-foreground/60">
         {serviceCategories.map(({ id, category, Icon }, i) => (
           <motion.div
             key={id}
-            className={"flex min-h-[3.5rem] items-center gap-x-3"}
+            className="flex min-h-[3.5rem] items-center gap-x-3"
             layout
             initial={{ fontSize: "1.5rem" }}
             animate={
-              i === 1
+              i === 2
                 ? { fontSize: "1.875rem", color: "rgba(255,255,255, 0.9)" }
                 : { fontSize: "1.5rem", color: "rgba(255,255,255, 0.6)" }
             }

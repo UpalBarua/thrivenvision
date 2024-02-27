@@ -1,37 +1,12 @@
-import {
-  Card,
-  CardBody,
-  CardFooter,
-  CardHeader,
-  Image,
-} from "@nextui-org/react";
-import React from "react";
+import { Card, CardBody, CardFooter, Image } from "@nextui-org/react";
+import { employees } from "@/config";
+import { SectionHeading } from "@/components/ui/section-heading";
 
-const AboutUs = () => {
-  const AllEmployee = [
-    {
-      id: 1,
-      name: "Mohammed Nazmul Hossain",
-      title: "Chief Operating Officer,",
-      image: "https://i.ibb.co/JRKHjhf/Nazmul.png",
-    },
-    {
-      id: 2,
-      name: "Robin M. Rahman",
-      title: " Chief Executive Officer",
-      image: "https://i.ibb.co/88mzwLt/Robin.png",
-    },
-    {
-      id: 3,
-      name: "Syed Hameem Bin Arshad",
-      title: "Chief Business Officer",
-      image: "https://i.ibb.co/9wQ1MTp/Hameem.png",
-    },
-  ];
+export default function AboutUs() {
   return (
-    <section className="mx-auto mb-20  mt-14 max-w-6xl ">
-      <h1 className="pb-8 text-5xl font-semibold lg:pb-6">About us</h1>
-      <p className="text-[20px] leading-relaxed">
+    <section className="container mx-auto mb-20 mt-14 max-w-6xl">
+      <SectionHeading className="text-start">About us</SectionHeading>
+      <p className="text-[20px] leading-relaxed text-foreground/80">
         <span className="font-semibold">thrivenvision</span> distinguishes
         itself as more than a digital agency by employing innovators, creators,
         and strategists who are committed to propelling your brand forward in
@@ -97,26 +72,30 @@ const AboutUs = () => {
         </p>
       </div>
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-        {AllEmployee?.map((employee) => (
-          <div key={employee?.id}>
-            <Card className="bg-primary/5 py-4">
-              <CardBody className="ml-6 flex justify-center overflow-visible py-2">
-                <Image
-                  alt="Card background"
-                  className="  w-full rounded-xl object-cover object-center lg:w-[300px]"
-                  src={employee?.image}
-                />
-              </CardBody>
-              <CardFooter className="flex-col items-center px-4 pb-6 pt-4">
-                <h1 className="text-[20px] font-semibold">{employee?.name}</h1>
-                <h1 className="text-[20px] font-semibold">{employee?.title}</h1>
-              </CardFooter>
-            </Card>
-          </div>
+        {employees.map((employee) => (
+          <Employee key={employee.name} {...employee} />
         ))}
       </div>
     </section>
   );
-};
+}
 
-export default AboutUs;
+type EmployeeProps = (typeof employees)[number];
+
+function Employee({ name, image, position }: EmployeeProps) {
+  return (
+    <Card className="bg-primary/5 py-4">
+      <CardBody className="ml-6 flex justify-center overflow-visible py-2">
+        <Image
+          alt="Card background"
+          className="  w-full rounded-xl object-cover object-center lg:w-[300px]"
+          src={image}
+        />
+      </CardBody>
+      <CardFooter className="flex-col items-center px-4 pb-6 pt-4">
+        <h1 className="text-[20px] font-semibold">{name}</h1>
+        <h1 className="text-[20px] font-semibold">{position}</h1>
+      </CardFooter>
+    </Card>
+  );
+}
