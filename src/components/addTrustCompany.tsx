@@ -15,7 +15,7 @@ const AddTrustedCompany = () => {
     try {
       setIsSubmitting(true);
 
-      const imgURL = await uploadFile(pictureFile);
+      const imgURL = await uploadFile(pictureFile as File);
 
       await addNewPCompany({
         imageUrl: imgURL,

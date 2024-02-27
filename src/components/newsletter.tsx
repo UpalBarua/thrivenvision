@@ -41,7 +41,7 @@ export function Newsletter() {
           <Input
             placeholder="example@email.com"
             classNames={{
-              inputWrapper: "bg-background/60 border border-foreground/10",
+              inputWrapper: "bg-background/60 border border-foreground/20",
             }}
           />
           <Button

@@ -4,12 +4,8 @@ import { Providers } from "@/components/providers";
 import { AuthContextProvider } from "@/context/auth-context";
 import { cn } from "@/lib/cn";
 import type { Metadata } from "next";
-import { Exo, Kaushan_Script } from "next/font/google";
-import Image from "next/image";
+import { exo } from "./fonts";
 import "./globals.css";
-
-const exo = Exo({ subsets: ["latin"] });
-const accentFont = Kaushan_Script({ subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
   title: "thrivenvision",
@@ -39,7 +35,7 @@ export default function RootLayout({
                 <MainNav />
                 {children}
               </div>
-              <Footer accentFont={accentFont} />
+              <Footer />
             </div>
           </AuthContextProvider>
         </Providers>

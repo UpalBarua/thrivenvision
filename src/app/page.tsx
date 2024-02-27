@@ -9,7 +9,7 @@ import Image from "next/image";
 
 export default function HomePage() {
   return (
-    <main className="container relative z-10 mx-auto max-w-7xl space-y-20 px-2 sm:px-4">
+    <main className="container relative z-10 mx-auto max-w-7xl px-2 sm:px-4">
       <Hero />
       <Services />
       <PricingPackages />
@@ -20,7 +20,7 @@ export default function HomePage() {
         <Newsletter />
       </section>
       <Image
-        className="object-fit absolute right-0 top-0 h-[calc(75dvh)] opacity-30"
+        className="object-fit absolute right-0 top-[2.5rem] h-[calc(75dvh)] opacity-30"
         src={"/hero-bg-logo.webp"}
         alt="hero bg image"
         height="600"

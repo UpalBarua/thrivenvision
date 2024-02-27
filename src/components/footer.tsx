@@ -1,7 +1,6 @@
-/* eslint-disable react/no-unescaped-entities */
+import { kaushanScript } from "@/app/fonts";
 import { cn } from "@/lib/cn";
 import { Button } from "@nextui-org/react";
-import Image from "next/image";
 import {
   Facebook,
   Instagram,
@@ -10,8 +9,9 @@ import {
   MapPin,
   PhoneCall,
 } from "lucide-react";
+import Image from "next/image";
 
-const Footer = ({ accentFont }) => {
+const Footer = () => {
   return (
     <section className="mt-auto border-t border-foreground/10 bg-black/80 pt-[20rem]">
       <div className="mx-auto flex max-w-7xl flex-col-reverse lg:flex-col ">
@@ -19,7 +19,7 @@ const Footer = ({ accentFont }) => {
           <footer className="pb-4 ">
             <div className="mb-8 ml-6 grid grid-cols-1 gap-4 pt-14 lg:mb-14 lg:grid-cols-4">
               <div>
-                <h2 className={cn(accentFont.className, "text-[29px]")}>
+                <h2 className={cn(kaushanScript.className, "text-[29px]")}>
                   Embrace the unknown,
                 </h2>
                 <h3 className="pb-6 text-[20px] capitalize">

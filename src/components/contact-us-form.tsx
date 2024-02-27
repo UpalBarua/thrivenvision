@@ -1,12 +1,12 @@
 "use client";
 
+import emailjs from "@emailjs/browser";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button, Input, Textarea } from "@nextui-org/react";
 import { Send, X } from "lucide-react";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { z } from "zod";
-import emailjs from "@emailjs/browser";
 
 const contactUsFormSchema = z.object({
   name: z
@@ -28,7 +28,6 @@ const contactUsFormSchema = z.object({
 type TContactUsForm = z.infer<typeof contactUsFormSchema>;
 
 export function ContactUsForm() {
-  const form = useRef();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const { control, handleSubmit, reset } = useForm<TContactUsForm>({
@@ -40,31 +39,6 @@ export function ContactUsForm() {
     },
   });
 
-  const sendMail = (data) => {
-    if (
-      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID &&
-      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID &&
-      process.env.NEXT_PUBLIC_EMAILJS_USER_ID &&
-      form.current
-    ) {
-      emailjs
-        .sendForm(
-          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-          form.current,
-          process.env.NEXT_PUBLIC_EMAILJS_USER_ID,
-        )
-        .then(
-          (result) => {
-            console.log("success", result);
-          },
-          (error) => {
-            console.log("error here");
-          },
-        );
-    }
-  };
-
   const onSubmit = async ({ name, email, message }: TContactUsForm) => {
     try {
       setIsSubmitting(true);
@@ -75,9 +49,12 @@ export function ContactUsForm() {
         message,
       };
 
-      sendMail(newMessage);
-
-      console.log(newMessage);
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string,
+        newMessage,
+        process.env.NEXT_PUBLIC_EMAILJS_USER_ID as string,
+      );
 
       reset();
     } catch (error) {
@@ -89,7 +66,7 @@ export function ContactUsForm() {
 
   return (
     <section>
-      <form ref={form} className="space-y-4" onSubmit={handleSubmit(onSubmit)}>
+      <form className="space-y-4" onSubmit={handleSubmit(onSubmit)}>
         <Controller
           name="name"
           control={control}

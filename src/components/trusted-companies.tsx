@@ -9,7 +9,7 @@ export async function TrustedCompanies() {
   const companines = await getAllTrustedCompany();
 
   return (
-    <section className="grid grid-cols-2 items-start gap-8 py-20">
+    <section className="grid grid-cols-2 items-start gap-8 pb-40">
       <div className="flex flex-col items-start">
         <SectionHeading className="text-start">
           Partnering with

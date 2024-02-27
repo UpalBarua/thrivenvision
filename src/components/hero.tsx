@@ -4,7 +4,7 @@ import { HeroImages } from "./hero-images";
 
 export function Hero() {
   return (
-    <section className="grid h-[40rem] grid-cols-2 items-center justify-center gap-10">
+    <section className="mb-28 grid h-[40rem] grid-cols-2 items-center justify-center gap-10">
       <div className="relative space-y-8">
         <svg
           className="absolute -left-8 -top-10 h-32 w-32 -rotate-[180deg] scale-x-[-1]"
