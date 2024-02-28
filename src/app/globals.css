@@ -44,6 +44,28 @@
   z-index: 10;
 }
 
+.gradient-btn-wide::after {
+  content: "";
+  top: 50;
+  left: 50;
+  position: absolute;
+  background: linear-gradient(45deg,
+      rgba(123, 10, 238, 1) 35%,
+      rgba(247, 101, 255, 1) 90%);
+  height: 900%;
+  width: 900%;
+  rotate: 180deg;
+  border-radius: 50%;
+  animation: rotate 5s ease-in-out infinite;
+  -webkit-animation: rotate 10s ease infinite;
+  -moz-animation: rotate 10s ease infinite;
+}
+
+.gradient-btn-wide>* {
+  position: relative;
+  z-index: 10;
+}
+
 @keyframes rotate {
   0% {
     transform: rotate(0);

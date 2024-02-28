@@ -64,9 +64,9 @@ export function PricingPackageCard({
           variant="solid"
           fullWidth
           size="lg"
-          className="text-base font-semibold"
+          className="gradient-btn-wide text-base font-semibold"
         >
-          Get a Quote
+          <span>Get a Quote</span>
         </Button>
       </CardFooter>
     </Card>

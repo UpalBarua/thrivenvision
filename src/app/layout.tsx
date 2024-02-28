@@ -1,4 +1,4 @@
-import Footer from "@/components/footer";
+import { Footer } from "@/components/footer";
 import { MainNav } from "@/components/main-nav";
 import { Providers } from "@/components/providers";
 import { AuthContextProvider } from "@/context/auth-context";

@@ -137,11 +137,12 @@ export function ContactUsForm() {
         <div className="flex items-center justify-end gap-x-2 pt-2">
           <Button
             type="button"
-            color="danger"
+            variant="solid"
             startContent={<X size={16} />}
             onClick={() => {
               reset();
             }}
+            className="bg-gray-800"
           >
             <span>Clear</span>
           </Button>
@@ -150,8 +151,9 @@ export function ContactUsForm() {
             type="submit"
             color="primary"
             isLoading={isSubmitting}
+            className="gradient-btn"
           >
-            Submit
+            <span>Submit</span>
           </Button>
         </div>
       </form>

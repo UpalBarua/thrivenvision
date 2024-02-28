@@ -29,11 +29,13 @@ export function Newsletter() {
       />
       <div>
         <SectionHeading className="md:text-start">
-          Stay Ahead of the Curve Join Our Exclusive Newsletter!
+          <span className="text-4xl">Stay Ahead of the Curve</span>
+          <br />
+          Join Our Exclusive Newsletter!
         </SectionHeading>
         <SectionSubheading className="mx-0 max-w-full px-0 md:text-start">
           Dive into the latest trends, insights, and tips in the digital world
-          with <span className="font-semibold">thrivenvisions </span>
+          with <span className="font-semibold">thrivenvision&apos;s </span>
           newsletter. Signing up is quick and easy! Just enter your email below,
           and let us bring the future of digital innovation straight to you.
         </SectionSubheading>
@@ -41,7 +43,7 @@ export function Newsletter() {
           <Input
             placeholder="example@email.com"
             classNames={{
-              inputWrapper: "bg-background/60 border border-foreground/20",
+              inputWrapper: "bg-background/40 border border-foreground/20",
             }}
           />
           <Button

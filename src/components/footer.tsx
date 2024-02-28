@@ -1,3 +1,5 @@
+"use client";
+
 import { kaushanScript } from "@/app/fonts";
 import { cn } from "@/lib/cn";
 import { Button } from "@nextui-org/react";
@@ -10,10 +12,18 @@ import {
   PhoneCall,
 } from "lucide-react";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
-const Footer = () => {
+export function Footer() {
+  const pathname = usePathname();
+
   return (
-    <section className="mt-auto border-t border-foreground/10 bg-black/80 pt-[20rem]">
+    <footer
+      className={cn(
+        "mt-auto border-t border-foreground/10 bg-black/80",
+        pathname === "/" ? "pt-[20rem]" : "mt-10",
+      )}
+    >
       <div className="mx-auto flex max-w-7xl flex-col-reverse lg:flex-col ">
         <div className="shadow-2xl  dark:text-gray-100 ">
           <footer className="pb-4 ">
@@ -25,7 +35,6 @@ const Footer = () => {
                 <h3 className="pb-6 text-[20px] capitalize">
                   let your dreams take flight.
                 </h3>
-
                 <Button
                   color="primary"
                   size="lg"
@@ -47,7 +56,6 @@ const Footer = () => {
               </div>
               <div>
                 <h2 className=" pb-4 text-[24px] font-bold">Contacts</h2>
-
                 <ul className="space-y-6 text-gray-400">
                   <li className="flex items-center gap-4">
                     <PhoneCall size={26} /> +8801686113364
@@ -92,8 +100,6 @@ const Footer = () => {
           </footer>
         </div>
       </div>
-    </section>
+    </footer>
   );
-};
-
-export default Footer;
+}
