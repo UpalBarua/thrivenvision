@@ -40,7 +40,7 @@ export default function RootLayout({
           </AuthContextProvider>
         </Providers>
         <div
-          className="fixed inset-0 z-0 h-full w-full bg-[url('/bg-gradient.png')] 
+          className="fixed inset-0 z-0 h-full w-full bg-[url('/images/bg-gradient.png')] 
           bg-cover bg-center opacity-40"
         />
       </body>

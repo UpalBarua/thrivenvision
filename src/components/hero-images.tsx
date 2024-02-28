@@ -50,7 +50,7 @@ export function HeroImages() {
             animate={i === 2 ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 1, layout: { duration: 0.5 } }}
           >
-            <Image
+            <img
               className="object-fit object-center"
               alt="hero image"
               src={categoryImage}

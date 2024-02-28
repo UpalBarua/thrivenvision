@@ -38,7 +38,12 @@ export function MainNav() {
       }}
     >
       <Link href="/">
-        <Image src="/named-logo.png" alt="logo" height={80} width={160} />
+        <Image
+          src="/images/named-logo.png"
+          alt="logo"
+          height={80}
+          width={160}
+        />
       </Link>
       <NavbarContent className="hidden gap-2 sm:flex" justify="end">
         {navLinks.map(({ label, href }) => (

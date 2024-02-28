@@ -20,7 +20,7 @@ export function Newsletter() {
       className="flex-row items-center gap-10 p-6"
     >
       <Image
-        src="/newsletter.png"
+        src="/images/newsletter.png"
         alt="newsletter image"
         quality={95}
         height={500}

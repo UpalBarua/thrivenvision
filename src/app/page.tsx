@@ -21,7 +21,7 @@ export default function HomePage() {
       </section>
       <Image
         className="object-fit absolute right-0 top-[5rem] h-[30rem] opacity-30"
-        src={"/hero-bg-logo.webp"}
+        src={"/images/hero-bg-logo.webp"}
         alt="hero bg image"
         height="600"
         width="600"
