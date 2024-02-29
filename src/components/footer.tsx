@@ -79,7 +79,7 @@ export function Footer() {
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-6">
                 <Image
-                  src="/images/named-logo.png"
+                  src="/images/named-logo.webp"
                   alt="logo"
                   height={80}
                   width={160}

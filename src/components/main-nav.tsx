@@ -39,7 +39,7 @@ export function MainNav() {
     >
       <Link href="/">
         <Image
-          src="/images/named-logo.png"
+          src="/images/named-logo.webp"
           alt="logo"
           height={80}
           width={160}
