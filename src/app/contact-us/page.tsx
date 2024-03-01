@@ -5,17 +5,15 @@ import { SectionSubheading } from "@/components/ui/section-subheading";
 import { socialLinks } from "@/config";
 import { ContactUsForm } from "@/components/contact-us-form";
 import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 
 export default function ContactUs() {
-  const searchParams = useSearchParams();
-  const pageFor = searchParams.get("for");
-
   return (
     <main className="container relative z-10 mx-auto grid max-w-5xl grid-cols-1 gap-10 px-2 pt-[max(5dvw,1.5rem)] sm:px-4 md:grid-cols-2 md:gap-28">
       <div>
-        <SectionSubheading className="mx-0 px-0 pb-2 text-start">
-          {pageFor === "quote" ? "Get a Quote" : "Contact Us"}
-        </SectionSubheading>
+        <Suspense>
+          <PageHeading />
+        </Suspense>
         <SectionHeading className="text-start">
           Reach our Customer service!
         </SectionHeading>
@@ -41,5 +39,16 @@ export default function ContactUs() {
       </div>
       <ContactUsForm />
     </main>
+  );
+}
+
+function PageHeading() {
+  const searchParams = useSearchParams();
+  const pageFor = searchParams.get("for");
+
+  return (
+    <SectionSubheading className="mx-0 px-0 pb-2 text-start">
+      {pageFor === "quote" ? "Get a Quote" : "Contact Us"}
+    </SectionSubheading>
   );
 }

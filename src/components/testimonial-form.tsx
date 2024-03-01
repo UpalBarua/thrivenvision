@@ -61,6 +61,7 @@ export function TestimonialForm() {
 
       const newTestimonial = {
         comment,
+        starRating: 0,
         customer: {
           name,
           handle,

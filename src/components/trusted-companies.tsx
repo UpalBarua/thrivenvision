@@ -34,7 +34,7 @@ export async function TrustedCompanies() {
         {trustedCompanines?.map((company) => (
           <div
             key={company}
-            className="flex place-content-center rounded-xl border border-foreground/10 p-0 sm:bg-background/80 lg:p-6"
+            className="flex place-content-center rounded-xl p-0 sm:bg-background/80 lg:border lg:border-foreground/10 lg:p-6"
           >
             <Image
               src={company}
