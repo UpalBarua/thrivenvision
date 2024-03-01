@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function AboutUs() {
   return (
-    <section className="container mx-auto mb-20 mt-14 max-w-6xl space-y-12">
+    <section className="container relative z-10 mx-auto max-w-6xl space-y-[min(4rem,15dvw)] px-2 pt-[max(3dvw,1.5rem)] sm:px-4">
       <div>
         <SectionHeading className="text-start">About us</SectionHeading>
         <p className="text-[1.25rem] leading-relaxed text-foreground/80">
@@ -19,14 +19,15 @@ export default function AboutUs() {
           your brand.
         </p>
       </div>
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         <Card
-          className="border border-foreground/10 p-4"
+          isBlurred
           classNames={{
             base: [
-              "bg-background/40",
+              "dark:bg-background/60",
               "backdrop-blur-md",
               "backdrop-saturate-150",
+              "border border-foreground/10 p-4",
             ],
           }}
         >
@@ -41,12 +42,13 @@ export default function AboutUs() {
           </CardBody>
         </Card>
         <Card
-          className="border border-foreground/10 p-4"
+          isBlurred
           classNames={{
             base: [
-              "bg-background/40",
+              "dark:bg-background/60",
               "backdrop-blur-md",
               "backdrop-saturate-150",
+              "border border-foreground/10 p-4",
             ],
           }}
         >
@@ -92,7 +94,7 @@ export default function AboutUs() {
         <SectionHeading>Meet the force behind the magic</SectionHeading>
         <SectionSubheading className="max-w-full pb-8">
           A diverse group of dedicated professionals driven by collaboration,
-          <br />
+          <br className="hidden md:block" />
           delivering innovative solutions to exceed client expectations
         </SectionSubheading>
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
@@ -110,15 +112,22 @@ type EmployeeProps = (typeof employees)[number];
 function Employee({ name, image, position }: EmployeeProps) {
   return (
     <Card
-      className="border border-foreground/10 p-8"
+      isBlurred
       classNames={{
-        base: ["bg-background/40", "backdrop-blur-md", "backdrop-saturate-150"],
+        base: [
+          "dark:bg-background/60",
+          "backdrop-blur-md",
+          "backdrop-saturate-150",
+          "border border-foreground/10 p-8",
+        ],
       }}
     >
-      <CardBody className="flex items-center justify-center space-y-1 text-[1.25rem]">
+      <CardBody className="flex items-center justify-center space-y-1 text-center text-[1.25rem]">
         <Image
           src={image}
           alt={name}
+          height={200}
+          width={200}
           className="w-full object-cover object-center"
         />
         <h3 className="pt-8 font-semibold">{name}</h3>

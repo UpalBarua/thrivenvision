@@ -207,11 +207,6 @@ export const services = [
           "Make your products stand out with compelling descriptions that drive sales.",
       },
       {
-        name: "Website Content",
-        serviceDescription:
-          "Craft a compelling online narrative with our Website Content writing. We'll ensure your website effectively communicates your brand.",
-      },
-      {
         name: "Resume Writing",
         serviceDescription:
           "Land your dream job with a professionally crafted resume that highlights your strengths and achievements.",
@@ -220,6 +215,11 @@ export const services = [
         name: "Scriptwriting",
         serviceDescription:
           "Bring your ideas to life on screen with our expert scriptwriting service. We create scripts that captivate and engage your audience.",
+      },
+      {
+        name: "Website Content",
+        serviceDescription:
+          "Craft a compelling online narrative with our Website Content writing. We'll ensure your website effectively communicates your brand.",
       },
     ],
   },

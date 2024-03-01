@@ -17,7 +17,7 @@ export const navLinks = [
   },
   {
     label: "Packages",
-    href: "/#pricing",
+    href: "/#packages",
   },
   {
     label: "Services",
@@ -77,17 +77,17 @@ export const whyChooseUsData = [
 export const socialLinks = [
   {
     platform: "Facebook",
-    link: "facebook.com",
+    link: "https://www.facebook.com/thrivenvision",
     Icon: Facebook,
   },
   {
     platform: "Instagram",
-    link: "instagram.com",
+    link: "https://www.instagram.com/thrivenvision",
     Icon: Instagram,
   },
   {
     platform: "LinkedIn",
-    link: "linkedin.com",
+    link: "https://www.linkedin.com/company/thrivenvision",
     Icon: Linkedin,
   },
 ] as const;
@@ -96,17 +96,17 @@ export const employees = [
   {
     name: "Mohammed Nazmul Hossain",
     position: "Chief Operating Officer",
-    image: "https://i.ibb.co/JRKHjhf/Nazmul.png",
+    image: "/images/headshots/nazmul.webp",
   },
   {
     name: "Robin M. Rahman",
     position: " Chief Executive Officer",
-    image: "https://i.ibb.co/88mzwLt/Robin.png",
+    image: "/images/headshots/robin.webp",
   },
   {
     name: "Syed Hameem Bin Arshad",
     position: "Chief Business Officer",
-    image: "https://i.ibb.co/9wQ1MTp/Hameem.png",
+    image: "/images/headshots/hameem.webp",
   },
 ] as const;
 
@@ -189,4 +189,16 @@ export const privacyPolicy = [
     description:
       "We reserve the right to update this Privacy Policy at any time. When we do, we will post a notification on our website. We encourage you to periodically review this page for the latest information on our privacy practices.",
   },
+] as const;
+
+export const trustedCompanines = [
+  "/images/brands/logo-0.webp",
+  "/images/brands/logo-1.webp",
+  "/images/brands/logo-2.webp",
+  "/images/brands/logo-3.webp",
+  "/images/brands/logo-4.webp",
+  "/images/brands/logo-5.webp",
+  "/images/brands/logo-6.webp",
+  "/images/brands/logo-7.webp",
+  "/images/brands/logo-8.webp",
 ] as const;

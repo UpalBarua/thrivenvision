@@ -15,6 +15,7 @@ export type TPicture = {
 export type TTestimonial = {
   id?: string;
   comment: string;
+  starRating: number;
   customer: {
     name: string;
     handle: string;

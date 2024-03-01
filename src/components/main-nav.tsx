@@ -51,9 +51,7 @@ export function MainNav() {
               size="sm"
               className="text-base text-foreground/80"
             >
-              <Link href={href} scroll={false}>
-                {label}
-              </Link>
+              <Link href={href}>{label}</Link>
             </Button>
           </NavbarItem>
         ))}
@@ -73,6 +71,24 @@ export function MainNav() {
             </Link>
           </NavbarMenuItem>
         ))}
+        <NavbarMenuItem>
+          <Link
+            className="w-full text-base"
+            color="foreground"
+            href="/terms-of-service"
+          >
+            Terms of Service
+          </Link>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          <Link
+            className="w-full text-base"
+            color="foreground"
+            href="/privacy-policy"
+          >
+            Privacy Policy
+          </Link>
+        </NavbarMenuItem>
       </NavbarMenu>
     </Navbar>
   );

@@ -63,7 +63,7 @@ export function PricingPackageCard({
           size="lg"
           className="gradient-btn-wide mt-2 text-base font-semibold"
         >
-          <Link href="/quote">Get a Quote</Link>
+          <Link href="/contact-us?for=quote">Get a Quote</Link>
         </Button>
       </CardFooter>
     </Card>

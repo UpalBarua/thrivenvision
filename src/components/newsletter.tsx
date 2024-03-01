@@ -2,6 +2,7 @@ import { Button, Card, Input } from "@nextui-org/react";
 import Image from "next/image";
 import { SectionHeading } from "./ui/section-heading";
 import { SectionSubheading } from "./ui/section-subheading";
+import { Mail } from "lucide-react";
 
 export function Newsletter() {
   return (
@@ -23,7 +24,7 @@ export function Newsletter() {
         quality={95}
         height={500}
         width={500}
-        className="h-full w-full rounded-2xl object-cover object-center lg:w-auto"
+        className="h-full w-full rounded-2xl object-cover object-center lg:w-[32rem]"
       />
       <div className="space-y-2 p-2">
         <SectionHeading className="text-start">
@@ -39,6 +40,7 @@ export function Newsletter() {
         </SectionSubheading>
         <form className="lg:items-scenter flex flex-col gap-4 sm:flex-row sm:gap-2">
           <Input
+            startContent={<Mail />}
             placeholder="example@email.com"
             classNames={{
               inputWrapper:

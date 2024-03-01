@@ -4,7 +4,7 @@ import { PortfolioPost } from "./portfolio-post";
 import { SectionHeading } from "./ui/section-heading";
 import { SectionSubheading } from "./ui/section-subheading";
 
-const portfolios = [
+export const portfolios = [
   {
     url: "https://www.instagram.com/p/C2sWPScP0qD/",
   },
