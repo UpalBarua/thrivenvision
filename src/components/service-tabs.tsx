@@ -14,24 +14,21 @@ export function ServiceTabs() {
       fullWidth
       classNames={{
         tabList: [
-          "dark:border dark:border-foreground/10 border",
-          "bg-background/40",
-          "dark:bg-background/50",
+          "border border-foreground/10",
+          "bg-background/60",
           "backdrop-blur-md",
           "backdrop-saturate-150",
           "overflow-x-scroll w-[calc(100dvw-1rem)] mx-auto",
           "md:w-full md:justify-between",
-          "text-foreground mb-2",
+          "mb-2",
         ],
         tab: "max-w-fit h-10 px-2 md:h-11 md:px-3",
-        tabContent:
-          "group-data-[selected=true]:text-background dark:group-data-[selected=true]:text-foreground",
+        tabContent: ":group-data-[selected=true]:text-white",
       }}
-      className="pt-10"
     >
-      {services.map(({ category, Icon, services }, i) => (
+      {services.map(({ category, Icon, services }) => (
         <Tab
-          key={category + i}
+          key={category}
           title={
             <div className="flex items-center space-x-1.5">
               <Icon className="hidden h-5 w-5 md:block" />

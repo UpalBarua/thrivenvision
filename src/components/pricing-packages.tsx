@@ -7,12 +7,12 @@ export async function PricingPackages() {
   const pricingPackages = await getPricingPackagesFromDB();
 
   return (
-    <section id="pricing" className="pb-40">
+    <section id="pricing">
       <SectionHeading>Our Packages</SectionHeading>
       <SectionSubheading>
-        Discover our customizable packages <br /> tailored to your needs
+        Discover our customizable packages <br /> tailored to your needs.
       </SectionSubheading>
-      <div className="flex flex-wrap place-content-center gap-6 pt-10">
+      <div className="flex flex-wrap place-content-center gap-6">
         {pricingPackages?.map((pricingPackage) => (
           <PricingPackageCard key={pricingPackage.id} {...pricingPackage} />
         ))}

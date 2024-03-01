@@ -12,9 +12,14 @@
       rgba(247, 101, 255, 1) 80%);
   height: 200%;
   width: 200%;
-  animation: rotate 10s ease-in-out infinite;
-  -webkit-animation: rotate 10s ease infinite;
-  -moz-animation: rotate 10s ease infinite;
+}
+
+@media screen and (min-width: 64em) {
+  .portfolio::after {
+    animation: rotate 10s ease-in-out infinite;
+    -webkit-animation: rotate 10s ease infinite;
+    -moz-animation: rotate 10s ease infinite;
+  }
 }
 
 .portfolio>* {

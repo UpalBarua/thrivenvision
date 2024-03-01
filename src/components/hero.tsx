@@ -4,8 +4,8 @@ import { HeroImages } from "./hero-images";
 
 export function Hero() {
   return (
-    <section className="mb-28 grid h-[40rem] grid-cols-2 items-center justify-center gap-10">
-      <div className="relative space-y-8">
+    <section className=" grid h-[40rem] grid-cols-1 items-start justify-center gap-0 md:grid-cols-2 lg:items-center">
+      <div className="relative order-last flex flex-col justify-center space-y-2 lg:order-first lg:justify-start lg:space-y-8">
         <svg
           className="absolute -left-8 -top-10 h-32 w-32 -rotate-[180deg] scale-x-[-1]"
           xmlns="http://www.w3.org/2000/svg"
@@ -18,21 +18,21 @@ export function Hero() {
             strokeWidth="1.07"
             stroke="#ffffff"
             strokeMiterlimit="10"
-          ></path>
+          />
         </svg>
-        <h2 className="relative z-10 text-[5rem] leading-[5.5rem] tracking-wider">
+        <h1 className="relative z-10 text-center text-[clamp(2.375rem,5vw+0.5rem,5rem)] leading-tight tracking-wider lg:text-start">
           <span className="font-bold text-primary">thrive</span> towards your{" "}
           <span className="font-bold text-primary">envision.</span>
-        </h2>
+        </h1>
         <HeroCategories />
-        <div className="flex items-center gap-x-4">
+        <div className="flex items-center justify-center gap-x-4 lg:justify-start">
           <Button
             color="primary"
-            className="gradient-btn h-14 px-6 text-xl font-semibold"
+            className="gradient-btn h-10 px-4 text-base font-semibold lg:h-14 lg:px-6 lg:text-xl"
           >
             <span>Get a Quote</span>
           </Button>
-          <Button className="h-14 border border-foreground/20 bg-background px-6 text-xl font-semibold text-foreground/80 shadow-md">
+          <Button className="h-10 border border-foreground/20 bg-background px-4 text-base font-semibold text-foreground/80 shadow-md lg:h-14 lg:px-6 lg:text-xl">
             Case Studies
           </Button>
         </div>
