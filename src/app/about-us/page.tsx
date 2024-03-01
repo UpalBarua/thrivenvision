@@ -1,12 +1,8 @@
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  Image,
-} from "@nextui-org/react";
-import { employees } from "@/config";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { SectionSubheading } from "@/components/ui/section-subheading";
+import { employees } from "@/config";
+import { Card, CardBody, CardHeader } from "@nextui-org/react";
+import Image from "next/image";
 
 export default function AboutUs() {
   return (

@@ -4,6 +4,7 @@ import { services } from "@/config/services";
 import { ScrollShadow } from "@nextui-org/react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import useMediaQuery from "@/hooks/use-media-query";
 
 const initialServiceCategories = services.map(({ id, category, Icon }) => ({
   id,
@@ -15,6 +16,8 @@ export function HeroCategories() {
   const [serviceCategories, setServiceCategories] = useState(
     initialServiceCategories,
   );
+
+  const isLgScreen = useMediaQuery("(min-width:64em)");
 
   useEffect(() => {
     let tempCategory = {};
@@ -37,7 +40,7 @@ export function HeroCategories() {
 
   return (
     <ScrollShadow hideScrollBar visibility="both" size={25}>
-      <div className="-mt-[3.5rem] h-full max-h-[calc(3.5rem*4)] overflow-hidden px-2 text-2xl text-foreground/60">
+      <div className="-mt-[3.5rem] flex h-full max-h-[calc(3.5rem*4)] flex-col items-center overflow-hidden px-2 lg:items-start">
         {serviceCategories.map(({ id, category, Icon }, i) => (
           <motion.div
             key={id}
@@ -46,12 +49,18 @@ export function HeroCategories() {
             initial={{ fontSize: "1.5rem" }}
             animate={
               i === 2
-                ? { fontSize: "1.875rem", color: "rgba(255,255,255, 0.9)" }
-                : { fontSize: "1.5rem", color: "rgba(255,255,255, 0.6)" }
+                ? {
+                  fontSize: isLgScreen ? "1.875rem" : "1.35rem",
+                  color: "rgba(255,255,255, 0.9)",
+                }
+                : {
+                  fontSize: isLgScreen ? "1.5rem" : "1.35rem",
+                  color: "rgba(255,255,255, 0.6)",
+                }
             }
             transition={{ duration: 0.75, layout: { duration: 0.5 } }}
           >
-            <Icon className="h-7 w-7 text-primary" />
+            <Icon className="h-6 w-6 text-primary lg:h-7 lg:w-7" />
             <p>{category}</p>
           </motion.div>
         ))}

@@ -7,7 +7,6 @@ import {
   DropdownItem,
   DropdownMenu,
   DropdownTrigger,
-  // Link,
   Navbar,
   NavbarContent,
   NavbarItem,
@@ -17,24 +16,21 @@ import {
 } from "@nextui-org/react";
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
-import { useState } from "react";
 import Link from "next/link";
+import { useState } from "react";
 
 export function MainNav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const pathname = usePathname();
 
   return (
     <Navbar
       shouldHideOnScroll
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
-      height="4rem"
+      height="3.5rem"
       maxWidth="xl"
       classNames={{
         wrapper: "px-2 sm:px-4",
-        item: ["data-[active=true]:text-red-400"],
       }}
     >
       <Link href="/">
@@ -43,13 +39,19 @@ export function MainNav() {
           alt="logo"
           height={80}
           width={160}
+          priority
+          quality={95}
         />
       </Link>
-      <NavbarContent className="hidden gap-2 sm:flex" justify="end">
+      <NavbarContent className="hidden gap-3 md:flex" justify="end">
         {navLinks.map(({ label, href }) => (
-          <NavbarItem key={href} isActive={pathname.startsWith(href)}>
-            <Button variant="light" className="text-base">
-              <Link color="foreground" href={href} scroll={false}>
+          <NavbarItem key={href}>
+            <Button
+              variant="light"
+              size="sm"
+              className="text-base text-foreground/80"
+            >
+              <Link href={href} scroll={false}>
                 {label}
               </Link>
             </Button>
@@ -58,16 +60,15 @@ export function MainNav() {
         <NavbarItem>
           <LegalButton />
         </NavbarItem>
-        {/* <ThemeSwitcher /> */}
       </NavbarContent>
       <NavbarMenuToggle
         aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-        className="sm:hidden"
+        className="md:hidden"
       />
-      <NavbarMenu>
+      <NavbarMenu className="space-y-2 py-6">
         {navLinks.map(({ label, href }) => (
-          <NavbarMenuItem key={href} isActive={pathname.startsWith(href)}>
-            <Link className="w-full" color="foreground" href={href}>
+          <NavbarMenuItem key={href}>
+            <Link href={href} className="w-full text-foreground/80">
               {label}
             </Link>
           </NavbarMenuItem>
@@ -81,7 +82,11 @@ function LegalButton() {
   return (
     <Dropdown className="mt-2 border border-foreground/10 bg-background/80 backdrop-blur-md backdrop-saturate-150">
       <DropdownTrigger>
-        <Button variant="light" className="text-base">
+        <Button
+          variant="light"
+          size="sm"
+          className="text-base text-foreground/80"
+        >
           <span>Legal</span>
           <ChevronDown />
         </Button>

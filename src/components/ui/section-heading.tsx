@@ -10,7 +10,7 @@ export function SectionHeading({ children, className }: SectionHeadingProps) {
   return (
     <h2
       className={cn(
-        "pb-2 text-center text-2xl font-semibold capitalize tracking-tight sm:text-3xl md:pb-6 md:text-[2.8125rem] md:leading-[1.25]",
+        "pb-2 text-center text-[clamp(1.5rem,_3.5vw+1rem,_2.8125rem)] font-semibold capitalize tracking-tight md:pb-4",
         className,
       )}
     >

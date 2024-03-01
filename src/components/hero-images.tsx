@@ -45,7 +45,7 @@ export function HeroImages() {
         {categoryImages.map(({ id, categoryImage }, i) => (
           <motion.div
             key={id}
-            className="flex min-w-full items-center justify-center"
+            className="flex min-w-full items-center justify-center px-10 lg:px-0"
             layout
             animate={i === 2 ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 1, layout: { duration: 0.5 } }}
@@ -56,6 +56,8 @@ export function HeroImages() {
               src={categoryImage}
               height={450}
               width={450}
+              quality={95}
+              priority
             />
           </motion.div>
         ))}

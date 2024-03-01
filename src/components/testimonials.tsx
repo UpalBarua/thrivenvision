@@ -1,14 +1,7 @@
 import { SectionHeading } from "@/components/ui/section-heading";
 import { SectionSubheading } from "@/components/ui/section-subheading";
-import { getTestimonialsFromDB } from "@/lib/services";
 import { TTestimonial } from "@/types";
-import {
-  Avatar,
-  Card,
-  CardBody,
-  CardFooter,
-  CardHeader,
-} from "@nextui-org/react";
+import { Avatar, Card, CardBody, CardFooter } from "@nextui-org/react";
 
 const testimonials = [
   {
@@ -107,13 +100,13 @@ export async function Testimonials() {
   // const testimonials = await getTestimonialsFromDB();
 
   return (
-    <section className="py-20">
-      <SectionHeading>Recommendations!</SectionHeading>
+    <section>
+      <SectionHeading>Recommendations</SectionHeading>
       <SectionSubheading>
-        Learn about the positive impact our services have had on our customers
-        through their testimonials.
+        Learn about the positive impact our services have had on <br /> our
+        customers through their testimonials.
       </SectionSubheading>
-      <div className="mt-10 [column-fill:_balance] sm:columns-2 lg:columns-3">
+      <div className="[column-fill:_balance] sm:columns-2 lg:columns-3">
         {testimonials.map((testimonial) => (
           <TestimonialCard key={testimonial.id} {...testimonial} />
         ))}
@@ -129,18 +122,16 @@ function TestimonialCard({
   return (
     <Card
       isHoverable
+      isBlurred
       classNames={{
         base: [
-          "bg-background/40",
-          "dark:bg-background/50",
-          "data-[hover=true]:bg-background/80",
+          "dark:bg-background/60",
           "dark:data-[hover=true]:bg-background/80",
           "backdrop-blur-md",
           "backdrop-saturate-150",
+          "group mb-4 p-2 dark:border dark:border-foreground/10 sm:break-inside-avoid sm:p-4 lg:p-5",
         ],
       }}
-      className="group mb-4 p-2 dark:border dark:border-foreground/10 
-      sm:break-inside-avoid sm:p-4 lg:p-5"
     >
       <CardBody className="leading-relaxed text-foreground/60">
         <p>{comment}</p>

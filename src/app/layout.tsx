@@ -1,5 +1,5 @@
-import { Footer } from "@/components/footer";
 import { MainNav } from "@/components/main-nav";
+import { Footer } from "@/components/footer";
 import { Providers } from "@/components/providers";
 import { AuthContextProvider } from "@/context/auth-context";
 import { cn } from "@/lib/cn";
@@ -19,13 +19,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className="scroll-smooth dark"
+      className="!scroll-smooth dark"
       style={{ scrollBehavior: "smooth" }}
     >
       <body
         className={cn(
           exo.className,
-          "relative min-h-screen overflow-x-hidden  text-foreground/90 antialiased",
+          "relative min-h-screen overflow-x-hidden text-foreground/90 antialiased",
         )}
       >
         <Providers>
@@ -40,8 +40,8 @@ export default function RootLayout({
           </AuthContextProvider>
         </Providers>
         <div
-          className="fixed inset-0 z-0 h-full w-full bg-[url('/images/bg-gradient.webp')] 
-          bg-cover bg-center opacity-40"
+          className="fixed inset-0 bg-[url('/images/bg-gradient.webp')] 
+          bg-cover bg-center opacity-50"
         />
       </body>
     </html>
