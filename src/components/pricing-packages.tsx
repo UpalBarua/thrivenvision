@@ -10,7 +10,8 @@ export async function PricingPackages() {
     <section id="packages" className="scroll-mt-10">
       <SectionHeading>Our Packages</SectionHeading>
       <SectionSubheading>
-        Discover our customizable packages <br /> tailored to your needs.
+        Explore our customizable packages for your specific needs
+        {/* Discover our customizable packages <br /> tailored to your needs. */}
       </SectionSubheading>
       <div className="flex flex-wrap place-content-center gap-6">
         {pricingPackages?.map((pricingPackage) => (

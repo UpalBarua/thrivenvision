@@ -28,13 +28,15 @@ export function Footer() {
           <h4 className="pb-6 text-xl capitalize text-foreground">
             let your dreams take flight.
           </h4>
-          <Button
-            color="primary"
-            size="lg"
-            className="gradient-btn !text-xl font-semibold capitalize"
-          >
-            <Link href="/contact-us">Hire us now</Link>
-          </Button>
+          <Link href="/contact-us?for=quote">
+            <Button
+              color="primary"
+              size="lg"
+              className="gradient-btn !text-xl font-semibold capitalize"
+            >
+              <span>Hire us now</span>
+            </Button>
+          </Link>
         </div>
         <div>
           <h3 className="pb-4 text-2xl font-semibold text-foreground">
@@ -84,24 +86,24 @@ export function Footer() {
         />
         <p>Copyright © 2024 thrivenvision.studio</p>
         <div className="flex flex-col items-center gap-4 lg:flex-row">
-          <div className="flex items-center gap-1 capitalize lg:gap-4">
+          <div className="flex items-center gap-1 lg:gap-4">
             <Link
               href="/privacy-policy"
               className="underline-offset-2 transition-colors hover:text-foreground hover:underline"
             >
-              privacy policy
+              Privacy Policy
             </Link>
             <Link
               href="/terms-of-service"
               className="underline-offset-2 transition-colors hover:text-foreground hover:underline"
             >
-              terms of service
+              Terms of Service
             </Link>
             <Link
-              href="/privacy-policy"
+              href="/contact-us"
               className="underline-offset-2 transition-colors hover:text-foreground hover:underline"
             >
-              support
+              Support
             </Link>
           </div>
           <div className="flex items-center gap-2">

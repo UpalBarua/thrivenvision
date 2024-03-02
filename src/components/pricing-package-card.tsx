@@ -16,7 +16,7 @@ export function PricingPackageCard({
 }: TPricingPackage) {
   const servicesAndFeaturesList = {
     "Services Included": services,
-    features: features,
+    Features: features,
   };
 
   return (
@@ -56,15 +56,17 @@ export function PricingPackageCard({
         ))}
       </CardBody>
       <CardFooter>
-        <Button
-          color="primary"
-          variant="solid"
-          fullWidth
-          size="lg"
-          className="gradient-btn-wide mt-2 text-base font-semibold"
-        >
-          <Link href="/contact-us?for=quote">Get a Quote</Link>
-        </Button>
+        <Link className="w-full" href="/contact-us?for=quote">
+          <Button
+            color="primary"
+            variant="solid"
+            fullWidth
+            size="lg"
+            className="gradient-btn-wide mt-2 text-base font-semibold"
+          >
+            <span>Get a Quote</span>
+          </Button>
+        </Link>
       </CardFooter>
     </Card>
   );

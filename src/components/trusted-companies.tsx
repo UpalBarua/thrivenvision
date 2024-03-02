@@ -21,14 +21,16 @@ export async function TrustedCompanies() {
           Discover the synergy of creativity and strategy in our portfolio of
           successful projects.
         </SectionSubheading>
-        <Button
-          color="primary"
-          size="lg"
-          endContent={<ChevronRight />}
-          className="gradient-btn text-lg font-semibold"
-        >
-          <Link href="/contact-us">Lets Connect</Link>
-        </Button>
+        <Link href="/contact-us">
+          <Button
+            color="primary"
+            size="lg"
+            endContent={<ChevronRight />}
+            className="gradient-btn text-lg font-semibold"
+          >
+            <span>Lets Connect</span>
+          </Button>
+        </Link>
       </div>
       <div className="grid grid-cols-3 gap-8 px-2 lg:gap-4 lg:px-0">
         {trustedCompanines?.map((company) => (

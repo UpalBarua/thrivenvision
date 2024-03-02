@@ -23,9 +23,8 @@ export function Portfolios() {
         Portfolio Spotlight: Witness Our Impact
       </SectionHeading>
       <SectionSubheading className="max-w-3xl text-white/80">
-        Our achievements speak for themselves. Explore our portfolio to see how
-        we have helped clients achievetheir goals and surpass their
-        expectations.
+        Our accomplishments speak for themselves. Explore our portfolio to learn
+        how we helped customers accomplish goals and exceed expectations
       </SectionSubheading>
       <div className="grid grid-cols-1 gap-4 px-4 pt-4 md:grid-cols-2 lg:grid-cols-3">
         {portfolios?.map(({ url }, i) => (

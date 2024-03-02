@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@nextui-org/react";
 import { HeroCategories } from "./hero-categories";
 import { HeroImages } from "./hero-images";
@@ -28,7 +30,7 @@ export function Hero() {
         <div className="flex items-center justify-center gap-x-4 lg:justify-start">
           <Button
             color="primary"
-            className="gradient-btn h-10 px-4 text-base font-semibold lg:h-14 lg:px-6 lg:text-xl"
+            className="gradient-btn-wide h-10 px-4 text-base font-semibold lg:h-14 lg:px-6 lg:text-xl"
           >
             <span>Book Your Free Consult</span>
           </Button>

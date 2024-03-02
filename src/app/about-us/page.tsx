@@ -93,9 +93,11 @@ export default function AboutUs() {
       <div className="pt-6">
         <SectionHeading>Meet the force behind the magic</SectionHeading>
         <SectionSubheading className="max-w-full pb-8">
-          A diverse group of dedicated professionals driven by collaboration,
-          <br className="hidden md:block" />
-          delivering innovative solutions to exceed client expectations
+          Passionate professionals collaborate to provide unique solutions that
+          exceed customer expectations
+          {/* A diverse group of dedicated professionals driven by collaboration, */}
+          {/* <br className="hidden md:block" /> */}
+          {/* delivering innovative solutions to exceed client expectations */}
         </SectionSubheading>
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           {employees.map((employee) => (
@@ -118,7 +120,7 @@ function Employee({ name, image, position }: EmployeeProps) {
           "dark:bg-background/60",
           "backdrop-blur-md",
           "backdrop-saturate-150",
-          "border border-foreground/10 p-8",
+          "border border-foreground/10 p-6",
         ],
       }}
     >

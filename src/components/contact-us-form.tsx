@@ -95,7 +95,7 @@ export function ContactUsForm() {
           render={({ field, fieldState }) => (
             <Input
               size="lg"
-              label="email"
+              label="Email"
               placeholder="Enter your email"
               errorMessage={fieldState.error?.message || ""}
               isInvalid={fieldState.invalid}
@@ -119,7 +119,7 @@ export function ContactUsForm() {
               size="lg"
               minRows={8}
               label="Message"
-              placeholder="Enter your Message"
+              placeholder="Enter your message"
               errorMessage={fieldState.error?.message || ""}
               isInvalid={fieldState.invalid}
               {...field}

@@ -12,7 +12,7 @@ import {
 
 export const navLinks = [
   {
-    label: "About us",
+    label: "About Us",
     href: "/about-us",
   },
   {
@@ -24,7 +24,7 @@ export const navLinks = [
     href: "/#services",
   },
   {
-    label: "Contact us",
+    label: "Contact Us",
     href: "/contact-us",
   },
 ] as const;

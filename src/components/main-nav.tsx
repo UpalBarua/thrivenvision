@@ -49,7 +49,7 @@ export function MainNav() {
             <Button
               variant="light"
               size="sm"
-              className="text-base text-foreground/80"
+              className="text-base capitalize text-foreground/80"
             >
               <Link href={href}>{label}</Link>
             </Button>
@@ -66,7 +66,7 @@ export function MainNav() {
       <NavbarMenu className="space-y-2 py-6">
         {navLinks.map(({ label, href }) => (
           <NavbarMenuItem key={href}>
-            <Link href={href} className="w-full text-foreground/80">
+            <Link href={href} className="w-full capitalize text-foreground/80">
               {label}
             </Link>
           </NavbarMenuItem>
@@ -110,7 +110,7 @@ function LegalButton() {
       <DropdownMenu>
         <DropdownItem className="hover:!bg-background">
           <Link
-            className="w-full text-base"
+            className="w-full text-base capitalize"
             color="foreground"
             href="/terms-of-service"
           >
@@ -119,7 +119,7 @@ function LegalButton() {
         </DropdownItem>
         <DropdownItem className="hover:!bg-background">
           <Link
-            className="w-full text-base"
+            className="w-full text-base capitalize"
             color="foreground"
             href="/privacy-policy"
           >

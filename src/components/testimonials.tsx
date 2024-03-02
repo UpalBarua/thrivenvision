@@ -114,9 +114,7 @@ export async function Testimonials() {
     <section>
       <SectionHeading>Recommendations</SectionHeading>
       <SectionSubheading>
-        Learn about the positive impact our services have had on{" "}
-        <br className="hidden lg:block" /> our customers through their
-        testimonials.
+        Discover the beneficial effect of our services via client testimonials
       </SectionSubheading>
       <div className="[column-fill:_balance] sm:columns-2 lg:columns-3">
         {testimonials.map((testimonial) => (
