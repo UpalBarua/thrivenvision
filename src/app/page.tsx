@@ -7,14 +7,10 @@ import { Testimonials } from "@/components/testimonials";
 import { TrustedCompanies } from "@/components/trusted-companies";
 import { WhyChooseUs } from "@/components/why-choose-us";
 import Image from "next/image";
-import { ConsultantBookingForm } from "@/components/consultant-booking-form";
-import { ConsultantBookingModal } from "@/components/consultant-booking-modal";
 
 export default function HomePage() {
   return (
     <main className="container relative z-20 mx-auto max-w-7xl space-y-[min(10rem,25dvw)] px-2 sm:px-4">
-      <ConsultantBookingForm />
-      <ConsultantBookingModal />
       <Hero />
       <Services />
       <PricingPackages />
