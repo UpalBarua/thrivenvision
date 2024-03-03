@@ -26,7 +26,7 @@ export function Portfolios() {
         Our accomplishments speak for themselves. Explore our portfolio to learn
         how we helped customers accomplish goals and exceed expectations
       </SectionSubheading>
-      <div className="grid grid-cols-1 gap-4 px-4 pt-4 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 px-0 pt-4 md:grid-cols-2 lg:grid-cols-3 lg:px-4">
         {portfolios?.map(({ url }, i) => (
           <PortfolioPost key={url + i} url={url} />
         ))}

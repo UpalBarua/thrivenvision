@@ -1,5 +1,6 @@
 import { db, storage } from "@/firebase/firebase.config";
 import type {
+  TConsultation,
   TPicture,
   TPortfolio,
   TPricingPackage,
@@ -13,7 +14,6 @@ import {
   doc,
   getDoc,
   getDocs,
-  orderBy,
   query,
 } from "firebase/firestore";
 import { deleteObject, ref } from "firebase/storage";
@@ -87,6 +87,7 @@ export const getTestimonialsFromDB = async () => {
 export const addNewPortfolioToDB = async (newPortfolio: TPortfolio) => {
   return await addDoc(collection(db, "portfolios"), newPortfolio);
 };
+
 export const getAllPortfolio = async () => {
   let portfolio: TPortfolio[] = [];
 
@@ -97,4 +98,20 @@ export const getAllPortfolio = async () => {
   });
 
   return portfolio;
+};
+
+export const addNewConsultation = async (newConsultation: TConsultation) => {
+  return await addDoc(collection(db, "consulations"), newConsultation);
+};
+
+export const getAllConsulations = async () => {
+  let consulations: TConsultation[] = [];
+
+  const querySnapshot = await getDocs(collection(db, "consulations"));
+
+  querySnapshot.forEach((doc) => {
+    consulations.push({ id: doc.id, ...doc.data() } as TConsultation);
+  });
+
+  return consulations;
 };

@@ -80,3 +80,9 @@
     transform: rotate(360deg);
   }
 }
+
+input[type="radio"] {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+}

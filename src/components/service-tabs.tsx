@@ -23,7 +23,7 @@ export function ServiceTabs() {
           "mb-2",
         ],
         tab: "max-w-fit h-10 px-2 md:h-11 md:px-3",
-        tabContent: ":group-data-[selected=true]:text-white",
+        tabContent: "group-data-[selected=true]:text-white",
       }}
     >
       {services.map(({ category, Icon, services }) => (

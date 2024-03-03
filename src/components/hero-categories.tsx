@@ -35,7 +35,7 @@ export function HeroCategories() {
       }, 1000);
     }, 3000);
 
-    return () => clearInterval(interval);
+    // return () => clearInterval(interval);
   }, []);
 
   return (

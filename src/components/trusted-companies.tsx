@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { SectionHeading } from "./ui/section-heading";
 import { SectionSubheading } from "./ui/section-subheading";
+import TrustedCompaniesSlider from "./trusted-companies-slider";
 
 export async function TrustedCompanies() {
   return (
@@ -24,15 +25,14 @@ export async function TrustedCompanies() {
         <Link href="/contact-us">
           <Button
             color="primary"
-            size="lg"
             endContent={<ChevronRight />}
-            className="gradient-btn text-lg font-semibold"
+            className="gradient-btn font-semibold lg:h-12 lg:px-5 lg:text-lg"
           >
             <span>Lets Connect</span>
           </Button>
         </Link>
       </div>
-      <div className="grid grid-cols-3 gap-8 px-2 lg:gap-4 lg:px-0">
+      <div className="hidden grid-cols-3 gap-8 px-2 lg:grid lg:gap-4 lg:px-0">
         {trustedCompanines?.map((company) => (
           <div
             key={company}
@@ -49,6 +49,7 @@ export async function TrustedCompanies() {
           </div>
         ))}
       </div>
+      <TrustedCompaniesSlider />
     </section>
   );
 }

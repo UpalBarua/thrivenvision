@@ -30,7 +30,7 @@ export function HeroImages() {
       }, 1000);
     }, 3000);
 
-    return () => clearInterval(interval);
+    // return () => clearInterval(interval);
   }, []);
 
   return (

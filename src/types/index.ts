@@ -32,7 +32,19 @@ export type TServiceCategory = {
     serviceDescription: string;
   }[];
 };
+
 export type TPortfolio = {
   id?: string;
   portfolio: string;
+};
+
+export type TConsultation = {
+  id?: string;
+  fullName: string;
+  email: string;
+  message?: string;
+  phoneNo: string;
+  consultType: string;
+  preferedTimeSlot: string;
+  preferedDate: string;
 };
