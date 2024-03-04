@@ -26,7 +26,7 @@ export function ConsultantBookingModal() {
         isOpen={isOpen}
         onOpenChange={onOpenChange}
         scrollBehavior="outside"
-        size="4xl"
+        size="5xl"
         classNames={{
           base: "bg-background/80 border border-foreground/10 backdrop-blur-md md:p-4 backdrop-saturate-150",
           body: "px-2 lg:px-4",

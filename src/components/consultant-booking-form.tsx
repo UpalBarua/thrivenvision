@@ -26,16 +26,16 @@ const serviceCategories = services.map(({ category }) => category);
 
 const timeSlots = [
   "12:00 AM",
-  "2:00 AM",
-  "4:00 AM",
-  "6:00 AM",
-  "8:00 AM",
+  "04:00 AM",
+  "02:00 AM",
+  "06:00 AM",
+  "08:00 AM",
   "10:00 AM",
   "12:00 PM",
-  "2:00 PM",
-  "4:00 PM",
-  "6:00 PM",
-  "8:00 PM",
+  "02:00 PM",
+  "04:00 PM",
+  "06:00 PM",
+  "08:00 PM",
   "10:00 PM",
 ] as const;
 
@@ -226,6 +226,7 @@ export function ConsultantBookingForm() {
               errorMessage={fieldState.error?.message || ""}
               isInvalid={fieldState.invalid}
               {...field}
+              className="text-base"
               classNames={{
                 inputWrapper: [
                   "bg-background",
@@ -261,15 +262,15 @@ export function ConsultantBookingForm() {
                 isInvalid={fieldState.invalid}
                 {...field}
               >
-                <div className="flex flex-wrap items-center gap-2">
+                <div className="grid gap-4 grid-cols-3">
                   {timeSlots.map((slot) => (
                     <Radio
                       key={slot}
                       value={slot}
                       classNames={{
                         base: cn(
-                          "inline-flex m-0 bg-background hover:bg-background/40 items-center justify-between",
-                          "flex-row-reverse cursor-pointer rounded-lg gap-4 p-2 border border-foreground/10",
+                          "inline-flex !min-w-full m-0 bg-background hover:bg-background/40 items-center justify-between",
+                          "flex-row-reverse cursor-pointer rounded-lg gap-4 p-3 border border-foreground/10",
                           "data-[selected=true]:border-primary",
                         ),
                       }}

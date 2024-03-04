@@ -20,7 +20,7 @@ export default function HomePage() {
       <Testimonials />
       <Newsletter />
       <Image
-        className="object-fit absolute -top-[22dvw] right-0 h-[15rem] opacity-30 lg:-top-[4dvw] lg:h-[30rem]"
+        className="object-fit absolute -top-[22dvw] right-0 hidden h-[15rem] opacity-30 lg:-top-[4dvw] lg:block lg:h-[30rem]"
         src={"/images/hero-bg-logo.webp"}
         alt="hero bg image"
         height="600"

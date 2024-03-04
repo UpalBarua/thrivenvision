@@ -1,10 +1,10 @@
 "use client";
 
 import { services } from "@/config/services";
+import useMediaQuery from "@/hooks/use-media-query";
 import { ScrollShadow } from "@nextui-org/react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import useMediaQuery from "@/hooks/use-media-query";
 
 const initialServiceCategories = services.map(({ id, category, Icon }) => ({
   id,
@@ -35,7 +35,7 @@ export function HeroCategories() {
       }, 1000);
     }, 3000);
 
-    // return () => clearInterval(interval);
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -50,13 +50,13 @@ export function HeroCategories() {
             animate={
               i === 2
                 ? {
-                  fontSize: isLgScreen ? "1.875rem" : "1.35rem",
-                  color: "rgba(255,255,255, 0.9)",
-                }
+                    fontSize: isLgScreen ? "1.875rem" : "1.35rem",
+                    color: "rgba(255,255,255, 0.9)",
+                  }
                 : {
-                  fontSize: isLgScreen ? "1.5rem" : "1.35rem",
-                  color: "rgba(255,255,255, 0.6)",
-                }
+                    fontSize: isLgScreen ? "1.5rem" : "1.35rem",
+                    color: "rgba(255,255,255, 0.6)",
+                  }
             }
             transition={{ duration: 0.75, layout: { duration: 0.5 } }}
           >

@@ -1,14 +1,20 @@
 "use client";
 
 import { Button } from "@nextui-org/react";
+import { motion } from "framer-motion";
+import { ConsultantBookingModal } from "./consultant-booking-modal";
 import { HeroCategories } from "./hero-categories";
 import { HeroImages } from "./hero-images";
-import { ConsultantBookingModal } from "./consultant-booking-modal";
 
 export function Hero() {
   return (
-    <section className=" grid h-[40rem] grid-cols-1 items-start justify-center gap-0 md:grid-cols-2 lg:items-center">
-      <div className="relative order-last flex flex-col justify-center space-y-2 lg:order-first lg:justify-start lg:space-y-8">
+    <section className="grid h-[40rem] grid-cols-1 items-start justify-center gap-0 md:grid-cols-2 lg:items-center">
+      <motion.div
+        className="relative order-last flex flex-col justify-center space-y-2 lg:order-first lg:justify-start lg:space-y-8"
+        initial={{ scale: 0, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >
         <svg
           className="absolute -left-8 -top-10 h-32 w-32 -rotate-[180deg] scale-x-[-1]"
           xmlns="http://www.w3.org/2000/svg"
@@ -35,7 +41,7 @@ export function Hero() {
             Case Studies
           </Button>
         </div>
-      </div>
+      </motion.div>
       <HeroImages />
     </section>
   );

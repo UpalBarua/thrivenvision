@@ -110,7 +110,7 @@ function LegalButton() {
       <DropdownMenu>
         <DropdownItem className="hover:!bg-background">
           <Link
-            className="w-full text-base capitalize"
+            className="w-full text-base"
             color="foreground"
             href="/terms-of-service"
           >
