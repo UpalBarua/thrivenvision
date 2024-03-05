@@ -39,6 +39,19 @@ const timeSlots = [
   "10:00 PM",
 ] as const;
 
+const getNext7Days = (): string[] => {
+  const dates: string[] = [];
+  const today = new Date();
+
+  for (let i = 0; i < 7; i++) {
+    const nextDay = new Date(today.getTime());
+    nextDay.setDate(today.getDate() + i);
+    dates.push(nextDay.toDateString());
+  }
+
+  return dates;
+};
+
 const phoneNoRegex = new RegExp(
   /^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/,
 );
@@ -75,15 +88,20 @@ type TConsultBookingForm = z.infer<typeof consultBookinFormSchema>;
 export function ConsultantBookingForm() {
   const [preferedDate, setPreferedDate] = useState<Date>();
   const [disabledDates, setDisabledDates] = useState<Date[]>();
+  // const [time]
 
   useEffect(() => {
     const getDisabledDates = async () => {
       const consultations = await getAllConsulations();
+      const next7Days = getNext7Days();
+
       const bookedDates = consultations.map(
         ({ preferedDate }) => new Date(preferedDate),
       );
-      console.log(bookedDates);
-      setDisabledDates(bookedDates);
+
+      const next7DaysDate = next7Days.map((date) => new Date(date));
+
+      setDisabledDates([...bookedDates, ...next7DaysDate]);
     };
 
     getDisabledDates();
@@ -105,7 +123,7 @@ export function ConsultantBookingForm() {
     try {
       await addNewConsultation({
         ...formData,
-        preferedDate: preferedDate?.toString()
+        preferedDate: preferedDate?.toString(),
       } as TConsultation);
       reset();
       console.log("new consultation added");
@@ -249,6 +267,7 @@ export function ConsultantBookingForm() {
             selected={preferedDate}
             onSelect={setPreferedDate}
             disabled={disabledDates}
+            showOutsideDays
           />
         </div>
         <div>
@@ -262,7 +281,7 @@ export function ConsultantBookingForm() {
                 isInvalid={fieldState.invalid}
                 {...field}
               >
-                <div className="grid gap-4 grid-cols-3">
+                <div className="grid grid-cols-3 gap-4">
                   {timeSlots.map((slot) => (
                     <Radio
                       key={slot}

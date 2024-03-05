@@ -8,7 +8,7 @@ import { HeroImages } from "./hero-images";
 
 export function Hero() {
   return (
-    <section className="grid h-[40rem] grid-cols-1 items-start justify-center gap-0 md:grid-cols-2 lg:items-center">
+    <section className="grid h-[40rem] grid-cols-1 items-start justify-center gap-0 pt-8 md:grid-cols-2 lg:items-center lg:pt-0">
       <motion.div
         className="relative order-last flex flex-col justify-center space-y-2 lg:order-first lg:justify-start lg:space-y-8"
         initial={{ scale: 0, opacity: 0 }}
@@ -34,9 +34,8 @@ export function Hero() {
           <span className="font-bold text-primary">envision.</span>
         </h1>
         <HeroCategories />
-        <div className="flex items-center justify-center gap-x-4 lg:justify-start">
+        <div className="flex flex-col pt-6 lg:pt-0 lg:flex-row items-center justify-center gap-4 lg:justify-start">
           <ConsultantBookingModal />
-
           <Button className="h-10 border border-foreground/20 bg-background px-4 text-base font-semibold text-foreground/80 shadow-md lg:h-14 lg:px-6 lg:text-xl">
             Case Studies
           </Button>
