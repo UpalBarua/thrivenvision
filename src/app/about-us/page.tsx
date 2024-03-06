@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function AboutUs() {
   return (
-    <section className="container relative z-10 mx-auto max-w-6xl space-y-[min(4rem,15dvw)] px-2 pt-[max(3dvw,1.5rem)] sm:px-4">
+    <section className="container relative z-10 mx-auto max-w-6xl space-y-[min(4rem,15dvw)] px-4 pt-[max(3dvw,1.5rem)]">
       <div>
         <SectionHeading className="text-start">About us</SectionHeading>
         <p className="text-[1.25rem] leading-relaxed text-foreground/80">

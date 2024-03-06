@@ -52,7 +52,7 @@ export function HeroImages() {
               transition={{ duration: 1, layout: { duration: 0.5 } }}
             >
               <Image
-                className="object-fit aspect-square w-[28rem] object-center"
+                className="object-fit aspect-square object-center md:w-[28rem]"
                 alt="hero image"
                 src={categoryImage}
                 height={300}

@@ -1,20 +1,14 @@
 "use client";
 
 import { Button } from "@nextui-org/react";
-import { motion } from "framer-motion";
 import { ConsultantBookingModal } from "./consultant-booking-modal";
 import { HeroCategories } from "./hero-categories";
 import { HeroImages } from "./hero-images";
 
 export function Hero() {
   return (
-    <section className="grid h-[40rem] grid-cols-1 items-start justify-center gap-4 pt-8 md:grid-cols-2 lg:items-center lg:pt-0">
-      <motion.div
-        className="relative order-last flex flex-col justify-center gap-y-6 md:order-first lg:justify-start lg:gap-y-8"
-        initial={{ scale: 0, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 0.5 }}
-      >
+    <section className="grid min-h-[40rem] grid-cols-1 items-start justify-center gap-4 pt-8 md:grid-cols-2 lg:items-center lg:pt-0">
+      <div className="relative order-last mx-auto flex max-w-max flex-col justify-center gap-y-6 md:order-first lg:justify-start lg:gap-y-8">
         <svg
           className="absolute -left-[9dvw] -top-[10.5dvw] h-[min(25dvw,10rem)] w-[min(25dvw,10rem)] -rotate-[180deg] scale-x-[-1] opacity-60 lg:-left-[4.5rem] lg:-top-[4rem]"
           xmlns="http://www.w3.org/2000/svg"
@@ -30,11 +24,12 @@ export function Hero() {
           />
         </svg>
         <h1 className="relative z-10 text-center text-[clamp(2.375rem,5vw+0.5rem,5rem)] leading-tight tracking-wider lg:text-start">
-          <span className="font-bold text-primary">thrive</span> towards your{" "}
-          <span className="font-bold text-primary">envision.</span>
+          <span className="font-bold text-primary">thrive</span> towards
+          <br />
+          your <span className="font-bold text-primary">envision.</span>
         </h1>
         <HeroCategories />
-        <div className="flex flex-col items-center justify-center gap-3 lg:justify-start [@media(min-width:21.875em)]:flex-row">
+        <div className="mx-auto flex max-w-[90%] flex-col items-center justify-center gap-3 md:mx-0 md:max-w-full md:flex-row">
           <ConsultantBookingModal />
           <Button
             fullWidth
@@ -43,7 +38,7 @@ export function Hero() {
             Case Studies
           </Button>
         </div>
-      </motion.div>
+      </div>
       <HeroImages />
     </section>
   );

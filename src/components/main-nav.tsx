@@ -63,7 +63,7 @@ export function MainNav() {
         aria-label={isMenuOpen ? "Close menu" : "Open menu"}
         className="md:hidden"
       />
-      <NavbarMenu className="space-y-2 py-6">
+      <NavbarMenu className="space-y-2 py-6" onClick={() => setIsMenuOpen(false)}>
         {navLinks.map(({ label, href }) => (
           <NavbarMenuItem key={href}>
             <Link href={href} className="w-full capitalize text-foreground/80">

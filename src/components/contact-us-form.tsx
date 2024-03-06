@@ -79,6 +79,7 @@ export function ContactUsForm() {
               isInvalid={fieldState.invalid}
               {...field}
               classNames={{
+                label: "text-base font-semibold",
                 inputWrapper: [
                   "bg-background",
                   "data-[hover=true]:bg-background/40",
@@ -101,6 +102,7 @@ export function ContactUsForm() {
               isInvalid={fieldState.invalid}
               {...field}
               classNames={{
+                label: "text-base font-semibold",
                 inputWrapper: [
                   "bg-background",
                   "data-[hover=true]:bg-background/40",
@@ -124,6 +126,7 @@ export function ContactUsForm() {
               isInvalid={fieldState.invalid}
               {...field}
               classNames={{
+                label: "text-base font-semibold",
                 inputWrapper: [
                   "bg-background",
                   "data-[hover=true]:bg-background/40",

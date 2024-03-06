@@ -9,7 +9,7 @@ import { Suspense } from "react";
 
 export default function ContactUs() {
   return (
-    <main className="container relative z-10 mx-auto grid max-w-5xl grid-cols-1 gap-10 px-2 pt-[max(5dvw,1.5rem)] sm:px-4 md:grid-cols-2 md:gap-28">
+    <main className="container relative z-10 mx-auto grid max-w-5xl grid-cols-1 gap-10 pt-[max(5dvw,1.5rem)] px-4 md:grid-cols-2 md:gap-28">
       <div>
         <Suspense>
           <PageHeading />
