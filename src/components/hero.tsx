@@ -8,15 +8,15 @@ import { HeroImages } from "./hero-images";
 
 export function Hero() {
   return (
-    <section className="grid h-[40rem] grid-cols-1 items-start justify-center gap-0 pt-8 md:grid-cols-2 lg:items-center lg:pt-0">
+    <section className="grid h-[40rem] grid-cols-1 items-start justify-center gap-4 pt-8 md:grid-cols-2 lg:items-center lg:pt-0">
       <motion.div
-        className="relative order-last flex flex-col justify-center space-y-2 lg:order-first lg:justify-start lg:space-y-8"
+        className="relative order-last flex flex-col justify-center gap-y-6 md:order-first lg:justify-start lg:gap-y-8"
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
         <svg
-          className="absolute -left-8 -top-10 h-32 w-32 -rotate-[180deg] scale-x-[-1]"
+          className="absolute -left-[4dvw] -top-[10dvw] h-[min(25dvw,10rem)] w-[min(25dvw,10rem)] -rotate-[180deg] scale-x-[-1] opacity-60 lg:-top-[4rem]"
           xmlns="http://www.w3.org/2000/svg"
           xmlnsXlink="http://www.w3.org/1999/xlink"
           viewBox="0 0 73 70"
@@ -34,9 +34,12 @@ export function Hero() {
           <span className="font-bold text-primary">envision.</span>
         </h1>
         <HeroCategories />
-        <div className="flex flex-col pt-6 lg:pt-0 lg:flex-row items-center justify-center gap-4 lg:justify-start">
+        <div className="flex flex-col items-center justify-center gap-3 lg:justify-start [@media(min-width:21.875em)]:flex-row">
           <ConsultantBookingModal />
-          <Button className="h-10 border border-foreground/20 bg-background px-4 text-base font-semibold text-foreground/80 shadow-md lg:h-14 lg:px-6 lg:text-xl">
+          <Button
+            fullWidth
+            className="h-10 border border-foreground/20 bg-background/80 px-4 text-base font-semibold text-foreground/80 shadow-md saturate-150 backdrop-blur-md lg:h-14 lg:px-6 lg:text-xl"
+          >
             Case Studies
           </Button>
         </div>

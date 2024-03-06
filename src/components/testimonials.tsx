@@ -4,6 +4,13 @@ import { SectionSubheading } from "@/components/ui/section-subheading";
 import { TTestimonial } from "@/types";
 import { Avatar, Card, CardBody, CardFooter } from "@nextui-org/react";
 import { Star } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "./ui/carousel";
 
 const testimonials = [
   {
@@ -116,11 +123,24 @@ export async function Testimonials() {
       <SectionSubheading>
         Discover the beneficial effect of our services via client testimonials
       </SectionSubheading>
-      <div className="[column-fill:_balance] sm:columns-2 lg:columns-3">
+      <div className="hidden [column-fill:_balance] sm:block sm:columns-2 lg:columns-3">
         {testimonials.map((testimonial) => (
           <TestimonialCard key={testimonial.id} {...testimonial} />
         ))}
       </div>
+      <Carousel className="w-full sm:hidden">
+        <div className="flex items-center justify-center gap-x-4 opacity-75">
+          <CarouselPrevious className="static" />
+          <CarouselNext className="static" />
+        </div>
+        <CarouselContent>
+          {testimonials.map((testimonial) => (
+            <CarouselItem key={testimonial.id}>
+              <TestimonialCard {...testimonial} />
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+      </Carousel>
     </section>
   );
 }
@@ -165,10 +185,6 @@ function TestimonialCard({
                 />
               ))}
           </div>
-          {/* <span>{console.log(starRating)}</span> */}
-          {/* <span className="text-sm tracking-tight text-foreground/60"> */}
-          {/*   {handle} */}
-          {/* </span> */}
         </div>
       </CardFooter>
     </Card>

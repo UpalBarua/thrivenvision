@@ -87,8 +87,7 @@ type TConsultBookingForm = z.infer<typeof consultBookinFormSchema>;
 
 export function ConsultantBookingForm() {
   const [preferedDate, setPreferedDate] = useState<Date>();
-  const [disabledDates, setDisabledDates] = useState<Date[]>();
-  // const [time]
+  const [disabledDates, setDisabledDates] = useState<Date[]>([]);
 
   useEffect(() => {
     const getDisabledDates = async () => {
@@ -150,6 +149,7 @@ export function ConsultantBookingForm() {
               isInvalid={fieldState.invalid}
               {...field}
               classNames={{
+                label: "text-base font-semibold",
                 inputWrapper: [
                   "bg-background",
                   "data-[hover=true]:bg-background/40",
@@ -166,12 +166,13 @@ export function ConsultantBookingForm() {
           render={({ field, fieldState }) => (
             <Input
               size="lg"
-              label="Email Address"
               placeholder="Enter your email"
+              label="Email Address"
               errorMessage={fieldState.error?.message || ""}
               isInvalid={fieldState.invalid}
               {...field}
               classNames={{
+                label: "text-base font-semibold",
                 inputWrapper: [
                   "bg-background",
                   "data-[hover=true]:bg-background/40",
@@ -194,6 +195,7 @@ export function ConsultantBookingForm() {
               isInvalid={fieldState.invalid}
               {...field}
               classNames={{
+                label: "text-base font-semibold",
                 inputWrapper: [
                   "bg-background",
                   "data-[hover=true]:bg-background/40",
@@ -216,6 +218,7 @@ export function ConsultantBookingForm() {
               isInvalid={fieldState.invalid}
               {...field}
               classNames={{
+                label: "text-base font-semibold",
                 trigger: [
                   "bg-background",
                   "data-[hover=true]:bg-background/40",
@@ -246,6 +249,7 @@ export function ConsultantBookingForm() {
               {...field}
               className="text-base"
               classNames={{
+                label: "text-base font-semibold",
                 inputWrapper: [
                   "bg-background",
                   "data-[hover=true]:bg-background/40",
@@ -266,7 +270,7 @@ export function ConsultantBookingForm() {
             mode="single"
             selected={preferedDate}
             onSelect={setPreferedDate}
-            disabled={disabledDates}
+            disabled={[{ before: new Date() }, ...disabledDates]}
             showOutsideDays
           />
         </div>

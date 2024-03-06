@@ -20,11 +20,11 @@ export default function HomePage() {
       <Testimonials />
       <Newsletter />
       <Image
-        className="object-fit absolute -top-[22dvw] right-0 hidden h-[15rem] opacity-30 lg:-top-[4dvw] lg:block lg:h-[30rem]"
+        className="object-fit absolute -top-[4dvw] right-0 hidden h-[30rem] w-[37.5rem] object-center opacity-30 md:block"
         src={"/images/hero-bg-logo.webp"}
         alt="hero bg image"
-        height="600"
-        width="600"
+        height="300"
+        width="300"
         quality={95}
         priority
       />

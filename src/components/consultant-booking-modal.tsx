@@ -16,6 +16,7 @@ export function ConsultantBookingModal() {
   return (
     <>
       <Button
+        fullWidth
         color="primary"
         className="gradient-btn-wide h-10 px-4 text-base font-semibold lg:h-14 lg:px-6 lg:text-xl"
         onPress={onOpen}
