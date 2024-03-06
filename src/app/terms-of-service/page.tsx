@@ -3,7 +3,7 @@ import { SectionHeading } from "@/components/ui/section-heading";
 
 export default function TermsOfServices() {
   return (
-    <section className="container relative z-10 mx-auto max-w-5xl px-2 pt-[max(3dvw,1.5rem)] sm:px-4">
+    <section className="container relative z-10 mx-auto max-w-5xl px-4 pt-[max(3dvw,1.5rem)]">
       <SectionHeading className="text-start normal-case">
         Terms of Service
       </SectionHeading>

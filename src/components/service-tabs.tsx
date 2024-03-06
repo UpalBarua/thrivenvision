@@ -32,7 +32,7 @@ export function ServiceTabs() {
           key={category}
           title={
             <div className="flex items-center space-x-1.5">
-              <Icon className="hidden h-5 w-5 md:block" />
+              <Icon className="h-5 w-5" />
               <span>{category}</span>
             </div>
           }

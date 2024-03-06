@@ -86,7 +86,7 @@ export function Footer() {
         />
         <p>Copyright © 2024 thrivenvision.studio</p>
         <div className="flex flex-col items-center gap-4 lg:flex-row">
-          <div className="flex items-center gap-1 lg:gap-4">
+          <div className="flex flex-col items-center gap-1 sm:flex-row md:gap-4">
             <Link
               href="/privacy-policy"
               className="underline-offset-2 transition-colors hover:text-foreground hover:underline"

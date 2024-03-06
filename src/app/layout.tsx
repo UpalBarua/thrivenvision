@@ -35,7 +35,7 @@ export default function RootLayout({
                 <MainNav />
                 {children}
               </div>
-              {/* <Footer /> */}
+              <Footer />
             </div>
           </AuthContextProvider>
         </Providers>

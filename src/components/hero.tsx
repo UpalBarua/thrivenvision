@@ -16,7 +16,7 @@ export function Hero() {
         transition={{ duration: 0.5 }}
       >
         <svg
-          className="absolute -left-[4dvw] -top-[10dvw] h-[min(25dvw,10rem)] w-[min(25dvw,10rem)] -rotate-[180deg] scale-x-[-1] opacity-60 lg:-top-[4rem]"
+          className="absolute -left-[9dvw] -top-[10.5dvw] h-[min(25dvw,10rem)] w-[min(25dvw,10rem)] -rotate-[180deg] scale-x-[-1] opacity-60 lg:-left-[4.5rem] lg:-top-[4rem]"
           xmlns="http://www.w3.org/2000/svg"
           xmlnsXlink="http://www.w3.org/1999/xlink"
           viewBox="0 0 73 70"

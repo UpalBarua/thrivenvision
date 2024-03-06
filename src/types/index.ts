@@ -18,7 +18,6 @@ export type TTestimonial = {
   starRating: number;
   customer: {
     name: string;
-    handle: string;
     picture: string;
   };
 };

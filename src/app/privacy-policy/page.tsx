@@ -3,7 +3,7 @@ import { privacyPolicy } from "@/config";
 
 export default function PrivacyPolicy() {
   return (
-    <section className="container relative z-10 mx-auto max-w-5xl px-2 pt-[max(3dvw,1.5rem)] sm:px-4">
+    <section className="container relative z-10 mx-auto max-w-5xl px-4 pt-[max(3dvw,1.5rem)]">
       <SectionHeading className="text-start">Privacy Policy</SectionHeading>
       <p className="pb-14 text-[1.25rem] leading-relaxed text-foreground/80">
         At <span className="font-semibold">thrivenvision</span>, we are

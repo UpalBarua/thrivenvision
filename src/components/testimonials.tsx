@@ -16,99 +16,90 @@ const testimonials = [
   {
     id: "0",
     comment:
-      "Frontend developer anLorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
-    starRating: 4,
+      "Thrivenvision revolutionised my organisation! We were thrust into the limelight by their inventive branding tactics. They embody our success from logo design to social media campaigns; they are the secret ingredient.",
+    starRating: 5,
     customer: {
-      name: "Sarah Johnson",
-      handle: "@SarahDigitalPro",
+      name: "Donald T Clark",
       picture: "https://source.unsplash.com/random/?random,person",
     },
   },
   {
     id: "1",
     comment:
-      "Passionate about design Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat. and tcreate beautiful and intuitive digital experiences together! Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    starRating: 4,
+      "Working with thrivenvision changed everything. The inventiveness of their group is unbounded. Their attention to detail is unparalleled, and our website revamp was perfect.",
+    starRating: 5,
     customer: {
-      name: "John Smith",
-      handle: "@JohnDesignTech",
+      name: "Daniel R Wagner",
       picture: "https://source.unsplash.com/random/?random,person",
     },
   },
   {
     id: "2",
     comment:
-      "Full-stack developeany challenge that comes my way! Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    starRating: 4,
+      "Thrivenvision successfully materialised our vision. Their expertise in UX/UI and content strategy contributed to the app's user-friendliness and increased engagement. Strongly recommend them!",
+    starRating: 5,
     customer: {
-      name: "Emily Davis",
-      handle: "@EmilyFullStack",
+      name: "Cynthia M Hanlon",
       picture: "https://source.unsplash.com/random/?random,person",
     },
   },
   {
     id: "3",
     comment:
-      "Graphic designer by day, diga touch of creativity to your project! Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    starRating: 4,
+      "The dedication of Thrivenvision is praiseworthy. As a result of the redesign of our e-commerce website, sales increased dramatically. Additionally, their consumer service is exceptional.",
+    starRating: 5,
     customer: {
-      name: "Alex Turner",
-      handle: "@AlexGraphicArtist",
+      name: "David L.",
       picture: "https://source.unsplash.com/random/?random,person",
     },
   },
   {
     id: "4",
     comment:
-      "Marketing strategist Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat. and datathat drive results and propel your business forward! Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "Indeed, thrivenvision's branding alchemy works! Customers are now attuned to our brand identity. Their group is innovative, prompt, and a delight to collaborate with.",
     starRating: 5,
     customer: {
-      name: "Olivia White",
-      handle: "@OliviaMarketing",
+      name: "Chad E Cote",
       picture: "https://source.unsplash.com/random/?random,person",
     },
   },
   {
     id: "5",
     comment:
-      "Experienced project manager with a passion for efficiency and collaboration. Let's streamline your project and achieve success together! Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    starRating: 4,
+      "With Thrivenvision's SEO knowledge, our ranks skyrocketed. Their keyword magic caused an explosion in our organic traffic. Strongly suggest it!",
+    starRating: 5,
     customer: {
-      name: "Daniel Brown",
-      handle: "@DanielProjectMgr",
+      name: "Evelyn L Vrabel",
       picture: "https://source.unsplash.com/random/?random,person",
     },
   },
   {
     id: "6",
     comment:
-      "Frontend developer and UI/UX Join me on this coding adventure! Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
+      "What an incredible team Thrivenvision is! Their work on our website was revolutionary; it is now modern and easy to navigate. Their meticulousness is second to none.",
     starRating: 5,
     customer: {
-      name: "Sarah Johnson",
-      handle: "@SarahDigitalPro",
+      name: "Joseph M Williams",
       picture: "https://source.unsplash.com/random/?random,person",
     },
   },
   {
     id: "7",
     comment:
-      "Passionate about design and tcreate beautiful and intuitive digital experiences together! Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    starRating: 4,
+      "With Thrivenvision's help, our brand's visibility increased. We get a lot of clicks from their email marketing and blog articles. And they're really quick!",
+    starRating: 5,
     customer: {
-      name: "John Smith",
-      handle: "@JohnDesignTech",
+      name: "Kristin S Reed",
       picture: "https://source.unsplash.com/random/?random,person",
     },
   },
   {
     id: "8",
     comment:
-      "Full-stack developer with a kproblem-solving. Ready to tackle any challenge that comes my way! Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    starRating: 4,
+      "The imagination of Thrivenvision is limitless. Their video production crew elevated our product introduction to the level of a Hollywood film. Forever indebted, we are!",
+    starRating: 5,
     customer: {
-      name: "Emily Davis",
-      handle: "@EmilyFullStack",
+      name: "Ava G.",
       picture: "https://source.unsplash.com/random/?random,person",
     },
   },
@@ -168,7 +159,12 @@ function TestimonialCard({
         <p>{comment}</p>
       </CardBody>
       <CardFooter className="flex items-center gap-x-4">
-        <Avatar isBordered radius="lg" size="md" src={picture} />
+        <Avatar
+          isBordered
+          radius="lg"
+          size="md"
+          src={`/images/testimonials/${name}.webp`}
+        />
         <div className="space-y-2">
           <h3 className="font-semibold leading-none">{name}</h3>
           <div className="flex items-center gap-x-0.5">
