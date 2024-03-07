@@ -10,7 +10,7 @@ export function Hero() {
     <section className="grid min-h-[40rem] grid-cols-1 items-start justify-center gap-4 pt-8 md:grid-cols-2 lg:items-center lg:pt-0">
       <div className="relative order-last mx-auto flex max-w-max flex-col justify-center gap-y-6 md:order-first lg:justify-start lg:gap-y-8">
         <svg
-          className="absolute -left-[9dvw] -top-[10.5dvw] h-[min(25dvw,10rem)] w-[min(25dvw,10rem)] -rotate-[180deg] scale-x-[-1] opacity-60 lg:-left-[4.5rem] lg:-top-[4rem]"
+          className="absolute -left-[11dvw] -top-[10.5dvw] h-[min(25dvw,10rem)] w-[min(25dvw,10rem)] -rotate-[180deg] scale-x-[-1] opacity-60 lg:-left-[4.5rem] lg:-top-[4rem]"
           xmlns="http://www.w3.org/2000/svg"
           xmlnsXlink="http://www.w3.org/1999/xlink"
           viewBox="0 0 73 70"

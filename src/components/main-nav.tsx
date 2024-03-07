@@ -10,14 +10,12 @@ import {
   Navbar,
   NavbarContent,
   NavbarItem,
-  NavbarMenu,
-  NavbarMenuItem,
-  NavbarMenuToggle,
 } from "@nextui-org/react";
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { MobileNav } from "./mobile-nav";
 
 export function MainNav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -59,37 +57,7 @@ export function MainNav() {
           <LegalButton />
         </NavbarItem>
       </NavbarContent>
-      <NavbarMenuToggle
-        aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-        className="md:hidden"
-      />
-      <NavbarMenu className="space-y-2 py-6" onClick={() => setIsMenuOpen(false)}>
-        {navLinks.map(({ label, href }) => (
-          <NavbarMenuItem key={href}>
-            <Link href={href} className="w-full capitalize text-foreground/80">
-              {label}
-            </Link>
-          </NavbarMenuItem>
-        ))}
-        <NavbarMenuItem>
-          <Link
-            className="w-full text-base"
-            color="foreground"
-            href="/terms-of-service"
-          >
-            Terms of Service
-          </Link>
-        </NavbarMenuItem>
-        <NavbarMenuItem>
-          <Link
-            className="w-full text-base"
-            color="foreground"
-            href="/privacy-policy"
-          >
-            Privacy Policy
-          </Link>
-        </NavbarMenuItem>
-      </NavbarMenu>
+      <MobileNav isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
     </Navbar>
   );
 }

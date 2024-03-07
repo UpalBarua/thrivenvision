@@ -7,7 +7,7 @@ export async function PricingPackages() {
   const pricingPackages = await getPricingPackagesFromDB();
 
   return (
-    <section id="packages" className="scroll-mt-10">
+    <section id="packages" className="scroll-mt-[4rem]">
       <SectionHeading>Our Packages</SectionHeading>
       <SectionSubheading>
         Explore our customizable packages for your specific needs
