@@ -31,7 +31,7 @@ export function MainNav() {
         wrapper: "px-2 sm:px-4",
       }}
     >
-      <Link href="/">
+      <Link href="/" onClick={() => setIsMenuOpen(false)}>
         <Image
           src="/images/named-logo.webp"
           alt="logo"

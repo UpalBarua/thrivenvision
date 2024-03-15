@@ -3,7 +3,7 @@ import { SectionSubheading } from "@/components/ui/section-subheading";
 import { cn } from "@/lib/cn";
 import { TTestimonial } from "@/types";
 import { Avatar, Card, CardBody, CardFooter } from "@nextui-org/react";
-import { Star } from "lucide-react";
+import { CircleUserRound, Star, UserRound } from "lucide-react";
 import {
   Carousel,
   CarouselContent,
@@ -20,7 +20,7 @@ const testimonials = [
     starRating: 5,
     customer: {
       name: "Donald T Clark",
-      picture: "https://source.unsplash.com/random/?random,person",
+      picture: "/images/testimonials/donald-t-clark.webp",
     },
   },
   {
@@ -30,7 +30,7 @@ const testimonials = [
     starRating: 5,
     customer: {
       name: "Daniel R Wagner",
-      picture: "https://source.unsplash.com/random/?random,person",
+      picture: "/images/testimonials/daniel-r-wagner.webp",
     },
   },
   {
@@ -40,7 +40,7 @@ const testimonials = [
     starRating: 5,
     customer: {
       name: "Cynthia M Hanlon",
-      picture: "https://source.unsplash.com/random/?random,person",
+      picture: "/images/testimonials/cynthia-m-hanlon.webp",
     },
   },
   {
@@ -50,7 +50,7 @@ const testimonials = [
     starRating: 5,
     customer: {
       name: "David L.",
-      picture: "https://source.unsplash.com/random/?random,person",
+      picture: "",
     },
   },
   {
@@ -60,7 +60,7 @@ const testimonials = [
     starRating: 5,
     customer: {
       name: "Chad E Cote",
-      picture: "https://source.unsplash.com/random/?random,person",
+      picture: "/images/testimonials/chad-e-cote.webp",
     },
   },
   {
@@ -70,7 +70,7 @@ const testimonials = [
     starRating: 5,
     customer: {
       name: "Evelyn L Vrabel",
-      picture: "https://source.unsplash.com/random/?random,person",
+      picture: "/images/testimonials/evelyn-l-vrabel.webp",
     },
   },
   {
@@ -80,7 +80,7 @@ const testimonials = [
     starRating: 5,
     customer: {
       name: "Joseph M Williams",
-      picture: "https://source.unsplash.com/random/?random,person",
+      picture: "",
     },
   },
   {
@@ -90,7 +90,7 @@ const testimonials = [
     starRating: 5,
     customer: {
       name: "Kristin S Reed",
-      picture: "https://source.unsplash.com/random/?random,person",
+      picture: "",
     },
   },
   {
@@ -100,7 +100,7 @@ const testimonials = [
     starRating: 5,
     customer: {
       name: "Ava G.",
-      picture: "https://source.unsplash.com/random/?random,person",
+      picture: "",
     },
   },
 ];
@@ -139,7 +139,7 @@ export async function Testimonials() {
 function TestimonialCard({
   comment,
   starRating,
-  customer: { picture, name },
+  customer: { name, picture },
 }: TTestimonial) {
   return (
     <Card
@@ -163,25 +163,8 @@ function TestimonialCard({
           isBordered
           radius="lg"
           size="md"
-          src={`/images/testimonials/${name}.webp`}
-          fallback={
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              className="lucide lucide-circle-user-round"
-            >
-              <path d="M18 20a6 6 0 0 0-12 0" />
-              <circle cx="12" cy="10" r="4" />
-              <circle cx="12" cy="12" r="10" />
-            </svg>
-          }
+          src={picture}
+          fallback={<UserRound />}
         />
         <div className="space-y-2">
           <h3 className="font-semibold leading-none">{name}</h3>

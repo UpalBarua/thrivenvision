@@ -6,13 +6,16 @@ import { SectionSubheading } from "./ui/section-subheading";
 
 export const portfolios = [
   {
-    url: "https://www.instagram.com/p/C2sWPScP0qD/",
+    url: "https://www.instagram.com/p/C4CrIBFrzuV",
   },
   {
-    url: "https://www.instagram.com/p/C2sWPScP0qD/",
+    url: "https://www.instagram.com/p/C4YVxmTpBnr",
   },
   {
-    url: "https://www.instagram.com/p/C2sWPScP0qD/",
+    url: "https://www.instagram.com/p/C33ZtCQO0Tu",
+  },
+  {
+    url: "https://www.instagram.com/p/C4WIvETS-C_",
   },
 ];
 
@@ -27,7 +30,7 @@ export function Portfolios() {
         how we helped customers accomplish goals and exceed expectations
       </SectionSubheading>
       <div className="grid grid-cols-1 gap-4 px-0 pt-4 md:grid-cols-2 lg:grid-cols-3 lg:px-4">
-        {portfolios?.map(({ url }, i) => (
+        {portfolios.slice(0, 3).map(({ url }, i) => (
           <PortfolioPost key={url + i} url={url} />
         ))}
       </div>

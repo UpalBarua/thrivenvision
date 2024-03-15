@@ -4,6 +4,7 @@ import { Button } from "@nextui-org/react";
 import { ConsultantBookingModal } from "./consultant-booking-modal";
 import { HeroCategories } from "./hero-categories";
 import { HeroImages } from "./hero-images";
+import Link from "next/link";
 
 export function Hero() {
   return (
@@ -31,12 +32,16 @@ export function Hero() {
         <HeroCategories />
         <div className="mx-auto flex max-w-[90%] flex-col items-center justify-center gap-3 md:mx-0 md:max-w-full md:flex-row">
           <ConsultantBookingModal />
-          <Button
-            fullWidth
-            className="h-10 border border-foreground/20 bg-background/80 px-4 text-base font-semibold text-foreground/80 shadow-md saturate-150 backdrop-blur-md lg:h-14 lg:px-6 lg:text-xl"
-          >
-            Case Studies
-          </Button>
+          <Link href="/contact-us?for=quote">
+            <Button
+              fullWidth
+              className="h-10 border border-foreground/20 bg-background/80 px-4 text-base
+              font-semibold text-foreground/80 shadow-md saturate-150 backdrop-blur-md
+              md:min-w-[15rem] lg:h-14 lg:px-6 lg:text-xl"
+            >
+              Get a Quote
+            </Button>
+          </Link>
         </div>
       </div>
       <HeroImages />
