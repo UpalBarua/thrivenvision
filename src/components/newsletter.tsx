@@ -1,8 +1,10 @@
-import { Button, Card, Input } from "@nextui-org/react";
+import { Button } from "@nextui-org/button";
+import { Card } from "@nextui-org/card";
+import { Input } from "@nextui-org/input";
+import { Mail } from "lucide-react";
 import Image from "next/image";
 import { SectionHeading } from "./ui/section-heading";
 import { SectionSubheading } from "./ui/section-subheading";
-import { Mail } from "lucide-react";
 
 export function Newsletter() {
   return (

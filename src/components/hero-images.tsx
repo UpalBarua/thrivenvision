@@ -1,7 +1,7 @@
 "use client";
 
 import { services } from "@/config/services";
-import { ScrollShadow } from "@nextui-org/react";
+import { ScrollShadow } from "@nextui-org/scroll-shadow";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";

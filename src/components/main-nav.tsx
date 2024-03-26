@@ -1,16 +1,14 @@
 "use client";
 
 import { navLinks } from "@/config";
+import { Button } from "@nextui-org/button";
 import {
-  Button,
   Dropdown,
   DropdownItem,
   DropdownMenu,
   DropdownTrigger,
-  Navbar,
-  NavbarContent,
-  NavbarItem,
-} from "@nextui-org/react";
+} from "@nextui-org/dropdown";
+import { Navbar, NavbarContent, NavbarItem } from "@nextui-org/navbar";
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";

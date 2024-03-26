@@ -2,7 +2,7 @@
 
 import { ServiceCard } from "@/components/service-card";
 import { services } from "@/config/services";
-import { Tab, Tabs } from "@nextui-org/react";
+import { Tab, Tabs } from "@nextui-org/tabs";
 
 export function ServiceTabs() {
   return (

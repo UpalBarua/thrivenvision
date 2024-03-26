@@ -2,7 +2,8 @@ import { SectionHeading } from "@/components/ui/section-heading";
 import { SectionSubheading } from "@/components/ui/section-subheading";
 import { cn } from "@/lib/cn";
 import { TTestimonial } from "@/types";
-import { Avatar, Card, CardBody, CardFooter } from "@nextui-org/react";
+import { Card, CardBody, CardFooter } from "@nextui-org/card";
+import { Avatar } from "@nextui-org/avatar";
 import { CircleUserRound, Star, UserRound } from "lucide-react";
 import {
   Carousel,

@@ -3,7 +3,7 @@ import {
   NavbarMenu,
   NavbarMenuItem,
   NavbarMenuToggle,
-} from "@nextui-org/react";
+} from "@nextui-org/navbar";
 import Link from "next/link";
 import * as React from "react";
 

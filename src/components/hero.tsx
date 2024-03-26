@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@nextui-org/react";
+import { Button } from "@nextui-org/button";
 import { ConsultantBookingModal } from "./consultant-booking-modal";
 import { HeroCategories } from "./hero-categories";
 import { HeroImages } from "./hero-images";

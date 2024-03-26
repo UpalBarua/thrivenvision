@@ -1,14 +1,16 @@
 "use client";
 
 import { SectionHeading } from "@/components/ui/section-heading";
+import { addNewTestimonialToDB } from "@/lib/services";
+import { uploadFile } from "@/lib/upload-file";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Avatar, Button, Input, Textarea } from "@nextui-org/react";
+import { Avatar } from "@nextui-org/avatar";
+import { Button } from "@nextui-org/button";
+import { Input, Textarea } from "@nextui-org/input";
 import { Camera } from "lucide-react";
 import { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import * as z from "zod";
-import { uploadFile } from "@/lib/upload-file";
-import { addNewTestimonialToDB } from "@/lib/services";
 
 const testimonialFormSchema = z.object({
   comment: z

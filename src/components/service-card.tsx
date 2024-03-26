@@ -1,5 +1,5 @@
 import { services } from "@/config/services";
-import { Card } from "@nextui-org/react";
+import { Card } from "@nextui-org/card";
 
 type ServiceCardProps = (typeof services)[number]["services"][number];
 

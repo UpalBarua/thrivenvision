@@ -1,26 +1,20 @@
 "use client";
 
 import { services } from "@/config/services";
-import { Button } from "@nextui-org/react";
 import { cn } from "@/lib/cn";
+import { addNewConsultation, getAllConsulations } from "@/lib/services";
+import { TConsultation } from "@/types";
 import { zodResolver } from "@hookform/resolvers/zod";
-import {
-  Input,
-  Radio,
-  RadioGroup,
-  Select,
-  SelectItem,
-  Textarea,
-} from "@nextui-org/react";
-import { useState } from "react";
+import { Button } from "@nextui-org/button";
+import { Input, Textarea } from "@nextui-org/input";
+import { Radio, RadioGroup } from "@nextui-org/radio";
+import { Select, SelectItem } from "@nextui-org/select";
+import { Send, X } from "lucide-react";
+import { useEffect, useState } from "react";
 import { DayPicker } from "react-day-picker";
 import "react-day-picker/dist/style.css";
 import { Controller, useForm } from "react-hook-form";
 import * as z from "zod";
-import { Send, X } from "lucide-react";
-import { addNewConsultation, getAllConsulations } from "@/lib/services";
-import { TConsultation } from "@/types";
-import { useEffect } from "react";
 
 const serviceCategories = services.map(({ category }) => category);
 

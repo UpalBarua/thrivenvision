@@ -1,7 +1,7 @@
 import { SectionHeading } from "@/components/ui/section-heading";
 import { SectionSubheading } from "@/components/ui/section-subheading";
 import { employees } from "@/config";
-import { Card, CardBody, CardHeader } from "@nextui-org/react";
+import { Card, CardBody, CardHeader } from "@nextui-org/card";
 import Image from "next/image";
 
 export default function AboutUs() {

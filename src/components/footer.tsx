@@ -4,7 +4,7 @@ import { kaushanScript } from "@/app/fonts";
 import { socialLinks } from "@/config";
 import { services } from "@/config/services";
 import { cn } from "@/lib/cn";
-import { Button } from "@nextui-org/react";
+import { Button } from "@nextui-org/button";
 import { Mail, MapPin, PhoneCall } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
