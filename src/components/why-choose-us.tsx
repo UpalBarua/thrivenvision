@@ -10,7 +10,7 @@ export function WhyChooseUs() {
       </SectionHeading>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {whyChooseUsData.map((data) => (
-          <ChooseUsCard key={data.id} {...data} />
+          <ChooseUsCard key={data.title} {...data} />
         ))}
       </div>
     </section>
