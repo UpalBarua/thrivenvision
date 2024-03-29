@@ -29,13 +29,13 @@ export function ConsultantBookingModal() {
         scrollBehavior="outside"
         size="5xl"
         classNames={{
-          base: "bg-background/80 border border-foreground/10 backdrop-blur-md md:p-4 backdrop-saturate-150",
+          base: "bg-background/90 border border-foreground/10 backdrop-blur-md md:p-4 backdrop-saturate-150",
           body: "px-2 lg:px-4",
         }}
       >
         <ModalContent>
           <ModalHeader className="text-2xl font-semibold">
-            Book a Consult
+            Book a Free Consult
           </ModalHeader>
           <ModalBody>
             <ConsultantBookingForm />

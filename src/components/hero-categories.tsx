@@ -1,10 +1,10 @@
 "use client";
 
 import { services } from "@/config/services";
+import { useInfinitySlider } from "@/hooks/use-infinity-slider";
 import useMediaQuery from "@/hooks/use-media-query";
 import { ScrollShadow } from "@nextui-org/scroll-shadow";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
 
 const initialServiceCategories = services.map(({ id, category, Icon }) => ({
   id,
@@ -13,36 +13,15 @@ const initialServiceCategories = services.map(({ id, category, Icon }) => ({
 }));
 
 export function HeroCategories() {
-  const [serviceCategories, setServiceCategories] = useState(
-    initialServiceCategories,
-  );
+  const sliderItems = useInfinitySlider(initialServiceCategories);
 
   const isLgScreen = useMediaQuery("(min-width:64em)");
-
-  useEffect(() => {
-    let tempCategory = {};
-
-    const interval = setInterval(() => {
-      setServiceCategories((prev) => {
-        tempCategory = prev[0];
-        return [...prev.slice(1)];
-      });
-
-      setTimeout(() => {
-        setServiceCategories((prev) => {
-          return [...prev, tempCategory] as typeof initialServiceCategories;
-        });
-      }, 1000);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <div>
       <ScrollShadow hideScrollBar visibility="both" size={25}>
         <div className="-mt-[3.5rem] flex h-full max-h-[calc(3.5rem*4)] flex-col items-center overflow-hidden px-2 md:items-start">
-          {serviceCategories.map(({ id, category, Icon }, i) => (
+          {sliderItems.map(({ id, category, Icon }, i) => (
             <motion.div
               key={id}
               className="flex min-h-[3.5rem] items-center gap-x-3"

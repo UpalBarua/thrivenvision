@@ -7,7 +7,6 @@ import { Testimonials } from "@/components/testimonials";
 import { TrustedCompanies } from "@/components/trusted-companies";
 import { WhyChooseUs } from "@/components/why-choose-us";
 import Image from "next/image";
-import { Calendar } from "@/components/ui/calendar";
 
 export default function HomePage() {
   return (

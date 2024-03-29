@@ -128,10 +128,10 @@ export function ConsultantBookingForm() {
 
   return (
     <form
-      className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6"
+      className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-10"
       onSubmit={handleSubmit(onSubmit)}
     >
-      <div className="space-y-4">
+      <div className="space-y-6">
         <Controller
           name="fullName"
           control={control}
@@ -257,19 +257,17 @@ export function ConsultantBookingForm() {
         />
       </div>
       <div className="space-y-6">
-        <div className="flex items-center justify-center">
-          <div
-            className="max-w-max rounded-2xl border border-foreground/20 
-        bg-background data-[hover=true]:bg-background/40 group-data-[focus=true]:bg-background/40"
-          >
-            <DayPicker
-              mode="single"
-              selected={preferedDate}
-              onSelect={setPreferedDate}
-              disabled={[{ before: new Date() }, ...disabledDates]}
-              showOutsideDays
-            />
-          </div>
+        <div
+          className="max-w-max rounded-2xl border border-foreground/20 
+          bg-background data-[hover=true]:bg-background/40 group-data-[focus=true]:bg-background/40"
+        >
+          <DayPicker
+            mode="single"
+            selected={preferedDate}
+            onSelect={setPreferedDate}
+            disabled={[{ before: new Date() }, ...disabledDates]}
+            showOutsideDays
+          />
         </div>
         <div>
           <Controller

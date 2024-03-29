@@ -1,8 +1,8 @@
 import { Button } from "@nextui-org/button";
+import Link from "next/link";
 import { ConsultantBookingModal } from "./consultant-booking-modal";
 import { HeroCategories } from "./hero-categories";
 import { HeroImages } from "./hero-images";
-import Link from "next/link";
 
 export function Hero() {
   return (
@@ -15,7 +15,7 @@ export function Hero() {
           your <span className="font-bold text-primary">envision.</span>
         </h1>
         <HeroCategories />
-        <div className="mx-auto flex max-w-[90%] flex-col items-center justify-center gap-3 md:mx-0 md:max-w-full md:flex-row">
+        <div className="mx-auto flex max-w-[90%] flex-col items-center justify-center gap-3 md:mx-0 md:flex-row">
           <ConsultantBookingModal />
           <Link href="/contact-us?for=quote">
             <Button

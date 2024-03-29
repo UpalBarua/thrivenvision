@@ -1,10 +1,10 @@
 "use client";
 
 import { services } from "@/config/services";
+import { useInfinitySlider } from "@/hooks/use-infinity-slider";
 import { ScrollShadow } from "@nextui-org/scroll-shadow";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useEffect, useState } from "react";
 
 const initialCategoryImages = services.map(({ id, categoryImage }) => ({
   id,
@@ -12,26 +12,7 @@ const initialCategoryImages = services.map(({ id, categoryImage }) => ({
 }));
 
 export function HeroImages() {
-  const [categoryImages, setCategoryImages] = useState(initialCategoryImages);
-
-  useEffect(() => {
-    let tempCategoryImage = {};
-
-    const interval = setInterval(() => {
-      setCategoryImages((prev) => {
-        tempCategoryImage = prev[0];
-        return [...prev.slice(1)];
-      });
-
-      setTimeout(() => {
-        setCategoryImages((prev) => {
-          return [...prev, tempCategoryImage] as typeof initialCategoryImages;
-        });
-      }, 1000);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, []);
+  const sliderItems = useInfinitySlider(initialCategoryImages);
 
   return (
     <section>
@@ -43,7 +24,7 @@ export function HeroImages() {
         className="relative z-20 overflow-x-hidden"
       >
         <div className="flex max-w-full -translate-x-[200%] items-center justify-start">
-          {categoryImages.map(({ id, categoryImage }, i) => (
+          {sliderItems.map(({ id, categoryImage }, i) => (
             <motion.div
               key={id}
               className="flex min-w-full items-center justify-center px-10 lg:px-0"
