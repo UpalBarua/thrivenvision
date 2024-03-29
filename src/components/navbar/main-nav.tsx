@@ -1,5 +1,3 @@
-"use client";
-
 import { navLinks } from "@/config";
 import { Button } from "@nextui-org/button";
 import {
@@ -8,37 +6,15 @@ import {
   DropdownMenu,
   DropdownTrigger,
 } from "@nextui-org/dropdown";
-import { Navbar, NavbarContent, NavbarItem } from "@nextui-org/navbar";
+import { NavbarContent, NavbarItem } from "@nextui-org/navbar";
 import { ChevronDown } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
-import { MobileNav } from "./mobile-nav";
+import { NavContainer } from "./nav-container";
 
 export function MainNav() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  console.log("fuck");
   return (
-    <Navbar
-      shouldHideOnScroll
-      isMenuOpen={isMenuOpen}
-      onMenuOpenChange={setIsMenuOpen}
-      height="3.5rem"
-      maxWidth="xl"
-      classNames={{
-        wrapper: "px-2 sm:px-4",
-      }}
-    >
-      <Link href="/" onClick={() => setIsMenuOpen(false)}>
-        <Image
-          src="/images/named-logo.webp"
-          alt="logo"
-          height={80}
-          width={160}
-          priority
-          quality={95}
-        />
-      </Link>
+    <NavContainer>
       <NavbarContent className="hidden gap-3 md:flex" justify="end">
         {navLinks.map(({ label, href }) => (
           <NavbarItem key={href}>
@@ -55,8 +31,7 @@ export function MainNav() {
           <LegalButton />
         </NavbarItem>
       </NavbarContent>
-      <MobileNav isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-    </Navbar>
+    </NavContainer>
   );
 }
 

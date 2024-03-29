@@ -12,7 +12,10 @@ type MobileNavProps = {
   setIsMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-export function MobileNav({ isMenuOpen, setIsMenuOpen }: MobileNavProps) {
+export function MobileNav({
+  isMenuOpen,
+  setIsMenuOpen,
+}: Readonly<MobileNavProps>) {
   return (
     <React.Fragment>
       <NavbarMenuToggle
