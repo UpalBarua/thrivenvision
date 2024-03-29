@@ -12,13 +12,13 @@ export default function HomePage() {
   return (
     <main className="container relative z-20 mx-auto max-w-7xl space-y-[min(10rem,25dvw)] px-2 sm:px-4">
       <Hero />
-      {/* <Services /> */}
-      {/* <PricingPackages /> */}
-      {/* <WhyChooseUs /> */}
-      {/* <TrustedCompanies /> */}
-      {/* <Portfolios /> */}
-      {/* <Testimonials /> */}
-      {/* <Newsletter /> */}
+      <Services />
+      <PricingPackages />
+      <WhyChooseUs />
+      <TrustedCompanies />
+      <Portfolios />
+      <Testimonials />
+      <Newsletter />
       <Image
         className="object-fit absolute -top-[4dvw] right-0 hidden h-[30rem] w-[37.5rem] object-center opacity-30 lg:block"
         src={"/images/hero-bg-logo.webp"}

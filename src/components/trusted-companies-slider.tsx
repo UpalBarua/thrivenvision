@@ -2,9 +2,9 @@ import { trustedCompanines } from "@/config";
 import { ScrollShadow } from "@nextui-org/scroll-shadow";
 import Image from "next/image";
 
-export default function TrustedCompaniesSlider() {
+export function TrustedCompaniesSlider() {
   return (
-    <div>
+    <div className="lg:hidden">
       <ScrollShadow
         hideScrollBar
         visibility="both"
@@ -12,7 +12,7 @@ export default function TrustedCompaniesSlider() {
         size={25}
       >
         <div className="relative flex overflow-hidden">
-          <div className="animate-marquee flex items-center justify-center gap-x-4 whitespace-nowrap">
+          <div className="flex animate-marquee items-center justify-center gap-x-4 whitespace-nowrap">
             {trustedCompanines?.map((company) => (
               <div key={company} className="mx-6">
                 <Image
@@ -26,7 +26,7 @@ export default function TrustedCompaniesSlider() {
               </div>
             ))}
           </div>
-          <div className="animate-marquee2 absolute top-0 flex items-center justify-center gap-x-4 whitespace-nowrap">
+          <div className="absolute top-0 flex animate-marquee2 items-center justify-center gap-x-4 whitespace-nowrap">
             {trustedCompanines?.map((company, i) => (
               <div key={company + i} className="mx-6">
                 <Image
