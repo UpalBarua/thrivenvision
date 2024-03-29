@@ -31,42 +31,36 @@ export const navLinks = [
 
 export const whyChooseUsData = [
   {
-    id: 1,
     Icon: Trophy,
     title: "Proven Track Record",
     description:
       "With a track record of delivering measurable results and exceeding client expectations, we're the trusted choice for businesses seeking success in today's competitive landscape.",
   },
   {
-    id: 2,
     Icon: Brain,
     title: "Expertise Across Industries",
     description:
       "Our team of seasoned professionals brings expertise across various industries, ensuring that we understand the unique challenges and opportunities specific to your business niche.",
   },
   {
-    id: 3,
     Icon: Wrench,
     title: "Customized Solutions",
     description:
       "We believe in personalized approaches tailored to each client's needs. Our customized solutions are designed to address your specific goals and drive sustainable growth.",
   },
   {
-    id: 4,
     Icon: Lightbulb,
     title: "Innovative Strategies",
     description:
       "Stay ahead of the curve with our innovative strategies. We continuously adapt to the ever-changing digital landscape, leveraging the latest tools and techniques to maximize your success.",
   },
   {
-    id: 5,
     Icon: Scale,
     title: "Value for Money",
     description:
       "We offer cost-effective solutions without compromising on quality. Get the most out of your investment with our competitive pricing and exceptional service.",
   },
   {
-    id: 6,
     Icon: Headset,
     title: "Dedicated Support",
     description:

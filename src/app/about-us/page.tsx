@@ -1,7 +1,7 @@
 import { SectionHeading } from "@/components/ui/section-heading";
 import { SectionSubheading } from "@/components/ui/section-subheading";
 import { employees } from "@/config";
-import { Card, CardBody, CardHeader } from "@nextui-org/react";
+import { Card, CardBody, CardHeader } from "@nextui-org/card";
 import Image from "next/image";
 
 export default function AboutUs() {
@@ -95,9 +95,6 @@ export default function AboutUs() {
         <SectionSubheading className="max-w-full pb-8">
           Passionate professionals collaborate to provide unique solutions that
           exceed customer expectations
-          {/* A diverse group of dedicated professionals driven by collaboration, */}
-          {/* <br className="hidden md:block" /> */}
-          {/* delivering innovative solutions to exceed client expectations */}
         </SectionSubheading>
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           {employees.map((employee) => (

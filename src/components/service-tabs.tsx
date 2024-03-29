@@ -2,7 +2,7 @@
 
 import { ServiceCard } from "@/components/service-card";
 import { services } from "@/config/services";
-import { Tab, Tabs } from "@nextui-org/react";
+import { Tab, Tabs } from "@nextui-org/tabs";
 
 export function ServiceTabs() {
   return (
@@ -25,7 +25,6 @@ export function ServiceTabs() {
         tab: "max-w-fit h-10 px-2 md:h-11 md:px-3 scroll-mx-[5rem]",
         tabContent: "group-data-[selected=true]:text-white",
       }}
-      onSelectionChange={(val) => console.log(val)}
     >
       {services.map(({ category, Icon, services }) => (
         <Tab

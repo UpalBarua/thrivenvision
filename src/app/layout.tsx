@@ -1,7 +1,6 @@
 import { Footer } from "@/components/footer";
-import { MainNav } from "@/components/main-nav";
+import { MainNav } from "@/components/navbar/main-nav";
 import { Providers } from "@/components/providers";
-import { AuthContextProvider } from "@/context/auth-context";
 import { cn } from "@/lib/cn";
 import type { Metadata } from "next";
 import { exo } from "./fonts";
@@ -29,15 +28,13 @@ export default function RootLayout({
         )}
       >
         <Providers>
-          <AuthContextProvider>
-            <div className="flex min-h-screen flex-col">
-              <div className="flex-1">
-                <MainNav />
-                {children}
-              </div>
-              <Footer />
+          <div className="flex min-h-screen flex-col">
+            <div className="flex-1">
+              <MainNav />
+              {children}
             </div>
-          </AuthContextProvider>
+            <Footer />
+          </div>
         </Providers>
         <div
           className="fixed inset-0 bg-[url('/images/bg-gradient.webp')] 

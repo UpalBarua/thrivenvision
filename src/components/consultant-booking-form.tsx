@@ -1,26 +1,22 @@
 "use client";
 
 import { services } from "@/config/services";
-import { Button } from "@nextui-org/react";
 import { cn } from "@/lib/cn";
+import { addNewConsultation, getAllConsulations } from "@/lib/services";
+import { TConsultation } from "@/types";
 import { zodResolver } from "@hookform/resolvers/zod";
-import {
-  Input,
-  Radio,
-  RadioGroup,
-  Select,
-  SelectItem,
-  Textarea,
-} from "@nextui-org/react";
-import { useState } from "react";
+import { Button } from "@nextui-org/button";
+import { Input, Textarea } from "@nextui-org/input";
+import { Radio, RadioGroup } from "@nextui-org/radio";
+import { Select, SelectItem } from "@nextui-org/select";
+import { Send, X } from "lucide-react";
+import { useEffect, useState } from "react";
 import { DayPicker } from "react-day-picker";
 import "react-day-picker/dist/style.css";
 import { Controller, useForm } from "react-hook-form";
 import * as z from "zod";
-import { Send, X } from "lucide-react";
-import { addNewConsultation, getAllConsulations } from "@/lib/services";
-import { TConsultation } from "@/types";
-import { useEffect } from "react";
+
+import "@/styles/calendar-styles.css";
 
 const serviceCategories = services.map(({ category }) => category);
 
@@ -133,10 +129,10 @@ export function ConsultantBookingForm() {
 
   return (
     <form
-      className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6"
+      className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-10"
       onSubmit={handleSubmit(onSubmit)}
     >
-      <div className="space-y-4">
+      <div className="space-y-6">
         <Controller
           name="fullName"
           control={control}
@@ -261,10 +257,10 @@ export function ConsultantBookingForm() {
           )}
         />
       </div>
-      <div className="space-y-6">
+      <div className="space-y-10">
         <div
           className="max-w-max rounded-2xl border border-foreground/20 
-        bg-background data-[hover=true]:bg-background/40 group-data-[focus=true]:bg-background/40"
+          bg-background data-[hover=true]:bg-background/40 group-data-[focus=true]:bg-background/40"
         >
           <DayPicker
             mode="single"
@@ -285,16 +281,16 @@ export function ConsultantBookingForm() {
                 isInvalid={fieldState.invalid}
                 {...field}
               >
-                <div className="grid grid-cols-3 gap-4">
+                <div className="grid max-w-max grid-cols-3 gap-4">
                   {timeSlots.map((slot) => (
                     <Radio
                       key={slot}
                       value={slot}
                       classNames={{
                         base: cn(
-                          "inline-flex !min-w-full m-0 bg-background hover:bg-background/40 items-center justify-between",
-                          "flex-row-reverse cursor-pointer rounded-lg gap-4 p-3 border border-foreground/10",
-                          "data-[selected=true]:border-primary",
+                          "flex [&>span]:hidden m-0 bg-background !text-foreground/60 transition-colors duaration-200 hover:border-primary items-center justify-center",
+                          "cursor-pointer rounded-xl gap-4 px-3 py-2 border border-foreground/10",
+                          "data-[selected=true]:bg-primary data-[selected=true]:border-primary",
                         ),
                       }}
                     >

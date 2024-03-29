@@ -1,25 +1,16 @@
-"use client";
-
 import { kaushanScript } from "@/app/fonts";
 import { socialLinks } from "@/config";
 import { services } from "@/config/services";
 import { cn } from "@/lib/cn";
-import { Button } from "@nextui-org/react";
+import { Button } from "@nextui-org/button";
 import { Mail, MapPin, PhoneCall } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { FooterContainer } from "./footer-container";
 
 export function Footer() {
-  const pathname = usePathname();
-
   return (
-    <footer
-      className={cn(
-        "relative z-10 mt-auto space-y-14 border-t border-foreground/10 bg-background/60 pb-6 text-foreground/60 backdrop-blur-md backdrop-saturate-150",
-        pathname === "/" ? "pt-[20rem]" : "mt-20 pt-12",
-      )}
-    >
+    <FooterContainer>
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-4 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <h3 className={cn(kaushanScript.className, "text-[1.8125rem]")}>
@@ -120,6 +111,6 @@ export function Footer() {
           </div>
         </div>
       </div>
-    </footer>
+    </FooterContainer>
   );
 }

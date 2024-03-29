@@ -9,9 +9,6 @@ export function Services() {
       <SectionSubheading>
         Experience our extensive services to help your business reach new
         heights
-        {/* Explore our comprehensive range of services */}
-        {/* <br className="hidden sm:block" /> */}
-        {/* designed to elevate your business to new heights */}
       </SectionSubheading>
       <ServiceTabs />
     </section>

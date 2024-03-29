@@ -3,7 +3,7 @@ import {
   NavbarMenu,
   NavbarMenuItem,
   NavbarMenuToggle,
-} from "@nextui-org/react";
+} from "@nextui-org/navbar";
 import Link from "next/link";
 import * as React from "react";
 
@@ -12,7 +12,10 @@ type MobileNavProps = {
   setIsMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-export function MobileNav({ isMenuOpen, setIsMenuOpen }: MobileNavProps) {
+export function MobileNav({
+  isMenuOpen,
+  setIsMenuOpen,
+}: Readonly<MobileNavProps>) {
   return (
     <React.Fragment>
       <NavbarMenuToggle

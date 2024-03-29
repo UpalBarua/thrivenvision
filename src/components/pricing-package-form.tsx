@@ -2,16 +2,17 @@
 
 import { addNewPricingPackageToDB } from "@/lib/services";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { Button } from "@nextui-org/button";
+import { Input } from "@nextui-org/input";
 import {
-  Button,
-  Input,
   Modal,
   ModalBody,
   ModalContent,
   ModalFooter,
   ModalHeader,
   useDisclosure,
-} from "@nextui-org/react";
+} from "@nextui-org/modal";
+
 import { Plus, X } from "lucide-react";
 import { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
