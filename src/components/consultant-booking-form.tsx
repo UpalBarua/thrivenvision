@@ -15,6 +15,7 @@ import { DayPicker } from "react-day-picker";
 import "react-day-picker/dist/style.css";
 import { Controller, useForm } from "react-hook-form";
 import * as z from "zod";
+import "@/styles/calendar-styles.css";
 
 const serviceCategories = services.map(({ category }) => category);
 
@@ -256,17 +257,19 @@ export function ConsultantBookingForm() {
         />
       </div>
       <div className="space-y-6">
-        <div
-          className="max-w-max rounded-2xl border border-foreground/20 
+        <div className="flex items-center justify-center">
+          <div
+            className="max-w-max rounded-2xl border border-foreground/20 
         bg-background data-[hover=true]:bg-background/40 group-data-[focus=true]:bg-background/40"
-        >
-          <DayPicker
-            mode="single"
-            selected={preferedDate}
-            onSelect={setPreferedDate}
-            disabled={[{ before: new Date() }, ...disabledDates]}
-            showOutsideDays
-          />
+          >
+            <DayPicker
+              mode="single"
+              selected={preferedDate}
+              onSelect={setPreferedDate}
+              disabled={[{ before: new Date() }, ...disabledDates]}
+              showOutsideDays
+            />
+          </div>
         </div>
         <div>
           <Controller
