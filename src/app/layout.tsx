@@ -1,5 +1,3 @@
-import { Footer } from "@/components/footer";
-import { MainNav } from "@/components/navbar/main-nav";
 import { Providers } from "@/components/providers";
 import { cn } from "@/lib/cn";
 import type { Metadata } from "next";
@@ -27,15 +25,7 @@ export default function RootLayout({
           "relative min-h-screen overflow-x-hidden text-foreground/90 antialiased",
         )}
       >
-        <Providers>
-          <div className="flex min-h-screen flex-col">
-            <div className="flex-1">
-              <MainNav />
-              {children}
-            </div>
-            <Footer />
-          </div>
-        </Providers>
+        <Providers>{children}</Providers>
         <div
           className="fixed inset-0 bg-[url('/images/bg-gradient.webp')] 
           bg-cover bg-center opacity-50"
