@@ -69,7 +69,7 @@ export default function DashboardLayout({
                 key={href}
                 href={href}
                 className={cn("transition-colors hover:text-foreground/80", {
-                  "font-bold text-foreground": pathname.endsWith(href),
+                  "text-foreground": pathname.endsWith(href),
                 })}
               >
                 {label}
@@ -78,7 +78,7 @@ export default function DashboardLayout({
           </nav>
         </nav>
       </aside>
-      <section className="inset-0 h-full min-h-screen overflow-y-scroll px-4 py-4 md:fixed md:left-[calc(22rem)] md:px-8 md:py-10">
+      <section className="inset-0 h-full min-h-screen overflow-y-scroll px-4 py-4 md:fixed md:left-[calc(16rem)] md:px-8 md:py-10">
         {children}
       </section>
     </main>
