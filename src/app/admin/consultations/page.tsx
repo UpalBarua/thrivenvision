@@ -71,7 +71,7 @@ function ConsultationCard({
           {consultType}
         </Chip>
       </div>
-      <div className="space-y-1">
+      <div className="space-y-2">
         {details.map(({ value, Icon }) => (
           <div key={value} className="flex items-center gap-x-2.5">
             <Icon className="h-4 w-4" />
