@@ -36,8 +36,6 @@ export function PortfolioForm() {
       };
       await addNewPortfolioToDB(newPortfolio);
 
-      console.log(newPortfolio);
-
       reset();
     } catch (error) {
       console.log(error);
