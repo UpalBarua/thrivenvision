@@ -32,7 +32,7 @@ export function PortfolioForm() {
       setIsSubmitting(true);
 
       const newPortfolio = {
-        portfolio,
+        instagramURL: portfolio,
       };
       await addNewPortfolioToDB(newPortfolio);
 
@@ -52,7 +52,6 @@ export function PortfolioForm() {
       onSubmit={handleSubmit(onSubmit)}
     >
       <SectionHeading>Add Your Portfolio</SectionHeading>
-
       <Controller
         name="portfolio"
         control={control}

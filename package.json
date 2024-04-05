@@ -14,6 +14,7 @@
     "@nextui-org/avatar": "^2.0.24",
     "@nextui-org/button": "^2.0.27",
     "@nextui-org/card": "^2.0.24",
+    "@nextui-org/chip": "^2.0.25",
     "@nextui-org/dropdown": "^2.1.17",
     "@nextui-org/input": "^2.1.17",
     "@nextui-org/modal": "^2.0.29",
@@ -40,6 +41,7 @@
     "react-hook-form": "^7.51.1",
     "react-social-media-embed": "^2.5.9",
     "sharp": "^0.33.3",
+    "sonner": "^1.4.41",
     "tailwind-merge": "^2.2.2",
     "uuid": "^9.0.1",
     "zod": "^3.22.4"

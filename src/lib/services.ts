@@ -5,8 +5,8 @@ import type {
   TPortfolio,
   TPricingPackage,
   TTestimonial,
+  NewsletterEmail,
 } from "@/types";
-
 import {
   addDoc,
   collection,
@@ -43,6 +43,7 @@ export const getPricingPackagesFromDB = async () => {
 export const addNewPCompany = async (picture: Omit<TPicture, "id">) => {
   await addDoc(collection(db, "company"), picture);
 };
+
 export const getAllTrustedCompany = async () => {
   let company: TPicture[] = [];
 
@@ -54,6 +55,7 @@ export const getAllTrustedCompany = async () => {
 
   return company;
 };
+
 export const deleteCompanyById = async (id: string) => {
   const querySnapshot = await getDoc(doc(db, "company", id));
   const document = querySnapshot.data();
@@ -84,20 +86,30 @@ export const getTestimonialsFromDB = async () => {
   return testimonials;
 };
 
+// portfolios
+
 export const addNewPortfolioToDB = async (newPortfolio: TPortfolio) => {
-  return await addDoc(collection(db, "portfolios"), newPortfolio);
+  try {
+    return await addDoc(collection(db, "portfolios"), newPortfolio);
+  } catch (error) {
+    console.log(error);
+  }
 };
 
-export const getAllPortfolio = async () => {
+export const getAllPortfolios = async () => {
   let portfolio: TPortfolio[] = [];
 
-  const querySnapshot = await getDocs(collection(db, "portfolio"));
+  const querySnapshot = await getDocs(collection(db, "portfolios"));
 
   querySnapshot.forEach((doc) => {
     portfolio.push({ id: doc.id, ...doc.data() } as TPortfolio);
   });
 
   return portfolio;
+};
+
+export const deletePortfolioById = async (id: string) => {
+  return await deleteDoc(doc(db, "portfolios", id));
 };
 
 export const addNewConsultation = async (newConsultation: TConsultation) => {
@@ -114,4 +126,20 @@ export const getAllConsulations = async () => {
   });
 
   return consulations;
+};
+
+export const addNewsletterEmail = async (newsletterEmail: NewsletterEmail) => {
+  return await addDoc(collection(db, "newsletter"), newsletterEmail);
+};
+
+export const getAllNewsletterEmails = async () => {
+  let emails: NewsletterEmail[] = [];
+
+  const querySnapshot = await getDocs(collection(db, "newsletter"));
+
+  querySnapshot.forEach((doc) => {
+    emails.push({ id: doc.id, ...doc.data() } as NewsletterEmail);
+  });
+
+  return emails;
 };

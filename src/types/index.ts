@@ -34,7 +34,7 @@ export type TServiceCategory = {
 
 export type TPortfolio = {
   id?: string;
-  portfolio: string;
+  instagramURL: string;
 };
 
 export type TConsultation = {
@@ -46,4 +46,10 @@ export type TConsultation = {
   consultType: string;
   preferedTimeSlot: string;
   preferedDate: string;
+};
+
+export type NewsletterEmail = {
+  id?: string;
+  email: string;
+  date: string;
 };

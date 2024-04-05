@@ -1,9 +1,9 @@
 "use client";
 
-import { AuthContextProvider } from "@/context/auth-context";
 import { NextUIProvider } from "@nextui-org/system";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { useRouter } from "next/navigation";
+import { Toaster } from "sonner";
 
 export function Providers({ children }: { children: React.ReactNode }) {
   const router = useRouter();
@@ -11,7 +11,8 @@ export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <NextUIProvider navigate={router.push}>
       <NextThemesProvider attribute="class" defaultTheme="dark">
-        <AuthContextProvider>{children}</AuthContextProvider>
+        {children}
+        <Toaster />
       </NextThemesProvider>
     </NextUIProvider>
   );

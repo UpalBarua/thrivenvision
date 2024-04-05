@@ -29,6 +29,13 @@ export const navLinks = [
   },
 ] as const;
 
+export const adminNavLinks = [
+  { label: "Consultations", href: "/admin/consultations" },
+  { label: "Portfolios", href: "/admin/portfolios" },
+  // { label: "Reviews", href: "/admin/reviews" },
+  { label: "Newsletter", href: "/admin/newsletter" },
+] as const;
+
 export const whyChooseUsData = [
   {
     Icon: Trophy,
