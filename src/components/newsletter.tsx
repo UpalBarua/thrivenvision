@@ -1,8 +1,6 @@
-import { Button } from "@nextui-org/button";
 import { Card } from "@nextui-org/card";
-import { Input } from "@nextui-org/input";
-import { Mail } from "lucide-react";
 import Image from "next/image";
+import { NewsletterForm } from "./newsletter-form";
 import { SectionHeading } from "./ui/section-heading";
 import { SectionSubheading } from "./ui/section-subheading";
 
@@ -40,29 +38,7 @@ export function Newsletter() {
           newsletter. Signing up is quick and easy! Just enter your email below,
           and let us bring the future of digital innovation straight to you.
         </SectionSubheading>
-        <form className="lg:items-scenter flex flex-col gap-4 sm:flex-row sm:gap-2">
-          <Input
-            startContent={<Mail />}
-            placeholder="example@email.com"
-            classNames={{
-              inputWrapper:
-                "bg-background/40 border border-foreground/20 data-[hover=true]:bg-background/60 group-data-[focus=true]:bg-background/60",
-              input: [
-                "placeholder:text-foreground/60 focus-visible:outline-none",
-                "data-[has-start-content=true]:ps-1.5",
-                "data-[has-end-content=true]:pe-1.5",
-              ],
-            }}
-          />
-          <Button
-            type="submit"
-            size="lg"
-            color="primary"
-            className="text-base sm:h-auto"
-          >
-            Subscribe
-          </Button>
-        </form>
+        <NewsletterForm />
         <p className="pt-10 leading-relaxed text-foreground/60">
           Your privacy is paramount to us. We promise to keep your email safe
           and never spam. Unsubscribe at any time with just a click.

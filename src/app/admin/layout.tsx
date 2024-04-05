@@ -1,13 +1,16 @@
 "use client";
 
 import { adminNavLinks } from "@/config";
+import { auth } from "@/firebase/firebase.config";
 import { cn } from "@/lib/cn";
 import { Button } from "@nextui-org/button";
+import { User, onAuthStateChanged } from "firebase/auth";
 import { Menu } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { ReactNode, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
+import { ReactNode, useEffect, useState } from "react";
+import Loading from "../loading";
 
 type DashboardLayoutProps = {
   children: ReactNode;
@@ -17,7 +20,29 @@ export default function DashboardLayout({
   children,
 }: Readonly<DashboardLayoutProps>) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [user, setUser] = useState<User | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
   const pathname = usePathname();
+  const router = useRouter();
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      if (currentUser) {
+        setUser(currentUser);
+        setIsLoading(false);
+      }
+    });
+
+    return () => unsubscribe();
+  }, []);
+
+  if (isLoading) {
+    return <Loading />;
+  }
+
+  if (!isLoading && !user) {
+    return router.push("/auth");
+  }
 
   return (
     <main className="relative z-10 h-full min-h-screen dark:bg-background dark:text-foreground/90">

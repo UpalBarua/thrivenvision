@@ -52,7 +52,6 @@ export function PortfolioForm() {
       onSubmit={handleSubmit(onSubmit)}
     >
       <SectionHeading>Add Your Portfolio</SectionHeading>
-
       <Controller
         name="portfolio"
         control={control}

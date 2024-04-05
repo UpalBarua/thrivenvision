@@ -47,3 +47,9 @@ export type TConsultation = {
   preferedTimeSlot: string;
   preferedDate: string;
 };
+
+export type NewsletterEmail = {
+  id?: string;
+  email: string;
+  date: string;
+};

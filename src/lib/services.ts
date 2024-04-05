@@ -5,6 +5,7 @@ import type {
   TPortfolio,
   TPricingPackage,
   TTestimonial,
+  NewsletterEmail,
 } from "@/types";
 import {
   addDoc,
@@ -125,4 +126,20 @@ export const getAllConsulations = async () => {
   });
 
   return consulations;
+};
+
+export const addNewsletterEmail = async (newsletterEmail: NewsletterEmail) => {
+  return await addDoc(collection(db, "newsletter"), newsletterEmail);
+};
+
+export const getAllNewsletterEmails = async () => {
+  let emails: NewsletterEmail[] = [];
+
+  const querySnapshot = await getDocs(collection(db, "newsletter"));
+
+  querySnapshot.forEach((doc) => {
+    emails.push({ id: doc.id, ...doc.data() } as NewsletterEmail);
+  });
+
+  return emails;
 };
