@@ -29,8 +29,8 @@ export default function DashboardLayout({
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {
         setUser(currentUser);
-        setIsLoading(false);
       }
+      setIsLoading(false);
     });
 
     return () => unsubscribe();
