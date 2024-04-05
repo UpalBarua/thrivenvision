@@ -32,7 +32,7 @@ export function PortfolioForm() {
       setIsSubmitting(true);
 
       const newPortfolio = {
-        portfolio,
+        instagramURL: portfolio,
       };
       await addNewPortfolioToDB(newPortfolio);
 
