@@ -1,11 +1,11 @@
+import { ConfirmationModal } from "@/components/confirmation-modal";
 import { SectionHeading } from "@/components/ui/section-heading";
-import { getAllConsulations } from "@/lib/services";
+import { deleteConsultationById, getAllConsulations } from "@/lib/services";
 import type { TConsultation } from "@/types";
 import { Card } from "@nextui-org/card";
-import { Calendar, Clock, Mail, Phone } from "lucide-react";
-import { Button } from "@nextui-org/button";
 import { Chip } from "@nextui-org/chip";
 import { format } from "date-fns";
+import { Calendar, Clock, Mail, Phone } from "lucide-react";
 
 export default async function Consultations() {
   const consultations = await getAllConsulations();
@@ -79,9 +79,12 @@ function ConsultationCard({
           </div>
         ))}
       </div>
-      <Button fullWidth color="primary">
-        Delete
-      </Button>
+      <ConfirmationModal
+        onConfirm={async () => {
+          "use server";
+          deleteConsultationById(id as string);
+        }}
+      />
     </Card>
   );
 }

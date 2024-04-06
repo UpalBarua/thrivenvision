@@ -1,11 +1,11 @@
 import { db, storage } from "@/firebase/firebase.config";
 import type {
+  NewsletterEmail,
   TConsultation,
   TPicture,
   TPortfolio,
   TPricingPackage,
   TTestimonial,
-  NewsletterEmail,
 } from "@/types";
 import {
   addDoc,
@@ -125,7 +125,18 @@ export const getAllConsulations = async () => {
     consulations.push({ id: doc.id, ...doc.data() } as TConsultation);
   });
 
+  // onSnapshot(collection(db, "consulations"), (snapshot) => {
+  //   consulations = [];
+  //   snapshot.docs.forEach((doc) => {
+  //     consulations.push({ id: doc.id, ...doc.data() } as TConsultation);
+  //   });
+  // });
+
   return consulations;
+};
+
+export const deleteConsultationById = async (id: string) => {
+  return await deleteDoc(doc(db, "consulations", id));
 };
 
 export const addNewsletterEmail = async (newsletterEmail: NewsletterEmail) => {

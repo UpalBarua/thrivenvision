@@ -9,6 +9,7 @@ import {
   ModalHeader,
   useDisclosure,
 } from "@nextui-org/modal";
+import { Trash2 } from "lucide-react";
 import { Fragment } from "react";
 
 type ConfirmationModalProps = {
@@ -22,8 +23,9 @@ export function ConfirmationModal({
 
   return (
     <Fragment>
-      <Button onPress={onOpen} fullWidth color="danger" size="lg">
-        Delete Portfolio
+      <Button onPress={onOpen} fullWidth size="lg">
+        <Trash2 className="h-5 w-5" />
+        <span>Delete</span>
       </Button>
       <Modal size="sm" isOpen={isOpen} onOpenChange={onOpenChange}>
         <ModalContent>
