@@ -125,6 +125,13 @@ export const getAllConsulations = async () => {
     consulations.push({ id: doc.id, ...doc.data() } as TConsultation);
   });
 
+  // onSnapshot(collection(db, "consulations"), (snapshot) => {
+  //   consulations = [];
+  //   snapshot.docs.forEach((doc) => {
+  //     consulations.push({ id: doc.id, ...doc.data() } as TConsultation);
+  //   });
+  // });
+
   return consulations;
 };
 

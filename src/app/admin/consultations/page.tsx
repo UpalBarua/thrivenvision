@@ -1,13 +1,11 @@
-import { SectionHeading } from "@/components/ui/section-heading";
 import { ConfirmationModal } from "@/components/confirmation-modal";
-import { getAllConsulations } from "@/lib/services";
+import { SectionHeading } from "@/components/ui/section-heading";
+import { deleteConsultationById, getAllConsulations } from "@/lib/services";
 import type { TConsultation } from "@/types";
 import { Card } from "@nextui-org/card";
-import { Calendar, Clock, Mail, Phone } from "lucide-react";
-import { Button } from "@nextui-org/button";
 import { Chip } from "@nextui-org/chip";
 import { format } from "date-fns";
-import { deleteConsultationById } from "@/lib/services";
+import { Calendar, Clock, Mail, Phone } from "lucide-react";
 
 export default async function Consultations() {
   const consultations = await getAllConsulations();
