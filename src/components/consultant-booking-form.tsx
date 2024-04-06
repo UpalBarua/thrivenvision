@@ -2,7 +2,7 @@
 
 import { services } from "@/config/services";
 import { cn } from "@/lib/cn";
-import { addNewConsultation, getAllConsulations } from "@/lib/services";
+import { addNewConsultation, getAllConsultations } from "@/lib/services";
 import { TConsultation } from "@/types";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@nextui-org/button";
@@ -87,7 +87,7 @@ export function ConsultantBookingForm() {
 
   useEffect(() => {
     const getDisabledDates = async () => {
-      const consultations = await getAllConsulations();
+      const consultations = await getAllConsultations();
       const next7Days = getNext7Days();
 
       const bookedDates = consultations.map(

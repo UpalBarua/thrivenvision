@@ -113,16 +113,16 @@ export const deletePortfolioById = async (id: string) => {
 };
 
 export const addNewConsultation = async (newConsultation: TConsultation) => {
-  return await addDoc(collection(db, "consulations"), newConsultation);
+  return await addDoc(collection(db, "consultations"), newConsultation);
 };
 
-export const getAllConsulations = async () => {
-  let consulations: TConsultation[] = [];
+export const getAllConsultations = async () => {
+  let consultations: TConsultation[] = [];
 
-  const querySnapshot = await getDocs(collection(db, "consulations"));
+  const querySnapshot = await getDocs(collection(db, "consultations"));
 
   querySnapshot.forEach((doc) => {
-    consulations.push({ id: doc.id, ...doc.data() } as TConsultation);
+    consultations.push({ id: doc.id, ...doc.data() } as TConsultation);
   });
 
   // onSnapshot(collection(db, "consulations"), (snapshot) => {
@@ -132,11 +132,11 @@ export const getAllConsulations = async () => {
   //   });
   // });
 
-  return consulations;
+  return consultations;
 };
 
 export const deleteConsultationById = async (id: string) => {
-  return await deleteDoc(doc(db, "consulations", id));
+  return await deleteDoc(doc(db, "consultations", id));
 };
 
 export const addNewsletterEmail = async (newsletterEmail: NewsletterEmail) => {
