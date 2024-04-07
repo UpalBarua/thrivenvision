@@ -1,3 +1,8 @@
+"use client";
+
+import { useRouter } from "next/navigation";
+
 export default function Admin() {
-  return <p>admin</p>;
+  const router = useRouter();
+  return router.push("/admin/consultations");
 }

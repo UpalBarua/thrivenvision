@@ -10,6 +10,7 @@ import {
   TableRow,
 } from "@nextui-org/table";
 import { format } from "date-fns";
+import { ConfirmationModal } from "./confirmation-modal";
 
 type NewsletterTableProps = {
   emails: NewsletterEmail[];
@@ -28,15 +29,19 @@ export function NewsletterTable({ emails }: Readonly<NewsletterTableProps>) {
       <TableHeader>
         <TableColumn>Email</TableColumn>
         <TableColumn>Submitted On</TableColumn>
+        <TableColumn>Actions</TableColumn>
       </TableHeader>
       <TableBody>
         {emails.map(({ id, email, date }) => (
           <TableRow key={id}>
-            <TableCell className="">
+            <TableCell>
               <h4 className="font-medium">{email}</h4>
             </TableCell>
-            <TableCell className="">
+            <TableCell>
               <h4 className="font-medium">{format(date, "PP")}</h4>
+            </TableCell>
+            <TableCell>
+              <ConfirmationModal onConfirm={() => console.log(id)} />
             </TableCell>
           </TableRow>
         ))}
