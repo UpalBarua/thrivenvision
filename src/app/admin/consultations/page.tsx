@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { ConfirmationModal } from "@/components/confirmation-modal";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { deleteConsultationById, getAllConsultations } from "@/lib/services";

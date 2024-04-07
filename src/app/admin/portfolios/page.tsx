@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { ConfirmationModal } from "@/components/confirmation-modal";
 import { NewPortfolioModal } from "@/components/new-portfolio-modal";
 import { PortfolioPost } from "@/components/portfolio-post";
