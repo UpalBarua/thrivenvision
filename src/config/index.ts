@@ -203,3 +203,79 @@ export const trustedCompanines = [
   "/images/brands/logo-7.webp",
   "/images/brands/logo-8.webp",
 ] as const;
+
+export const pricingPackages = [
+  {
+    name: "Brand Starter Kit",
+    services: [
+      "Basic Brand Consultation",
+      "Logo Design",
+      "Basic SEO Analysis",
+      "2 Custom Social Media Post Designs"
+    ],
+    features: [
+      "1 Video Call Session",
+      "2 Revisions per Service",
+      "Initial Brand Strategy Outline"
+    ]
+  },
+  {
+    name: "Digital Presence Builder",
+    services: [
+      "Brand Development Session",
+      "SEO and Basic Website Content",
+      "4 Custom Social Media Post Designs",
+      "1 Short Video Ad or Social Media Video"
+    ],
+    features: [
+      "2 Video Call Sessions",
+      "3 Revisions per Service",
+      "Monthly SEO and Social Media Report"
+    ]
+  },
+  {
+    name: "Market Influence Creator",
+    services: [
+      "Comprehensive Branding and Strategy",
+      "Advanced SEO Services",
+      "Influencer Marketing Introduction",
+      "6 Social Media Designs",
+      "1 Animated Explainer Video"
+    ],
+    features: [
+      "4 Video Call Sessions",
+      "4 Revisions per Service",
+      "Influencer Matching and Strategy"
+    ]
+  },
+  {
+    name: "Creative Visionary Package",
+    services: [
+      "Full-Scale Brand Development",
+      "Complete SEO and Content Strategy",
+      "Social Media Marketing Campaign",
+      "3D Product Animation",
+      "Custom Illustrations or Infographics"
+    ],
+    features: [
+      "6 Video Call Sessions",
+      "6 Revisions per Service",
+      "Bi-Monthly Creative Strategy Sessions"
+    ]
+  },
+  {
+    name: "Ultimate Business Transformer",
+    services: [
+      "End-to-End Branding and Business Consulting",
+      "Complete SEO, Website, and App Development",
+      "Full-Scale Digital Marketing and Video Campaign",
+      "Comprehensive Graphics & Design Suite",
+      "Article, Blog and Scriptwriting Services"
+    ],
+    features: [
+      "Unlimited Video Call Sessions",
+      "Unlimited Revisions",
+      "Monthly Performance Analytics and Strategy Refinement"
+    ]
+  }
+];
