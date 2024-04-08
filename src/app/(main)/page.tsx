@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { Hero } from "@/components/hero";
 import { Newsletter } from "@/components/newsletter";
 import { Portfolios } from "@/components/portfolios";

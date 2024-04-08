@@ -5,6 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@nextui-org/button";
 import { Input, Textarea } from "@nextui-org/input";
 import { Send, X } from "lucide-react";
+import { useSearchParams } from "next/navigation";
 import { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { z } from "zod";
@@ -31,6 +32,9 @@ type TContactUsForm = z.infer<typeof contactUsFormSchema>;
 export function ContactUsForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  const searchParams = useSearchParams();
+  const pageFor = searchParams.get("for");
+
   const { control, handleSubmit, reset } = useForm<TContactUsForm>({
     resolver: zodResolver(contactUsFormSchema),
     defaultValues: {
@@ -47,7 +51,8 @@ export function ContactUsForm() {
       const newMessage = {
         name,
         email,
-        message,
+        message:
+          (pageFor === "quote" ? "Get a Quote - " : "Contact Us - ") + message,
       };
 
       await emailjs.send(
