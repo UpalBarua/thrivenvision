@@ -23,7 +23,7 @@ export function ConfirmationModal({
 
   return (
     <Fragment>
-      <Button onPress={onOpen} fullWidth size="lg">
+      <Button onPress={onOpen} fullWidth size="lg" className="mt-4">
         <Trash2 className="h-5 w-5" />
         <span>Delete</span>
       </Button>
