@@ -1,5 +1,5 @@
-import * as React from "react";
 import { cn } from "@/lib/cn";
+import * as React from "react";
 
 type SectionSubheadingProps = {
   children: React.ReactNode;
@@ -11,13 +11,13 @@ export function SectionSubheading({
   className,
 }: SectionSubheadingProps) {
   return (
-    <h2
+    <h1
       className={cn(
         "mx-auto px-2 pb-[max(3.5dvw,_2rem)] text-center leading-relaxed text-foreground/80 md:text-[1.25rem]",
         className,
       )}
     >
       {children}
-    </h2>
+    </h1>
   );
 }

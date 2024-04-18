@@ -5,17 +5,17 @@ import { socialLinks } from "@/config";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Us | thrivenvision",
+  title: "Get a Quote | thrivenvision",
   description:
-    "Need digital help? Contact thrivenvision! All digital services, all questions answered.",
+    "Request a quote today from Get a Quote! Explore our comprehensive digital services tailored to meet all your needs. Quick responses, expert advice. Start your project with us.",
 };
 
-export default function ContactUs() {
+export default function GetQuote() {
   return (
     <main className="container relative z-10 mx-auto grid max-w-5xl grid-cols-1 gap-10 px-4 pt-[max(5dvw,1.5rem)] md:grid-cols-2 md:gap-28">
       <div>
         <SectionSubheading className="mx-0 px-0 pb-2 text-start">
-          Contact Us
+          Get a Quote
         </SectionSubheading>
         <SectionHeading className="text-start">
           Reach our Customer service!

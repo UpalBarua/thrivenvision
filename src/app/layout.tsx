@@ -1,28 +1,30 @@
-import { Providers } from '@/components/providers'
-import { cn } from '@/lib/cn'
-import type { Metadata } from 'next'
-import { exo } from './fonts'
-import './globals.css'
+import { Providers } from "@/components/providers";
+import { cn } from "@/lib/cn";
+import type { Metadata } from "next";
+import { exo } from "./fonts";
+import "./globals.css";
 
 export const metadata: Metadata = {
-  title: 'thrivenvision',
-}
+  title: "thrivenvision",
+  description:
+    "We are your one-stop solution for all digital demands because of our broad range of digital domain experience.",
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html
-      lang='en'
-      className='!scroll-smooth dark'
-      style={{ scrollBehavior: 'smooth' }}
+      lang="en"
+      className="!scroll-smooth dark"
+      style={{ scrollBehavior: "smooth" }}
     >
       <body
         className={cn(
           exo.className,
-          'relative min-h-screen overflow-x-hidden text-foreground/90 antialiased',
+          "relative min-h-screen overflow-x-hidden text-foreground/90 antialiased",
         )}
       >
         <Providers>{children}</Providers>
@@ -32,5 +34,5 @@ export default function RootLayout({
         />
       </body>
     </html>
-  )
+  );
 }
