@@ -5,6 +5,13 @@ import { NewPortfolioModal } from "@/components/new-portfolio-modal";
 import { PortfolioPost } from "@/components/portfolio-post";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { deletePortfolioById, getAllPortfolios } from "@/lib/services";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Portfolios | thrivenvision",
+  description:
+    "Explore thrivenvision's digital expertise! See our portfolio showcasing exceptional work across various services. ",
+};
 
 export default async function Portfolios() {
   const portfolios = await getAllPortfolios();

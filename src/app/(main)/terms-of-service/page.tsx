@@ -1,5 +1,12 @@
-import { termsOfServices } from "@/config";
 import { SectionHeading } from "@/components/ui/section-heading";
+import { termsOfServices } from "@/config";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Terms of Service | thrivenvision",
+  description:
+    "Digital experience secured. Learn about responsible use and user agreements for a secure thrivenvision experience.",
+};
 
 export default function TermsOfServices() {
   return (

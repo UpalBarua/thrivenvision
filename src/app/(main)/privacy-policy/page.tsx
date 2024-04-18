@@ -1,5 +1,12 @@
 import { SectionHeading } from "@/components/ui/section-heading";
 import { privacyPolicy } from "@/config";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | thrivenvision",
+  description:
+    "Your privacy matters! Understand how thrivenvision protects your data. Learn more in our Privacy Policy.",
+};
 
 export default function PrivacyPolicy() {
   return (

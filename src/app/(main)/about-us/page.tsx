@@ -3,6 +3,13 @@ import { SectionSubheading } from "@/components/ui/section-subheading";
 import { employees } from "@/config";
 import { Card, CardBody, CardHeader } from "@nextui-org/card";
 import Image from "next/image";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Us | thrivenvision",
+  description:
+    "Meet the thrivenvision team! We bring your digital vision to life. Discover our services and values.",
+};
 
 export default function AboutUs() {
   return (

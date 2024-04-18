@@ -2,6 +2,13 @@ import { ContactUsForm } from "@/components/contact-us-form";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { SectionSubheading } from "@/components/ui/section-subheading";
 import { socialLinks } from "@/config";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Get a Quote | thrivenvision",
+  description:
+    "Request a quote today from Get a Quote! Explore our comprehensive digital services tailored to meet all your needs. Quick responses, expert advice. Start your project with us.",
+};
 
 export default function GetQuote() {
   return (
