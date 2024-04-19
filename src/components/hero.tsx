@@ -17,7 +17,7 @@ export function Hero() {
         <HeroCategories />
         <div className="mx-auto flex max-w-[90%] flex-col items-center justify-center gap-3 md:mx-0 md:flex-row">
           <ConsultantBookingModal />
-          <Link href="/contact-us?for=quote">
+          <Link href="/get-quote">
             <Button
               fullWidth
               className="h-10 border border-foreground/20 bg-background/80 px-4 text-base

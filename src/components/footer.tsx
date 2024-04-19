@@ -19,7 +19,7 @@ export function Footer() {
           <h4 className="pb-6 text-xl capitalize text-foreground">
             let your dreams take flight.
           </h4>
-          <Link href="/contact-us?for=quote">
+          <Link href="/get-quote">
             <Button
               color="primary"
               size="lg"
