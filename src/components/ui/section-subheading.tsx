@@ -11,13 +11,13 @@ export function SectionSubheading({
   className,
 }: SectionSubheadingProps) {
   return (
-    <h1
+    <h2
       className={cn(
         "mx-auto px-2 pb-[max(3.5dvw,_2rem)] text-center leading-relaxed text-foreground/80 md:text-[1.25rem]",
         className,
       )}
     >
       {children}
-    </h1>
+    </h2>
   );
 }
