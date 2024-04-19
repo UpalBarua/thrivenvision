@@ -51,7 +51,7 @@ export function PricingPackageCard({
         ))}
       </CardBody>
       <CardFooter>
-        <Link className="w-full" href="/contact-us?for=quote">
+        <Link className="w-full" href="/get-quote">
           <Button
             color="primary"
             variant="solid"
