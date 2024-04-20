@@ -1,6 +1,7 @@
 export const dynamic = "force-dynamic";
 
 import { Hero } from "@/components/hero";
+import { MotionDiv } from "@/components/motion-div";
 import { Newsletter } from "@/components/newsletter";
 import { Portfolios } from "@/components/portfolios";
 import { PricingPackages } from "@/components/pricing-packages";
@@ -21,15 +22,31 @@ export default function HomePage() {
       <Portfolios />
       <Testimonials />
       <Newsletter />
-      <Image
-        className="object-fit absolute -top-[4dvw] right-0 hidden h-[30rem] w-[37.5rem] object-center opacity-30 lg:block"
-        src={"/images/hero-bg-logo.webp"}
-        alt="hero bg image"
-        height="300"
-        width="300"
-        quality={95}
-        priority
-      />
+      <MotionDiv
+        initial={{
+          opacity: 0,
+        }}
+        animate={{
+          opacity: 1,
+        }}
+        transition={{
+          duration: 2,
+        }}
+        viewport={{
+          once: true,
+        }}
+        className="absolute -top-[4dvw] right-0 hidden lg:block"
+      >
+        <Image
+          className="object-fit h-[30rem] w-[37.5rem] object-center opacity-30"
+          src={"/images/hero-bg-logo.webp"}
+          alt="hero bg image"
+          height="300"
+          width="300"
+          quality={95}
+          priority
+        />
+      </MotionDiv>
     </main>
   );
 }

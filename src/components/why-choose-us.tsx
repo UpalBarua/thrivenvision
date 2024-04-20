@@ -39,16 +39,17 @@ function ChooseUsCard({ Icon, title, description, i }: ChooseUsCardProps) {
         <MotionDiv
           initial={{
             scale: 0,
-            y: 25,
           }}
           whileInView={{
             scale: 1,
-            y: 0,
           }}
           transition={{
             type: "tween",
-            duration: 0.5,
-            delay: 0.25 * i,
+            duration: 0.75,
+            delay: 0.125 * (i + 1),
+          }}
+          viewport={{
+            once: true,
           }}
         >
           <div
@@ -66,15 +67,18 @@ function ChooseUsCard({ Icon, title, description, i }: ChooseUsCardProps) {
       <MotionDiv
         initial={{
           opacity: 0,
-          y: 25,
+          y: 100,
         }}
         whileInView={{
           opacity: 1,
           y: 0,
         }}
         transition={{
-          duration: 0.5,
-          delay: 0.25 * i,
+          duration: 0.75,
+          delay: 0.125 * (i + 1),
+        }}
+        viewport={{
+          once: true,
         }}
       >
         <CardBody className="space-y-2">
