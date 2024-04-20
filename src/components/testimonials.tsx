@@ -129,8 +129,9 @@ export async function Testimonials() {
               duration: 0.5,
               delay: 0.25 * i,
             }}
+            key={testimonial.id}
           >
-            <TestimonialCard key={testimonial.id} {...testimonial} />
+            <TestimonialCard {...testimonial} />
           </MotionDiv>
         ))}
       </div>

@@ -26,8 +26,9 @@ export async function PricingPackages() {
               duration: 0.5,
               delay: 0.25 * i,
             }}
+            key={pricingPackage.name}
           >
-            <PricingPackageCard key={pricingPackage.name} {...pricingPackage} />
+            <PricingPackageCard {...pricingPackage} />
           </MotionDiv>
         ))}
       </div>
