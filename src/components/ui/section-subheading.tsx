@@ -13,14 +13,14 @@ export function SectionSubheading({
 }: SectionSubheadingProps) {
   return (
     <MotionDiv
-      initial={{ opacity: 0, y: 25 }}
+      initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{
-        amount: "all",
-      }}
       transition={{
-        duration: 0.5,
-        delay: 0.125,
+        duration: 0.75,
+        delay: 0.5,
+      }}
+      viewport={{
+        once: true,
       }}
     >
       <h2

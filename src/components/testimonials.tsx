@@ -126,8 +126,11 @@ export async function Testimonials() {
               x: 0,
             }}
             transition={{
-              duration: 0.5,
-              delay: 0.25 * i,
+              duration: 0.75,
+              delay: 0.125 * (i + 1),
+            }}
+            viewport={{
+              once: true,
             }}
             key={testimonial.id}
           >

@@ -17,7 +17,6 @@ export function PricingPackageCard({
   return (
     <Card
       isBlurred
-      isHoverable
       classNames={{
         base: [
           "dark:bg-background/60",

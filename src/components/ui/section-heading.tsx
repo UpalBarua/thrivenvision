@@ -10,13 +10,13 @@ type SectionHeadingProps = {
 export function SectionHeading({ children, className }: SectionHeadingProps) {
   return (
     <MotionDiv
-      initial={{ opacity: 0, y: 15 }}
+      initial={{ opacity: 0, y: 25 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{
-        amount: "all",
-      }}
       transition={{
-        duration: 0.35,
+        duration: 0.75,
+      }}
+      viewport={{
+        once: true,
       }}
     >
       <h1
