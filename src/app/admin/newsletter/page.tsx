@@ -2,6 +2,13 @@ export const dynamic = "force-dynamic";
 
 import { NewsletterTable } from "@/components/wewsletter-table";
 import { getAllNewsletterEmails } from "@/lib/services";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Newsletter Panel | thrivenvision",
+  description:
+    "Efficiently manage and access client email submissions on our Newsletter page.",
+};
 
 export default async function Newsletter() {
   const newsletterEmails = await getAllNewsletterEmails();

@@ -1,6 +1,7 @@
 import { ServiceTabs } from "./service-tabs";
 import { SectionHeading } from "./ui/section-heading";
 import { SectionSubheading } from "./ui/section-subheading";
+import { MotionDiv } from "./motion-div";
 
 export function Services() {
   return (
@@ -10,7 +11,22 @@ export function Services() {
         Experience our extensive services to help your business reach new
         heights
       </SectionSubheading>
-      <ServiceTabs />
+      <MotionDiv
+        initial={{
+          y: 100,
+          opacity: 0,
+        }}
+        whileInView={{
+          y: 0,
+          opacity: 1,
+        }}
+        transition={{
+          duration: 0.5,
+          delay: 0.25,
+        }}
+      >
+        <ServiceTabs />
+      </MotionDiv>
     </section>
   );
 }

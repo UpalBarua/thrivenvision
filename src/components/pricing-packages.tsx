@@ -1,12 +1,10 @@
 import { PricingPackageCard } from "@/components/pricing-package-card";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { SectionSubheading } from "@/components/ui/section-subheading";
-// import { getPricingPackagesFromDB } from "@/lib/services";
 import { pricingPackages } from "@/config";
+import { MotionDiv } from "./motion-div";
 
 export async function PricingPackages() {
-  // const pricingPackages = await getPricingPackagesFromDB();
-
   return (
     <section id="packages" className="scroll-mt-[4rem]">
       <SectionHeading>Our Packages</SectionHeading>
@@ -14,8 +12,23 @@ export async function PricingPackages() {
         Explore our customizable packages for your specific needs
       </SectionSubheading>
       <div className="flex flex-wrap place-content-center gap-6">
-        {pricingPackages?.map((pricingPackage) => (
-          <PricingPackageCard key={pricingPackage.name} {...pricingPackage} />
+        {pricingPackages?.map((pricingPackage, i) => (
+          <MotionDiv
+            initial={{
+              y: 100,
+              opacity: 0,
+            }}
+            whileInView={{
+              y: 0,
+              opacity: 1,
+            }}
+            transition={{
+              duration: 0.5,
+              delay: 0.25 * i,
+            }}
+          >
+            <PricingPackageCard key={pricingPackage.name} {...pricingPackage} />
+          </MotionDiv>
         ))}
       </div>
     </section>
