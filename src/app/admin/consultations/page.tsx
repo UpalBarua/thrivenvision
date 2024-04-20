@@ -8,6 +8,13 @@ import { Card } from "@nextui-org/card";
 import { Chip } from "@nextui-org/chip";
 import { format } from "date-fns";
 import { Calendar, Clock, Mail, Phone } from "lucide-react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Consultations Panel | thrivenvision",
+  description:
+    "Access all client bookings for free consultations on our Consultations page.",
+};
 
 export default async function Consultations() {
   const consultations = await getAllConsultations();

@@ -2,9 +2,10 @@ import { SectionHeading } from "@/components/ui/section-heading";
 import { SectionSubheading } from "@/components/ui/section-subheading";
 import { cn } from "@/lib/cn";
 import { TTestimonial } from "@/types";
-import { Card, CardBody, CardFooter } from "@nextui-org/card";
 import { Avatar } from "@nextui-org/avatar";
-import { CircleUserRound, Star, UserRound } from "lucide-react";
+import { Card, CardBody, CardFooter } from "@nextui-org/card";
+import { Star, UserRound } from "lucide-react";
+import { MotionDiv } from "./motion-div";
 import {
   Carousel,
   CarouselContent,
@@ -107,8 +108,6 @@ const testimonials = [
 ];
 
 export async function Testimonials() {
-  // const testimonials = await getTestimonialsFromDB();
-
   return (
     <section>
       <SectionHeading>Recommendations</SectionHeading>
@@ -116,8 +115,23 @@ export async function Testimonials() {
         Discover the beneficial effect of our services via client testimonials
       </SectionSubheading>
       <div className="hidden [column-fill:_balance] sm:block sm:columns-2 lg:columns-3">
-        {testimonials.map((testimonial) => (
-          <TestimonialCard key={testimonial.id} {...testimonial} />
+        {testimonials.map((testimonial, i) => (
+          <MotionDiv
+            initial={{
+              opacity: 0,
+              x: 100,
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+            }}
+            transition={{
+              duration: 0.5,
+              delay: 0.25 * i,
+            }}
+          >
+            <TestimonialCard key={testimonial.id} {...testimonial} />
+          </MotionDiv>
         ))}
       </div>
       <Carousel className="w-full sm:hidden">

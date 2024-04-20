@@ -24,7 +24,7 @@ export function PricingPackageCard({
           "dark:data-[hover=true]:bg-background/80",
           "backdrop-blur-md",
           "backdrop-saturate-150",
-          "w-[23rem] p-4 md:p-6 border border-foreground/10",
+          "w-[23rem] h-full p-4 md:p-6 border border-foreground/10",
         ],
       }}
     >
