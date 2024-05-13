@@ -5,6 +5,7 @@ const nextConfig = {
       {
         hostname: "firebasestorage.googleapis.com",
       },
+
     ],
   },
 };
