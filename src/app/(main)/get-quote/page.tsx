@@ -5,7 +5,7 @@ import { socialLinks } from "@/config";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Get a Quote | thrivenvision",
+  title: "Get a Quote | Vectus Labs",
   description:
     "Request a quote today from Get a Quote! Explore our comprehensive digital services tailored to meet all your needs. Quick responses, expert advice. Start your project with us.",
 };

@@ -1,6 +1,6 @@
 "use client";
 
-import { Switch } from "@nextui-org/switch";
+import { Switch } from "@heroui/switch";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 
@@ -12,7 +12,10 @@ export const ThemeSwitcher = () => {
       defaultSelected
       size="md"
       color="primary"
-      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+      onChange={() => {
+        console.log(theme);
+        setTheme(theme === "dark" ? "light" : "dark");
+      }}
       thumbIcon={({ isSelected, className }) =>
         isSelected ? (
           <Moon className={className} size={14} />

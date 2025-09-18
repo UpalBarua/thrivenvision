@@ -14,7 +14,7 @@ export function FooterContainer({ children }: Readonly<FooterContainerProps>) {
   return (
     <footer
       className={cn(
-        "relative z-10 mt-auto space-y-14 border-t border-foreground/10 bg-background/60 pb-6 text-foreground/60 backdrop-blur-md backdrop-saturate-150",
+        "border-foreground/10 bg-background/60 text-foreground/60 relative z-10 mt-auto space-y-20 border-t pb-6 backdrop-blur-md backdrop-saturate-150",
         pathname === "/" ? "pt-[20rem]" : "mt-32 pt-12",
       )}
     >

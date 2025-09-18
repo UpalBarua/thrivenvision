@@ -2,15 +2,15 @@
 
 import { addNewPortfolioToDB } from "@/lib/services";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Button } from "@nextui-org/button";
-import { Input } from "@nextui-org/input";
+import { Button } from "@heroui/button";
+import { Input } from "@heroui/input";
 import {
   Modal,
   ModalBody,
   ModalContent,
   ModalHeader,
   useDisclosure,
-} from "@nextui-org/modal";
+} from "@heroui/modal";
 import { Fragment } from "react";
 import { Controller, useForm } from "react-hook-form";
 import * as z from "zod";

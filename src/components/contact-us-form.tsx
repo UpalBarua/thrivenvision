@@ -2,8 +2,8 @@
 
 import emailjs from "@emailjs/browser";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Button } from "@nextui-org/button";
-import { Input, Textarea } from "@nextui-org/input";
+import { Button } from "@heroui/button";
+import { Input, Textarea } from "@heroui/input";
 import { Send, X } from "lucide-react";
 import { useState } from "react";
 import { Controller, useForm } from "react-hook-form";

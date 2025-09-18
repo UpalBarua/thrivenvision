@@ -3,7 +3,7 @@
 import { adminNavLinks } from "@/config";
 import { auth } from "@/firebase/firebase.config";
 import { cn } from "@/lib/cn";
-import { Button } from "@nextui-org/button";
+import { Button } from "@heroui/button";
 import { User, onAuthStateChanged } from "firebase/auth";
 import { Menu } from "lucide-react";
 import Image from "next/image";
@@ -64,7 +64,7 @@ export default function DashboardLayout({
             height={60}
             width={140}
             priority
-            quality={95}
+            
           />
         </Link>
       </div>
@@ -85,7 +85,7 @@ export default function DashboardLayout({
               height={60}
               width={140}
               priority
-              quality={95}
+              
             />
           </Link>
           <nav className="flex flex-col items-start gap-y-3 text-lg font-medium text-foreground/60">

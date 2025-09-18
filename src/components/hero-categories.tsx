@@ -3,7 +3,7 @@
 import { services } from "@/config/services";
 import { useInfinitySlider } from "@/hooks/use-infinity-slider";
 import useMediaQuery from "@/hooks/use-media-query";
-import { ScrollShadow } from "@nextui-org/scroll-shadow";
+import { ScrollShadow } from "@heroui/scroll-shadow";
 import { motion } from "framer-motion";
 
 const initialServiceCategories = services.map(({ id, category, Icon }) => ({

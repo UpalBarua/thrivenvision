@@ -1,6 +1,6 @@
 import { SectionHeading } from "@/components/ui/section-heading";
 import { whyChooseUsData } from "@/config";
-import { Card, CardBody, CardHeader } from "@nextui-org/card";
+import { Card, CardBody, CardHeader } from "@heroui/card";
 import { MotionDiv } from "./motion-div";
 
 export function WhyChooseUs() {

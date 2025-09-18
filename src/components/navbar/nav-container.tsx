@@ -1,10 +1,11 @@
 "use client";
 
-import { Navbar } from "@nextui-org/navbar";
+import { Navbar } from "@heroui/navbar";
 import Image from "next/image";
 import Link from "next/link";
 import { ReactNode, useState } from "react";
 import { MobileNav } from "./mobile-nav";
+import { FlaskConicalIcon } from "lucide-react";
 
 type NavContainerProps = {
   children: ReactNode;
@@ -25,14 +26,7 @@ export function NavContainer({ children }: Readonly<NavContainerProps>) {
       }}
     >
       <Link href="/" onClick={() => setIsMenuOpen(false)}>
-        <Image
-          src="/images/named-logo.webp"
-          alt="logo"
-          height={80}
-          width={160}
-          priority
-          quality={95}
-        />
+        <Image src="logo.svg" alt="logo" height={250} width={180} priority />
       </Link>
       {children}
       <MobileNav isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />

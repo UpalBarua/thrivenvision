@@ -1,6 +1,6 @@
 import { TPricingPackage } from "@/types";
-import { Button } from "@nextui-org/button";
-import { Card, CardBody, CardFooter, CardHeader } from "@nextui-org/card";
+import { Button } from "@heroui/button";
+import { Card, CardBody, CardFooter, CardHeader } from "@heroui/card";
 import { Check } from "lucide-react";
 import Link from "next/link";
 

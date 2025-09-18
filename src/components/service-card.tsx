@@ -1,5 +1,5 @@
 import { services } from "@/config/services";
-import { Card } from "@nextui-org/card";
+import { Card } from "@heroui/card";
 
 type ServiceCardProps = (typeof services)[number]["services"][number];
 

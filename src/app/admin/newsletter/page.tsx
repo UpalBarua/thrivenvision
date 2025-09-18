@@ -5,7 +5,7 @@ import { getAllNewsletterEmails } from "@/lib/services";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Newsletter Panel | thrivenvision",
+  title: "Newsletter Panel | Vectus Labs",
   description:
     "Efficiently manage and access client email submissions on our Newsletter page.",
 };

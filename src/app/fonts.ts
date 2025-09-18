@@ -1,7 +1,7 @@
-import { Exo, Kaushan_Script } from "next/font/google";
+import { JetBrains_Mono, Lexend } from "next/font/google";
 
-export const exo = Exo({ subsets: ["latin"] });
-export const kaushanScript = Kaushan_Script({
+export const jetBrainsMono = JetBrains_Mono({
   subsets: ["latin"],
-  weight: "400",
 });
+
+export const lexend = Lexend({ subsets: ["latin"] });

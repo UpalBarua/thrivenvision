@@ -8,7 +8,7 @@ import { deletePortfolioById, getAllPortfolios } from "@/lib/services";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Portfolios Panel | thrivenvision",
+  title: "Portfolios Panel | Vectus Labs",
   description:
     "Access and update artist portfolios easily on our Portfolios page designed for admins.",
 };

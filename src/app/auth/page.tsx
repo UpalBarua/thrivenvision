@@ -2,10 +2,13 @@
 
 import { auth } from "@/firebase/firebase.config";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Button } from "@nextui-org/button";
-import { Card } from "@nextui-org/card";
-import { Input } from "@nextui-org/input";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { Button } from "@heroui/button";
+import { Card } from "@heroui/card";
+import { Input } from "@heroui/input";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
@@ -35,7 +38,8 @@ export default function Auth() {
   const onSubmit = async ({ email, password }: AuthForm) => {
     try {
       setIsLoading(true);
-      await signInWithEmailAndPassword(auth, email, password);
+      // await signInWithEmailAndPassword(auth, email, password);
+      await createUserWithEmailAndPassword(auth, email, password);
       router.push("/");
       reset();
     } catch (error) {
@@ -58,7 +62,7 @@ export default function Auth() {
           ],
         }}
       >
-        <div className="flex items-center justify-center pb-12 pt-4">
+        <div className="flex items-center justify-center pt-4 pb-12">
           <Image
             src="/images/named-logo.webp"
             height="80"

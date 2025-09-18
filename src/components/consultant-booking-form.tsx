@@ -5,18 +5,18 @@ import { cn } from "@/lib/cn";
 import { addNewConsultation, getAllConsultations } from "@/lib/services";
 import { TConsultation } from "@/types";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Button } from "@nextui-org/button";
-import { Input, Textarea } from "@nextui-org/input";
-import { Radio, RadioGroup } from "@nextui-org/radio";
-import { Select, SelectItem } from "@nextui-org/select";
+import { Button } from "@heroui/button";
+import { Input, Textarea } from "@heroui/input";
+import { Radio, RadioGroup } from "@heroui/radio";
+import { Select, SelectItem } from "@heroui/select";
 import { Send, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { DayPicker } from "react-day-picker";
-import "react-day-picker/dist/style.css";
 import { Controller, useForm } from "react-hook-form";
 import * as z from "zod";
 
-import "@/styles/calendar-styles.css";
+// import "react-day-picker/dist/style.css";
+// import "@/styles/calendar-styles.css";
 
 const serviceCategories = services.map(({ category }) => category);
 
@@ -258,10 +258,7 @@ export function ConsultantBookingForm() {
         />
       </div>
       <div className="space-y-10">
-        <div
-          className="max-w-max rounded-2xl border border-foreground/20 
-          bg-background data-[hover=true]:bg-background/40 group-data-[focus=true]:bg-background/40"
-        >
+        <div className="border-foreground/20 bg-background data-[hover=true]:bg-background/40 group-data-[focus=true]:bg-background/40 max-w-max rounded-2xl border">
           <DayPicker
             mode="single"
             selected={preferedDate}

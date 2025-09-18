@@ -78,17 +78,17 @@ export const whyChooseUsData = [
 export const socialLinks = [
   {
     platform: "Facebook",
-    link: "https://www.facebook.com/thrivenvision",
+    link: "https://www.facebook.com/Vectus Labs",
     Icon: Facebook,
   },
   {
     platform: "Instagram",
-    link: "https://www.instagram.com/thrivenvision",
+    link: "https://www.instagram.com/Vectus Labs",
     Icon: Instagram,
   },
   {
     platform: "LinkedIn",
-    link: "https://www.linkedin.com/company/thrivenvision",
+    link: "https://www.linkedin.com/company/Vectus Labs",
     Icon: Linkedin,
   },
 ] as const;
@@ -120,7 +120,7 @@ export const termsOfServices = [
   {
     term: "Services",
     description:
-      "thrivenvision offers a broad spectrum of digital services to a global clientele. In using our services, you commit to providing truthful and comprehensive details about your pro ect requirements and agree to supply all necessary materials for the successful completion of your project.",
+      "Vectus Labs offers a broad spectrum of digital services to a global clientele. In using our services, you commit to providing truthful and comprehensive details about your pro ect requirements and agree to supply all necessary materials for the successful completion of your project.",
   },
   {
     term: "Payment",
@@ -135,7 +135,7 @@ export const termsOfServices = [
   {
     term: "Confidentiality",
     description:
-      "thrivenvision commits to maintaining the confidentiality of all materials and information you provide and will not disclose such information to any third parties without your explicit consent.",
+      "Vectus Labs commits to maintaining the confidentiality of all materials and information you provide and will not disclose such information to any third parties without your explicit consent.",
   },
   {
     term: "Revision and Approval",
@@ -145,7 +145,7 @@ export const termsOfServices = [
   {
     term: "Liability",
     description:
-      "thrivenvision shall not be liable for any direct or indirect damages, including but not limited to loss of profits, savings, or incidental or consequential damages, that may result from utilizing our services.",
+      "Vectus Labs shall not be liable for any direct or indirect damages, including but not limited to loss of profits, savings, or incidental or consequential damages, that may result from utilizing our services.",
   },
   {
     term: "Termination",
@@ -155,7 +155,7 @@ export const termsOfServices = [
   {
     term: "Modification",
     description:
-      "thrivenvision reserves the right to alter these terms and conditions at any moment, without prior notification. By continuing to use our services, you consent to be bound by such modifications.",
+      "Vectus Labs reserves the right to alter these terms and conditions at any moment, without prior notification. By continuing to use our services, you consent to be bound by such modifications.",
   },
 ] as const;
 

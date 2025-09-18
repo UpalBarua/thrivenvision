@@ -1,11 +1,8 @@
-import { navLinks } from "@/config";
-import {
-  NavbarMenu,
-  NavbarMenuItem,
-  NavbarMenuToggle,
-} from "@nextui-org/navbar";
-import Link from "next/link";
 import * as React from "react";
+import { NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from "@heroui/navbar";
+import Link from "next/link";
+
+import { navLinks } from "@/config";
 
 type MobileNavProps = {
   isMenuOpen: boolean;
@@ -28,7 +25,7 @@ export function MobileNav({
       >
         {navLinks.map(({ label, href }) => (
           <NavbarMenuItem key={href}>
-            <Link href={href} className="w-full capitalize text-foreground/80">
+            <Link href={href} className="text-foreground/80 w-full capitalize">
               {label}
             </Link>
           </NavbarMenuItem>

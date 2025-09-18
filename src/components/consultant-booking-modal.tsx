@@ -1,13 +1,14 @@
 "use client";
 
-import { Button } from "@nextui-org/button";
+import { Button } from "@heroui/button";
 import {
   Modal,
   ModalBody,
   ModalContent,
   ModalHeader,
   useDisclosure,
-} from "@nextui-org/modal";
+} from "@heroui/modal";
+import { CalendarFoldIcon } from "lucide-react";
 import { ConsultantBookingForm } from "./consultant-booking-form";
 
 export function ConsultantBookingModal() {
@@ -16,12 +17,14 @@ export function ConsultantBookingModal() {
   return (
     <>
       <Button
-        fullWidth
+        // fullWidth
         color="primary"
-        className="gradient-btn-wide h-10 px-4 text-base font-semibold lg:h-14 lg:px-6 lg:text-xl"
+        size="lg"
+        // className="gradient-btn-wide h-10 px-4 text-base font-semibold lg:h-14 lg:px-6 lg:text-xl"
         onPress={onOpen}
+        startContent={<CalendarFoldIcon />}
       >
-        <span>Book Your Free Consult</span>
+        <span>Book Free Consultation</span>
       </Button>
       <Modal
         isOpen={isOpen}
@@ -35,7 +38,7 @@ export function ConsultantBookingModal() {
       >
         <ModalContent>
           <ModalHeader className="text-2xl font-semibold">
-            Book a Free Consult
+            Book Free Consultation
           </ModalHeader>
           <ModalBody>
             <ConsultantBookingForm />

@@ -1,4 +1,4 @@
-import { Card } from "@nextui-org/card";
+import { Card } from "@heroui/card";
 import Image from "next/image";
 import { NewsletterForm } from "./newsletter-form";
 import { SectionHeading } from "./ui/section-heading";
@@ -38,7 +38,6 @@ export function Newsletter() {
         <Image
           src="/images/newsletter.webp"
           alt="newsletter image"
-          quality={95}
           height={500}
           width={500}
           className="h-full w-full rounded-2xl object-cover object-center lg:w-[32rem]"
@@ -51,13 +50,13 @@ export function Newsletter() {
           </SectionHeading>
           <SectionSubheading className="mx-0 max-w-full px-0 text-start">
             Dive into the latest trends, insights, and tips in the digital world
-            with <span className="font-semibold">thrivenvision&apos;s </span>
+            with <span className="font-semibold">vectus lab&apos;s </span>
             newsletter. Signing up is quick and easy! Just enter your email
             below, and let us bring the future of digital innovation straight to
             you.
           </SectionSubheading>
           <NewsletterForm />
-          <p className="pt-10 leading-relaxed text-foreground/60">
+          <p className="text-foreground/60 pt-10 leading-relaxed">
             Your privacy is paramount to us. We promise to keep your email safe
             and never spam. Unsubscribe at any time with just a click.
           </p>

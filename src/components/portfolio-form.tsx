@@ -2,8 +2,8 @@
 
 import { SectionHeading } from "@/components/ui/section-heading";
 import { addNewPortfolioToDB } from "@/lib/services";
-import { Button } from "@nextui-org/button";
-import { Input } from "@nextui-org/input";
+import { Button } from "@heroui/button";
+import { Input } from "@heroui/input";
 import { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import * as z from "zod";

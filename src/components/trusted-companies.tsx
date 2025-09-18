@@ -1,5 +1,5 @@
 import { trustedCompanines } from "@/config";
-import { Button } from "@nextui-org/button";
+import { Button } from "@heroui/button";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -78,7 +78,7 @@ export async function TrustedCompanies() {
                 height={80}
                 width={200}
                 className="object-fit object-center"
-                quality={95}
+                
               />
             </div>
           </MotionDiv>

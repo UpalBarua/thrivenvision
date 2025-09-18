@@ -2,7 +2,7 @@
 
 import { ServiceCard } from "@/components/service-card";
 import { services } from "@/config/services";
-import { Tab, Tabs } from "@nextui-org/tabs";
+import { Tab, Tabs } from "@heroui/tabs";
 
 export function ServiceTabs() {
   return (
@@ -22,8 +22,8 @@ export function ServiceTabs() {
           "md:w-full md:justify-between",
           "mb-2",
         ],
-        tab: "max-w-fit h-10 px-2 md:h-11 md:px-3 scroll-mx-[5rem]",
-        tabContent: "group-data-[selected=true]:text-white",
+        tab: "max-w-fit h-10 px-2 md:h-11 md:px-4 scroll-mx-[5rem]",
+        tabContent: "group-data-[selected=true]:text-background",
       }}
     >
       {services.map(({ category, Icon, services }) => (

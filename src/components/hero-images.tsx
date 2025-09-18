@@ -2,7 +2,7 @@
 
 import { services } from "@/config/services";
 import { useInfinitySlider } from "@/hooks/use-infinity-slider";
-import { ScrollShadow } from "@nextui-org/scroll-shadow";
+import { ScrollShadow } from "@heroui/scroll-shadow";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -38,7 +38,7 @@ export function HeroImages() {
                 src={categoryImage}
                 height={300}
                 width={300}
-                quality={95}
+                
                 priority
               />
             </motion.div>

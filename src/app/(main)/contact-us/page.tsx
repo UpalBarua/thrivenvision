@@ -5,9 +5,9 @@ import { socialLinks } from "@/config";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Us | thrivenvision",
+  title: "Contact Us | Vectus Labs",
   description:
-    "Need digital help? Contact thrivenvision! All digital services, all questions answered.",
+    "Need digital help? Contact Vectus Labs! All digital services, all questions answered.",
 };
 
 export default function ContactUs() {

@@ -1,5 +1,5 @@
 import { trustedCompanines } from "@/config";
-import { ScrollShadow } from "@nextui-org/scroll-shadow";
+import { ScrollShadow } from "@heroui/scroll-shadow";
 import Image from "next/image";
 
 export function TrustedCompaniesSlider() {
@@ -21,7 +21,7 @@ export function TrustedCompaniesSlider() {
                   height={100}
                   width={120}
                   className="object-fit min-w-[10rem] object-center"
-                  quality={95}
+                  
                 />
               </div>
             ))}
@@ -35,7 +35,7 @@ export function TrustedCompaniesSlider() {
                   height={100}
                   width={120}
                   className="object-fit min-w-[10rem] object-center"
-                  quality={95}
+                  
                 />
               </div>
             ))}

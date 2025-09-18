@@ -8,7 +8,7 @@ import {
   TableColumn,
   TableHeader,
   TableRow,
-} from "@nextui-org/table";
+} from "@heroui/table";
 import { format } from "date-fns";
 import { ConfirmationModal } from "./confirmation-modal";
 

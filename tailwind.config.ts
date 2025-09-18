@@ -1,4 +1,4 @@
-import { nextui } from "@nextui-org/theme";
+import { heroui } from "@heroui/react";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -6,7 +6,7 @@ const config: Config = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./node_modules/@nextui-org/theme/dist/components/(button|avatar|card|dropdown|input|modal|navbar|radio|scroll-shadow|select|switch|table|tabs|chip).js",
+    "./node_modules/@heroui/theme/dist/components/(button|avatar|card|dropdown|input|modal|navbar|radio|scroll-shadow|select|switch|table|tabs|chip).js",
   ],
   theme: {
     extend: {
@@ -28,24 +28,25 @@ const config: Config = {
   },
   darkMode: "class",
   plugins: [
-    nextui({
-      addCommonColors: true,
+    heroui({
+      addCommonColors: false,
       themes: {
         dark: {
           colors: {
-            background: "#06001c",
-            foreground: "#e7e6ed",
+            background: "#151515",
+            foreground: "#F2EFEA",
             primary: {
               "100": "#EFCDFE",
               "200": "#DA9CFD",
               "300": "#BF6AF9",
               "400": "#A444F4",
-              "500": "#7B0AEE",
+              "500": "#f9b3d1",
               "600": "#5F07CC",
               "700": "#4605AB",
               "800": "#31038A",
               "900": "#230172",
-              DEFAULT: "#7B0AEE",
+              foreground: "#151515",
+              DEFAULT: "#04f06a",
             },
             success: {
               "100": "#F0FCD0",
@@ -83,6 +84,7 @@ const config: Config = {
               "900": "#7A0706",
               DEFAULT: "#FF6123",
             },
+            content1: "#151515",
           },
         },
         light: {
@@ -94,7 +96,7 @@ const config: Config = {
               "200": "#DA9CFD",
               "300": "#BF6AF9",
               "400": "#A444F4",
-              "500": "#7B0AEE",
+              "500": "#46B472",
               "600": "#5F07CC",
               "700": "#4605AB",
               "800": "#31038A",
@@ -143,4 +145,5 @@ const config: Config = {
     }),
   ],
 };
+
 export default config;

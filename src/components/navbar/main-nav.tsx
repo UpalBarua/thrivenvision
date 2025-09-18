@@ -1,9 +1,10 @@
-import { navLinks } from "@/config";
-import { Button } from "@nextui-org/button";
-import { NavbarContent, NavbarItem } from "@nextui-org/navbar";
+import { NavbarContent, NavbarItem } from "@heroui/navbar";
 import Link from "next/link";
+import { Button } from "@heroui/button";
+
 import { LegalButton } from "./legal-button";
 import { NavContainer } from "./nav-container";
+import { navLinks } from "@/config";
 
 export function MainNav() {
   return (
@@ -14,7 +15,7 @@ export function MainNav() {
             <Button
               variant="light"
               size="sm"
-              className="text-base capitalize text-foreground/80"
+              className="text-foreground/80 text-base capitalize"
             >
               <Link href={href}>{label}</Link>
             </Button>

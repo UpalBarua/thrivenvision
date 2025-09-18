@@ -8,7 +8,7 @@ import {
   TableColumn,
   TableHeader,
   TableRow,
-} from "@nextui-org/table";
+} from "@heroui/table";
 import { Pencil, Trash2 } from "lucide-react";
 import { PricingPackageForm } from "./pricing-package-form";
 

@@ -1,6 +1,6 @@
 import { XCircleIcon } from "lucide-react";
 import Link from "next/link";
-import { Button } from "@nextui-org/button";
+import { Button } from "@heroui/button";
 
 export default function NotFound() {
   return (
